@@ -1,9 +1,9 @@
 {
-  "name": "react-jwt-authentication-example",
+  "name": "3boyutlu-destek",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cornflourblue/react-jwt-authentication-example.git"
+    "url": "https://github.com/3-Boyutlu-Destek/new_website.git"
   },
   "license": "MIT",
   "scripts": {

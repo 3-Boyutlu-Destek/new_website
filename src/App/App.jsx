@@ -40,10 +40,10 @@ class App extends React.Component {
                     { currentUser &&
                         <nav className="navbar navbar-expand navbar-dark">
                              <img className="nav-item nav-link" src="public/logo.png" alt="Ana Sayfa"></img>
-                                <Link to="/" className="nav-item" style={titleStyle}>Home</Link>
+                                <Link to="/" className="nav-item" style={titleStyle}>Anasayfa</Link>
                             <div className="navbar-nav" style={{marginLeft:'auto'}}>
                                 <div style={titleStyle} >{currentUser.firstName +" "+ currentUser.lastName}</div>
-                                <a onClick={this.logout} className="nav-item" style={titleStyle} >Logout</a>
+                                <a onClick={this.logout} className="nav-item" style={titleStyle} >Çıkış</a>
                             </div>
                         </nav>
                     }
