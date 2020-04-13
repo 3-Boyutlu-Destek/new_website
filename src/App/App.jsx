@@ -23,7 +23,9 @@ class App extends React.Component {
         authenticationService.logout();
         history.push('/login');
     }
-
+    sss(){
+       history.push('/sss');
+    }
 
     render() {
         const { currentUser } = this.state;
@@ -40,9 +42,10 @@ class App extends React.Component {
                     { currentUser &&
                         <nav className="navbar navbar-expand navbar-dark">
                              <img className="nav-item nav-link" src="public/logo.png" alt="Ana Sayfa"></img>
-                                <Link to="/" className="nav-item" style={titleStyle}>Anasayfa</Link>
+                             <Link to="/" className="nav-item" style={titleStyle}>Anasayfa</Link>
                             <div className="navbar-nav" style={{marginLeft:'auto'}}>
                                 <div style={titleStyle} >{currentUser.firstName +" "+ currentUser.lastName}</div>
+                                <a href="public/ss_sorular.html" style={titleStyle} className="nav-item" target="_blank" >SSS</a>
                                 <a onClick={this.logout} className="nav-item" style={titleStyle} >Çıkış</a>
                             </div>
                         </nav>
