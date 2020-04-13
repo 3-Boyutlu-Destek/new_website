@@ -23,7 +23,9 @@ class App extends React.Component {
         authenticationService.logout();
         history.push('/login');
     }
-
+    sss(){
+       history.push('/sss');
+    }
 
     render() {
         const { currentUser } = this.state;
@@ -43,7 +45,7 @@ class App extends React.Component {
                              <Link to="/" className="nav-item" style={titleStyle}>Anasayfa</Link>
                             <div className="navbar-nav" style={{marginLeft:'auto'}}>
                                 <div style={titleStyle} >{currentUser.firstName +" "+ currentUser.lastName}</div>
-                                <a href="/ss_sorular.html" target="_blank" style={titleStyle} >Sık Sorulan Sorular</a>
+                                <a href="public/ss_sorular.html" style={titleStyle} className="nav-item" target="_blank" >SSS</a>
                                 <a onClick={this.logout} className="nav-item" style={titleStyle} >Çıkış</a>
                             </div>
                         </nav>
