@@ -4,18 +4,19 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx','.scss']
     },
     module: {
         rules: [
+            { test: /\.jsx?$/, loader: 'babel-loader' },
             {
-                test: /\.jsx?$/,
-                loader: 'babel-loader'
+                test:/\.scss$/, 
+                loader:[require.resolve('style-loader'), require.resolve('css-loader'), require.resolve('sass-loader')]
             }
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx','.scss'],
         alias: {
             '@': path.resolve(__dirname, 'src/'),
         }

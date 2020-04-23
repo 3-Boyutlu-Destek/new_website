@@ -4,9 +4,37 @@ import { history } from '@/_helpers';
 import { authenticationService } from '@/_services';
 import { PrivateRoute } from '@/_components';
 import { HomePage } from '@/HomePage';
-import { LoginPage } from '@/LoginPage';
-import { RegisterPage } from '@/RegisterPage';
+//import { style } from '@/App';
 
+const titleStyle={
+    color: 'black',
+     fontWeight: '600',
+     padding: '5px',
+     fontSize: '20px',
+     marginLeft:'20px'
+ }
+ const destekOlTitleStyle = {
+    color: 'white',
+    fontWeight: '600',
+    padding: '5px',
+    fontSize: '18px', 
+    marginLeft:'20px',
+    backgroundColor: '#FF4933',
+    borderRadius : '25px',
+    width: '140px',
+    textAlign: 'center'
+ }
+ const talepEtTitleStyle = {
+    color: 'white',
+    fontWeight: '600',
+    padding: '5px',
+    fontSize: '18px', 
+    marginLeft:'20px',
+    backgroundColor: 'black',
+    borderRadius : '25px',
+    width: '120px',
+    textAlign: 'center'
+ }
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -20,43 +48,30 @@ class App extends React.Component {
         authenticationService.currentUser.subscribe(x => this.setState({ currentUser: x }));
     }
 
-    logout() {
-        authenticationService.logout();
-        history.push('/login');
-    }
-
     render() {
         const { currentUser } = this.state;
-        const titleStyle={
-           color: 'black',
-            fontWeight: '600',
-            padding: '5px',
-            fontSize: '20px'
-        }
+        
 
         return (
             <Router history={history}>
                 <div>
-                    { currentUser &&
-                        <nav className="navbar navbar-expand navbar-dark">
-                             <img className="nav-item nav-link" src="public/logo.png" alt="Ana Sayfa"></img>
-                             <Link to="/" className="nav-item" style={titleStyle}>Anasayfa</Link>
+                    {
+                        <nav className="navbar navbar-expand navbar-dark" style={{width:'95%'}}>
+                            <Link to="/" className="nav-item" style={titleStyle}><img className="nav-item nav-link" src="public/logo.png" alt="Ana Sayfa"></img></Link>
                             <div className="navbar-nav" style={{marginLeft:'auto'}}>
                                 <div style={titleStyle} >Hakkımızda</div>
                                 <a style={titleStyle} className="nav-item" target="_blank" >Destekçiler</a>
-                                <a onClick={this.logout} className="nav-item" style={titleStyle} >Ürünler</a>
-                                <a onClick={this.logout} className="nav-item" style={titleStyle} >Destek Ol</a>
-                                <a onClick={this.logout} className="nav-item" style={titleStyle} >Talep Et</a>
+                                <a  className="nav-item" style={titleStyle} >Ürünler</a>
+                                <a  className="nav-item" style={destekOlTitleStyle} >Destek Ol</a>
+                                <a  className="nav-item" style={talepEtTitleStyle} >Talep Et</a>
                             </div>
                         </nav>
                     }
-                    <div className="jumbotron">
+                    <div className="jumbotron" style={{backgroundColor:'white'}}> 
                         <div className="container">
                             <div className="row">
-                                <div className="col-md-6 offset-md-3">
-                                    <PrivateRoute exact path="/" component={HomePage} />
-                                    <Route path="/login" component={LoginPage} />
-                                    <Route path="/register" component={RegisterPage} />
+                                <div className="col-md-12">
+                                    <PrivateRoute exact path='/' component={HomePage} />
                                 </div>
                             </div>
                         </div>
