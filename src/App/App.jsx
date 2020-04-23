@@ -42,9 +42,11 @@ class App extends React.Component {
                              <img className="nav-item nav-link" src="public/logo.png" alt="Ana Sayfa"></img>
                              <Link to="/" className="nav-item" style={titleStyle}>Anasayfa</Link>
                             <div className="navbar-nav" style={{marginLeft:'auto'}}>
-                                <div style={titleStyle} >{currentUser.firstName +" "+ currentUser.lastName}</div>
-                                <a href="public/ss_sorular.html" style={titleStyle} className="nav-item" target="_blank" >SSS</a>
-                                <a onClick={this.logout} className="nav-item" style={titleStyle} >Çıkış</a>
+                                <div style={titleStyle} >Hakkımızda</div>
+                                <a style={titleStyle} className="nav-item" target="_blank" >Destekçiler</a>
+                                <a onClick={this.logout} className="nav-item" style={titleStyle} >Ürünler</a>
+                                <a onClick={this.logout} className="nav-item" style={titleStyle} >Destek Ol</a>
+                                <a onClick={this.logout} className="nav-item" style={titleStyle} >Talep Et</a>
                             </div>
                         </nav>
                     }
