@@ -20,13 +20,13 @@ class HomePage extends React.Component {
         const { currentUser, users } = this.state;
         return (
             <div>
-                <h1>Merhaba {currentUser.firstName}!</h1>
-                {users &&
+                <h1>Merhaba Dünya!</h1>
+                {/*users &&
                     <ul>
                         {users.map(user =>
                             <li key={user.id}>{user.firstName} {user.lastName}</li>
                         )}
-                    </ul>
+                    </ul>*/
                 }
             </div>
         );
