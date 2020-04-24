@@ -14,7 +14,7 @@ const uretimeBaslaButton = {
     borderRadius: '20px',
     backgroundColor: '#FF4933',
     borderStyle: 'none',
-    width: '25%',
+    width: '30%',
     height: '35px',
     textAlign: 'center',
     color: 'white',
