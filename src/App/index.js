@@ -1,2 +1,2 @@
 export * from './App';
-//export * from './style';
+export * from './style';
