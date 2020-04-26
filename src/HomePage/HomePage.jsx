@@ -39,6 +39,23 @@ class HomePage extends React.Component {
           <img src="public/group.svg" style={{width:'inherit'}}/>
           
         </div>
+        <section className="YenilikciDestek">
+                <div className="row">
+                    <div className="col-md-6 "> 
+                        
+                        <h3 style={{marginTop:"10px",fontSize:"2.8rem",marginLeft:"15px"}}>Covid 19 Mücadelesine Yenilikçi Destek  </h3> 
+                        <br/>
+                        <p className="Aciklama">Covid-19 ile mücadelede sahip olduğumuz 3 boyutlu yazıcı potansiyeli ile medikal parçalara, araç ve gereçlere ihtiyaç duyan hastaneleri desteklemek ve kişisel korunma ihtiyacına 3 boyutlu yazıcı teknolojileri ile cevap vermek istiyoruz.</p>
+                        
+                        <p className="Aciklama">3 boyutlu yazıcıda üretilmiş parçalar, ihtiyaç anında orijinal parçaların yerini daha kısa sürede alabilir!</p>
+                    </div> 
+                    <div className="col-md-6" >
+                       <div style={{backgroundImage: `url(public/factory.png)`,width:'100%',height:'600px',backgroundSize: 'cover'}}>
+                           
+                       </div>
+                    </div> 
+                </div>
+        </section>
         <div className="Destekol">
           <h3 className="Destekol-title">Nasıl Destek Olabilirsiniz ?</h3>
           <div className="Destekol-cards">
