@@ -1,5 +1,3 @@
-# react-jwt-authentication-example
+# 3 Boyutlu destek web sitesidir.
 
-React (without Redux) - JWT Authentication Tutorial & Example
-
-To see a demo and further details go to http://jasonwatmore.com/post/2019/04/06/react-jwt-authentication-tutorial-example
+React (without Redux) 
