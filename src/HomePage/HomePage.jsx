@@ -25,12 +25,12 @@ class HomePage extends React.Component {
   render() {
     return (
       <div>
-        <div style={divHome}>
+        <section style={divHome}>
         <div className="col-md-6 offset-md-6" style={{zIndex:'10', position:'absolute', top:'140px'}}>
             <h1 style={{ fontWeight: '700' }}>
               Covid-19 ile mücadeleye tam destek
             </h1>
-            <p>
+            <p className="Aciklama">
               3 Boyutlu yazıcıda oluşturulmuş parçalar, ihtiyaç anında orjinal
               parçaların yerini daha kısa sürede alır
             </p>
@@ -38,7 +38,7 @@ class HomePage extends React.Component {
           </div>
           <img src="public/group.svg" style={{width:'inherit'}}/>
           
-        </div>
+        </section>
         <section className="YenilikciDestek">
                 <div className="row">
                     <div className="col-md-6 "> 
@@ -56,7 +56,7 @@ class HomePage extends React.Component {
                     </div> 
                 </div>
         </section>
-        <div className="Destekol">
+        <section className="Destekol">
           <h3 className="Destekol-title">Nasıl Destek Olabilirsiniz ?</h3>
           <div className="Destekol-cards">
             <div className="Destekol-cards-card">
@@ -121,7 +121,7 @@ class HomePage extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     );
   }
