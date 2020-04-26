@@ -1,11 +1,8 @@
 import React from 'react';
 import { Router, Route, Link, img } from 'react-router-dom';
 import { history } from '@/_helpers';
-import { authenticationService } from '@/_services';
 import { PrivateRoute } from '@/_components';
 import { HomePage } from '@/HomePage';
-import { style } from '@/App';
-
 const titleStyle = {
   color: 'black',
   fontWeight: '600',
@@ -39,19 +36,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      currentUser: null,
-    };
   }
 
-  componentDidMount() {
-    authenticationService.currentUser.subscribe((x) =>
-      this.setState({ currentUser: x })
-    );
-  }
 
   render() {
-    const { currentUser } = this.state;
 
     return (
       <Router history={history}>
@@ -59,7 +47,7 @@ class App extends React.Component {
           {
             <nav
               className="navbar navbar-expand navbar-dark"
-              style={{ width: '95%' }}
+              style={{ width: '100%', margin:'auto' }}
             >
               <Link to="/" className="nav-item" style={titleStyle}>
                 <img
@@ -85,14 +73,12 @@ class App extends React.Component {
               </div>
             </nav>
           }
-          <div className="" style={{ backgroundColor: 'white' }}>
-            <div className="container">
+          <div className="jumbotron" style={{ backgroundColor: 'white', paddingTop: '0' }}>
               <div className="row">
                 <div className="col-md-12">
                   <PrivateRoute exact path="/" component={HomePage} />
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </Router>

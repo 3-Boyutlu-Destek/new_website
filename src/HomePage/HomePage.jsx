@@ -1,23 +1,18 @@
 import React from 'react';
-
-import { userService, authenticationService } from '@/_services';
 import { Redirect } from 'react-router-dom';
 const divHome = {
-  backgroundImage: `url(public/group.svg)`,
+ // backgroundImage: `url(public/group.svg)`,
   width: '100%',
-  height: '600px',
-  backgroundSize: 'cover',
-  marginTop: '-70px',
 };
 
 const uretimeBaslaButton = {
   borderRadius: '20px',
   backgroundColor: '#FF4933',
   borderStyle: 'none',
-  width: '30%',
-  height: '35px',
   textAlign: 'center',
   color: 'white',
+  minWidth: '150px',
+  fontSize: 'large'
 };
 
 class HomePage extends React.Component {
@@ -31,7 +26,7 @@ class HomePage extends React.Component {
     return (
       <div>
         <div style={divHome}>
-          <div className="col-md-6 offset-md-6" style={{ paddingTop: '150px' }}>
+        <div className="col-md-6 offset-md-6" style={{zIndex:'10', position:'absolute', top:'140px'}}>
             <h1 style={{ fontWeight: '700' }}>
               Covid-19 ile mücadeleye tam destek
             </h1>
@@ -41,8 +36,10 @@ class HomePage extends React.Component {
             </p>
             <button style={uretimeBaslaButton}>Üretime Başla</button>
           </div>
+          <img src="public/group.svg" style={{width:'inherit'}}/>
+          
         </div>
-        <section className="Destekol">
+        <div className="Destekol">
           <h3 className="Destekol-title">Nasıl Destek Olabilirsiniz ?</h3>
           <div className="Destekol-cards">
             <div className="Destekol-cards-card">
@@ -107,7 +104,7 @@ class HomePage extends React.Component {
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     );
   }

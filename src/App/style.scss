@@ -8,11 +8,12 @@ html {
 
 //Destek Ol Section
 .Destekol {
+  width: 60%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   &-title {
-    font-size: 2.8rem;
     position: relative;
     &:before {
       content: '';
@@ -34,9 +35,9 @@ html {
       border: 0.23rem solid rgba(255, 0, 59, 0.33);
       border-radius: 1.9rem;
       box-shadow: 0px 3px 6px #00000029;
-      padding: 4.32rem 2rem 2rem;
+      padding: 1.32rem 1rem 1rem;
       font-size: 1.13rem;
-      height: 38rem;
+      height: 28rem;
       &.hover {
         background-color: #ff003b;
         position: relative;
@@ -46,30 +47,30 @@ html {
         margin-left: 2.7rem;
       }
       &-img {
-        width: 9.2rem;
+        width: 5.2rem;
       }
       &-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 2.16rem;
+        margin-top: 1rem;
         height: 19rem;
         position: relative;
         &-title {
           letter-spacing: 0px;
           font-weight: bold;
           color: #060606;
-          font-size: 1.7rem;
+          font-size: 1.0rem;
           &.hover {
             color: #fff;
           }
         }
         &-text {
           color: #515151;
-          font-size: 1.12rem;
-          margin-top: 1.26rem;
+          font-size: 15px;
+          margin-top: 5px;
           margin-bottom: 1.97rem;
-          width: 20rem;
+          width: 12rem;
           &.hover {
             color: #fff;
           }
@@ -81,8 +82,7 @@ html {
           padding-bottom: 1rem;
           color: #95989a;
           font-size: inherit;
-          position: absolute;
-          width: 15rem;
+          width: 10rem;
           bottom: 0;
           &:hover {
             cursor: pointer;
@@ -96,3 +96,5 @@ html {
     }
   }
 }
+
+
