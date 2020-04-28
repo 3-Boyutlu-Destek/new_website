@@ -50,7 +50,7 @@ class HomePage extends React.Component {
                         <p className="Aciklama">3 boyutlu yazıcıda üretilmiş parçalar, ihtiyaç anında orijinal parçaların yerini daha kısa sürede alabilir!</p>
                     </div> 
                     <div className="col-md-6" >
-                       <div style={{backgroundImage: `url(public/factory.png)`,width:'100%',height:'600px',backgroundSize: 'cover'}}>
+                       <div style={{backgroundImage: `url(public/factory.png)`,width:'100%',height:'600px',backgroundSize: 'cover', borderRadius:'25px'}}>
                            
                        </div>
                     </div> 
@@ -118,6 +118,119 @@ class HomePage extends React.Component {
                 <div className="Destekol-cards-card-content-button">
                   Destek Ol
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="Sistem">
+          <h3 className="Sistem-title">Sistem Nasıl Çalışır ?</h3>
+          <div className="Sistem-content">
+            <div className="Sistem-content-firstSection">
+              <div className="Sistem-content-firstSection-left">
+                <img
+                  src="public/sistem-1.png"
+                  alt=""
+                  className="Sistem-content-firstSection-left-img"
+                />
+              </div>
+              <div className="Sistem-content-firstSection-right">
+                <h5 className="Sistem-content-firstSection-right-title">
+                  Gönüllü Üretici Olarak Kaydol
+                </h5>
+                <p className="Sistem-content-firstSection-right-text">
+                  Birkaç basit adımda 3 Boyutlu destek ağı kapsamında üretime
+                  başlayabilirsiniz, mobil uygulamamızı buradan indirebilir ve
+                  gönüllü üreticilerin arasına katılmak için ilk adımı
+                  atabilirsiniz.
+                </p>
+              </div>
+            </div>
+            <div className="Sistem-content-secondSection">
+              <div className="Sistem-content-secondSection-left">
+                <img
+                  src="public/sistem-2.png"
+                  alt=""
+                  className="Sistem-content-secondSection-left-img"
+                />
+              </div>
+              <div className="Sistem-content-secondSection-right">
+                <h5 className="Sistem-content-secondSection-right-title">
+                  Üretime Başla
+                </h5>
+                <p className="Sistem-content-secondSection-right-text">
+                  Artık üretim yapmaya başlayabilirsiniz! Ürettiğiniz
+                  siperliklerin sağlık çalışanlarımız için kritik bir öneme
+                  sahip olduğunu lütfen unutmayın ve üretim ağımız ile
+                  koordineli çalışın.
+                </p>
+              </div>
+            </div>
+            <div className="Sistem-content-thirdSection">
+              <div className="Sistem-content-thirdSection-left">
+                <img
+                  src="public/sistem-3.png"
+                  alt=""
+                  className="Sistem-content-thirdSection-left-img"
+                />
+              </div>
+              <div className="Sistem-content-thirdSection-right">
+                <h5 className="Sistem-content-thirdSection-right-title">
+                  Ürettiğin Parçalar Sağlık Çalışanlarına Sper Olsun !
+                </h5>
+                <p className="Sistem-content-thirdSection-right-text">
+                  Dünyayı etkisi altına alan covid-19 virüsü ile ön saflarda
+                  savaşan sağlık çalışanlarımız için ürettiğin yüz siperlikleri,
+                  sağlık çalışanlarımızı virüse karşı daha da güçlü olmasını
+                  sağlıyor. Teşekkürler
+                </p>
+              </div>
+            </div>
+            <div className="Sistem-content-background">
+              <img
+                src="public/sistem-bg.png"
+                alt=""
+                className="Sistem-content-background-img"
+              />
+            </div>
+            <div className="Sistem-content-fourthSection">
+              <div className="Sistem-content-fourthSection-left">
+                <img
+                  src="public/sistem-4.png"
+                  alt=""
+                  className="Sistem-content-fourthSection-left-img"
+                />
+              </div>
+              <div className="Sistem-content-fourthSection-right">
+                <h5 className="Sistem-content-fourthSection-right-title">
+                  Linkten Tasarım Dosyasını İndir
+                </h5>
+                <p className="Sistem-content-fourthSection-right-text">
+                  Sağlık çalışanlarından aldığımız geri dönüşler ile ürettiğimiz
+                  siperliklerin model dosyasını web sitemizdeki veya mobil
+                  uygulamamızdaki linklerden Github hesabımıza ulaşarak
+                  indirebilirsiniz.
+                </p>
+              </div>
+            </div>
+            <div className="Sistem-content-fifthSection">
+              <div className="Sistem-content-fifthSection-left">
+                <img
+                  src="public/sistem-5.png"
+                  alt=""
+                  className="Sistem-content-fifthSection-left-img"
+                />
+              </div>
+              <div className="Sistem-content-fifthSection-right">
+                <h5 className="Sistem-content-fifthSection-right-title">
+                  Ürettiğin Parçaları İl Temsilcilerine Ulaştır
+                </h5>
+                <p className="Sistem-content-fifthSection-right-text">
+                  Ülke genelindeki sağlık çalışanlarımızın oluşturduğu siperlik
+                  talepleri il temsilcilerine ulaşmaktadır, ürettiğiniz
+                  siperlikleri il temsilcinize ulaştırabilir veya temsilci ile
+                  koordineli çalışarak direkt sağlık çalışanlarına
+                  iletebilirsiniz.
+                </p>
               </div>
             </div>
           </div>
