@@ -39,6 +39,29 @@ class HomePage extends React.Component {
           <img src="public/group.svg" style={{width:'inherit'}}/>
           
         </section>
+        <section className="Counter">
+          <h3 className="Counter-title"> Corona Virüse Karşı 3 Milyondan Fazla Destek Ağının Bir Parçası Ol! </h3>
+          <div className="row Counter-row">
+             <div className="col-md-4">
+               <div className="Counter-row-first-counter">
+                 <span>80.000 +</span>
+                  <span>Siperlik</span>
+               </div>
+             </div>
+             <div className="col-md-4">
+               <div className="Counter-row-second-counter">
+                   <span>3.000 +</span>
+                  <span>Kişi / Kurum</span>
+               </div>
+             </div>
+             <div className="col-md-4 ">
+               <div className="Counter-row-third-counter">
+               <span>4.522 +</span>
+                  <span>3Boyutlu Yazıcı</span>
+               </div>
+            </div>
+          </div>
+        </section>
         <section className="YenilikciDestek">
                 <div className="row">
                     <div className="col-md-6 "> 
@@ -87,14 +110,14 @@ class HomePage extends React.Component {
                 className="Destekol-cards-card-img"
               />
               <div className="Destekol-cards-card-content">
-                <div className="Destekol-cards-card-content-title hover">
+                <div className="Destekol-cards-card-content-title">
                   Hammadde Desteği
                 </div>
-                <p className="Destekol-cards-card-content-text hover">
+                <p className="Destekol-cards-card-content-text">
                   Lastik, PETG şeffaf koruyucu plaka ve filament desteği
                   sağlamak istersen, tedarik ağına dahil olabilirsin.
                 </p>
-                <div className="Destekol-cards-card-content-button hover">
+                <div className="Destekol-cards-card-content-button">
                   Destek Ol
                 </div>
               </div>
