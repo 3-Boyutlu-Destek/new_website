@@ -280,11 +280,8 @@ html {
     flex-flow: column;
     justify-content: center;
     color: #ffffff;
-    height:320px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 60px;
+    height:250px;
     &-first-span{
-      margin-top: auto;
       font-size: 2rem;
       font-weight:bold;
       }
@@ -294,7 +291,8 @@ html {
 
       &-img{
         width: 100%;
-        margin-top: auto;
+        z-index: 10;
+        margin-top: -5rem;
       }
     }
 
@@ -307,14 +305,11 @@ html {
     justify-content: center;
     color: #ffffff;
     font-size: larger;
-    height: 320px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 60px;
+    height: 230px;
        &-up-img{
          width: 100%;
        }
        &-first-span{
-        margin-top: auto;
         font-size: 2rem;
         font-weight:bold;
         }
@@ -324,7 +319,8 @@ html {
 
       &-img{
         width: 100%;
-        margin-top: auto;
+        z-index: 10;
+        margin-top: -5rem;
       }
     }
     &-third-counter{
@@ -335,11 +331,8 @@ html {
       justify-content: center;
       color: #ffffff;
       font-size: larger;
-      height: 320px;
-      border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 60px;
+      height: 210px;
       &-first-span{
-        margin-top: auto;
         font-size: 2rem;
         font-weight:bold;
         }
@@ -349,7 +342,8 @@ html {
 
       &-img{
         width: 100%;
-        margin-top: auto;
+        z-index: 10;
+        margin-top: -5rem;
       }
     }
   }
