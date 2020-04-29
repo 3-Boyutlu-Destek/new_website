@@ -43,21 +43,27 @@ class HomePage extends React.Component {
           <h3 className="Counter-title"> Corona Virüse Karşı 3 Milyondan Fazla Destek Ağının Bir Parçası Ol! </h3>
           <div className="row Counter-row">
              <div className="col-md-4">
+             <img src="public/counter-ust-1.png" style={{width:"10rem"}}/>
                <div className="Counter-row-first-counter">
                  <span>80.000 +</span>
                   <span>Siperlik</span>
+                  <img className="Counter-row-first-counter-img" src="public/counter-alt-1.png"/>
                </div>
              </div>
              <div className="col-md-4">
+               <img src="public/counter-ust-2.png" style={{width:"10rem", marginTop:"20px"}}/>
                <div className="Counter-row-second-counter">
-                   <span>3.000 +</span>
+                  <span>3.000 +</span>
                   <span>Kişi / Kurum</span>
+                  <img className="Counter-row-second-counter-img" src="public/counter-alt-2.png"/>
                </div>
              </div>
              <div className="col-md-4 ">
+             <img src="public/counter-ust-3.png" style={{width:"10rem", marginTop:"5px"}}/>
                <div className="Counter-row-third-counter">
-               <span>4.522 +</span>
+                   <span>4.522 +</span>
                   <span>3Boyutlu Yazıcı</span>
+                  <img className="Counter-row-third-counter-img" src="public/counter-alt-3.png"/>
                </div>
             </div>
           </div>
