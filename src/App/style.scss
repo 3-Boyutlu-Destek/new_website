@@ -349,3 +349,59 @@ html {
   }
   
 }
+
+.BizdenHaberler{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-title {
+    position: relative;
+    &:before {
+      content: '';
+      background-color: red;
+      width: 0.85rem;
+      height: 0.85rem;
+      border-radius: 18px;
+      position: absolute;
+      right: -18px;
+    }
+  }
+  &-haber{
+    display: flex;
+    flex-direction:column;
+    width: min-content;
+    &-img{
+      height: 542px;
+      border-radius: 29px;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+      background-color: #aab0bb;
+    }
+    &-baslik{
+      font-family: Poppins;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.53;
+      text-align: left;
+      color: #515151;
+    }
+    &-text{
+      font-family: Poppins;
+      font-size: 20px;
+      line-height: 1.5;
+      text-align: left;
+      color: #353535;
+    }
+    &-devami{
+      font-family: Poppins;
+      font-size: 24px;
+      line-height: 1.46;
+      text-align: center;
+      color: #ffffff;
+      background-color: red;
+      border-radius: 20px;
+      margin-top: 20px;
+      width: 200px;
+    }
+  }
+}

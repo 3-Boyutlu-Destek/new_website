@@ -265,6 +265,44 @@ class HomePage extends React.Component {
             </div>
           </div>
         </section>
+        <section className="BizdenHaberler">
+          <h3 className="BizdenHaberler-title">Bizden Haberler</h3>
+          <div className="row">
+              <div className="col-md-4 BizdenHaberler-haber">
+                  <img className="BizdenHaberler-haber-img" src="public/factory.png" />
+                  <h1 className="BizdenHaberler-haber-baslik">Haber Başlığı 1</h1>
+                  <span className="BizdenHaberler-haber-text">Ülke genelindeki sağlık çalışanlarımızın oluşturduğu siperlik talepleri 
+                    il temsilcilerine ulaşmaktadır, ürettiğiniz siperlikleri il temsilcinize 
+                    ulaştırabilir veya temsilci ile koordineli çalışarak direkt sağlık
+                     çalışanlarına iletebilirsiniz.</span>
+                     <a className="BizdenHaberler-haber-devami" href="" target="_blank">
+                         Devamını Oku
+                     </a>
+              </div>
+              <div className="col-md-4 BizdenHaberler-haber">
+                  <img className="BizdenHaberler-haber-img" src="public/counter-ust-1.png" />
+                  <h1 className="BizdenHaberler-haber-baslik">Haber Başlığı 2</h1>
+                  <span className="BizdenHaberler-haber-text">Ülke genelindeki sağlık çalışanlarımızın oluşturduğu siperlik talepleri 
+                    il temsilcilerine ulaşmaktadır, ürettiğiniz siperlikleri il temsilcinize 
+                    ulaştırabilir veya temsilci ile koordineli çalışarak direkt sağlık
+                     çalışanlarına iletebilirsiniz.</span>
+                     <a className="BizdenHaberler-haber-devami" href="" target="_blank">
+                        Devamını Oku
+                     </a>
+              </div>
+              <div className="col-md-4 BizdenHaberler-haber">
+                  <img className="BizdenHaberler-haber-img" src="public/counter-ust-3.png" />
+                  <h1 className="BizdenHaberler-haber-baslik">Haber Başlığı 3</h1>
+                  <span className="BizdenHaberler-haber-text">Ülke genelindeki sağlık çalışanlarımızın oluşturduğu siperlik talepleri 
+                    il temsilcilerine ulaşmaktadır, ürettiğiniz siperlikleri il temsilcinize 
+                    ulaştırabilir veya temsilci ile koordineli çalışarak direkt sağlık
+                     çalışanlarına iletebilirsiniz.</span>
+                 <a className="BizdenHaberler-haber-devami" href="" target="_blank">
+                     Devamını Oku
+                 </a>
+              </div>
+          </div>
+        </section>
       </div>
     );
   }
