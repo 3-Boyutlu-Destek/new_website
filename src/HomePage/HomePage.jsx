@@ -45,24 +45,24 @@ class HomePage extends React.Component {
              <div className="col-md-4">
              <img src="public/counter-ust-1.png" style={{width:"10rem"}}/>
                <div className="Counter-row-first-counter">
-                 <span>80.000 +</span>
-                  <span>Siperlik</span>
+                 <span className="Counter-row-first-counter-first-span">80.000 +</span>
+                  <span className="Counter-row-first-counter-second-span">Siperlik</span>
                   <img className="Counter-row-first-counter-img" src="public/counter-alt-1.png"/>
                </div>
              </div>
              <div className="col-md-4">
                <img src="public/counter-ust-2.png" style={{width:"10rem", marginTop:"20px"}}/>
                <div className="Counter-row-second-counter">
-                  <span>3.000 +</span>
-                  <span>Kişi / Kurum</span>
+                  <span className="Counter-row-second-counter-first-span">3.000 +</span>
+                  <span className="Counter-row-second-counter-second-span">Kişi / Kurum</span>
                   <img className="Counter-row-second-counter-img" src="public/counter-alt-2.png"/>
                </div>
              </div>
              <div className="col-md-4 ">
              <img src="public/counter-ust-3.png" style={{width:"10rem", marginTop:"5px"}}/>
                <div className="Counter-row-third-counter">
-                   <span>4.522 +</span>
-                  <span>3Boyutlu Yazıcı</span>
+                   <span className="Counter-row-third-counter-first-span">4.522 +</span>
+                  <span className="Counter-row-third-counter-second-span">3Boyutlu Yazıcı</span>
                   <img className="Counter-row-third-counter-img" src="public/counter-alt-3.png"/>
                </div>
             </div>
@@ -123,7 +123,7 @@ class HomePage extends React.Component {
                   Lastik, PETG şeffaf koruyucu plaka ve filament desteği
                   sağlamak istersen, tedarik ağına dahil olabilirsin.
                 </p>
-                <div className="Destekol-cards-card-content-button">
+                <div className="Destekol-cards-card-content-button hover">
                   Destek Ol
                 </div>
               </div>
