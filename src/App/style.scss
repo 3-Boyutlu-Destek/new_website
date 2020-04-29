@@ -275,10 +275,8 @@ html {
     margin-top: 2rem;
 
     &-first-counter{
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
-    background-color: #ffc90a;
+    border-radius: 40px;
+    background-color: black;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -294,22 +292,25 @@ html {
       }
 
       &-img{
-        width: 15rem;
+        width: 100%;
+        border-bottom-right-radius: inherit;
+        border-bottom-left-radius: 22px;
       }
     }
 
     &-second-counter{
-      width: 300px;
-    height: 200px;
-    border-radius: 20px;
-      background-color: #ff003b;
+
+    border-radius: 40px;
+      background-color:black;
       display: flex;
     flex-flow: column;
     justify-content: center;
     font-weight: bold;
     color: #ffffff;
     font-size: larger;
-
+       &-up-img{
+         width: 100%;
+       }
       &-text{
         display: flex;
         flex-direction: column;
@@ -318,14 +319,15 @@ html {
       }
 
       &-img{
-        width: 15rem;
+        width: 100%;
+        border-bottom-right-radius: inherit;
+        border-bottom-left-radius: 22px;
       }
     }
     &-third-counter{
-      width: 300px;
-      height: 200px;
-       border-radius: 20px;
-      background-color: #0974ff;
+
+       border-radius: 40px;
+      background-color: black;
       display: flex;
       flex-flow: column;
       justify-content: center;
@@ -340,7 +342,9 @@ html {
       }
 
       &-img{
-        width: 15rem;
+        width: 100%;
+        border-bottom-right-radius: inherit;
+        border-bottom-left-radius: 22px;
       }
     }
   }
