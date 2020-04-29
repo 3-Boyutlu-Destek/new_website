@@ -47,24 +47,25 @@ class HomePage extends React.Component {
                <div className="Counter-row-first-counter">
                  <span className="Counter-row-first-counter-first-span">80.000 +</span>
                   <span className="Counter-row-first-counter-second-span">Siperlik</span>
-                  <img className="Counter-row-first-counter-img" src="public/counter-alt-1.png"/>
+                  
                </div>
+               <img className="Counter-row-first-counter-img" src="public/counter-alt-1.png"/>
              </div>
              <div className="col-md-4">
                <img src="public/counter-ust-2.png" style={{width:"10rem", marginTop:"20px"}}/>
                <div className="Counter-row-second-counter">
                   <span className="Counter-row-second-counter-first-span">3.000 +</span>
                   <span className="Counter-row-second-counter-second-span">Kişi / Kurum</span>
-                  <img className="Counter-row-second-counter-img" src="public/counter-alt-2.png"/>
                </div>
+               <img className="Counter-row-second-counter-img" src="public/counter-alt-2.png"/>
              </div>
              <div className="col-md-4 ">
              <img src="public/counter-ust-3.png" style={{width:"10rem", marginTop:"5px"}}/>
                <div className="Counter-row-third-counter">
                    <span className="Counter-row-third-counter-first-span">4.522 +</span>
                   <span className="Counter-row-third-counter-second-span">3Boyutlu Yazıcı</span>
-                  <img className="Counter-row-third-counter-img" src="public/counter-alt-3.png"/>
                </div>
+               <img className="Counter-row-third-counter-img" src="public/counter-alt-3.png"/>
             </div>
           </div>
         </section>
@@ -204,7 +205,7 @@ class HomePage extends React.Component {
               </div>
               <div className="Sistem-content-thirdSection-right">
                 <h5 className="Sistem-content-thirdSection-right-title">
-                  Ürettiğin Parçalar Sağlık Çalışanlarına Sper Olsun !
+                  Ürettiğin Parçalar Sağlık Çalışanlarına Siper Olsun !
                 </h5>
                 <p className="Sistem-content-thirdSection-right-text">
                   Dünyayı etkisi altına alan covid-19 virüsü ile ön saflarda
