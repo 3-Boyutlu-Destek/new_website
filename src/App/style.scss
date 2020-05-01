@@ -29,8 +29,6 @@ html {
     margin-left: 123px;
     &-card {
       text-align: center;
-      //border-radius: 1.9rem;
-     // box-shadow: 0px 3px 6px #00000029;
       padding: 1.32rem 1rem 1rem;
       font-size: 1.13rem;
       height: 28rem;
@@ -49,7 +47,7 @@ html {
           flex-direction: column;
           align-items: center;
           margin-top: 1rem;
-          height: 19rem;
+          height: 22rem;
           position: relative;
           &-title {
             letter-spacing: 0px;
@@ -63,9 +61,6 @@ html {
           &-text {
             color: #515151;
             font-size: 15px;
-           // margin-top: 5px;
-            //margin-bottom: 1.97rem;
-           // width: 20rem;
            width: 50%;
            margin: auto;
             &.hover {
@@ -438,7 +433,7 @@ html {
     flex-direction:column;
     width: min-content;
     &-img{
-      height: 542px;
+      height: 400px;
       border-radius: 29px;
       box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
       background-color: #aab0bb;

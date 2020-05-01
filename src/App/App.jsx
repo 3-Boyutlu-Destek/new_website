@@ -31,6 +31,7 @@ const talepEtTitleStyle = {
   borderRadius: '25px',
   width: '120px',
   textAlign: 'center',
+  textDecoration:'none'
 };
 class App extends React.Component {
   constructor(props) {
@@ -67,7 +68,7 @@ class App extends React.Component {
                 <a className="nav-item" style={destekOlTitleStyle}>
                   Destek Ol
                 </a>
-                <a className="nav-item" style={talepEtTitleStyle}>
+                <a className="nav-item" style={talepEtTitleStyle} href="https://docs.google.com/forms/d/e/1FAIpQLSfTWxS4MBVDiqLRA-pL6GGk6p8lp1ugmwU6f0vvLYZChIs0zA/viewform?embedded=true" target="_blank">
                   Talep Et
                 </a>
               </div>

@@ -110,7 +110,9 @@ class HomePage extends React.Component {
                   Boyutlu Destek Ağı'na kaydolabilirsin.
                 </p>
                 <div className="Destekol-cards-card-content-button">
-                  Destek Ol
+                <a style={{textDecoration:'none', fontSize:'inherit'}} href="https://docs.google.com/forms/d/e/1FAIpQLSfKdrVs6fNSwsHGEkXcYFv9i03eRQKwwGm-g9y0c6N4LTPmvQ/viewform" target="_blank">
+                    Destek Ol
+               </a>
                 </div>
               </div>
             </div>
@@ -129,7 +131,9 @@ class HomePage extends React.Component {
                   sağlamak istersen, tedarik ağına dahil olabilirsin.
                 </p>
                 <div className="Destekol-cards-card-content-button hover">
-                  Destek Ol
+                <a style={{textDecoration:'none', fontSize:'inherit'}} href="https://docs.google.com/forms/d/e/1FAIpQLScR4-5CE7VXJwTO84wvjLHxn11vtnZrip3bMr-ncHKKo2GBOw/viewform" target="_blank">
+                    Destek Ol
+               </a>
                 </div>
               </div>
             </div>
@@ -149,10 +153,14 @@ class HomePage extends React.Component {
                   sağlayabilirsin. Hızlı paylaşım için sosyal medya araçlarını
                   kullanabilirsin.
                 </p>
-                <div className="Destekol-cards-card-content-button">
-                  Destek Ol
+                <div>
+                <a style={{marginRight:'5px', marginLeft:'5px'}} href="https://twitter.com/search?q=3boyutludestek" target="_blank"><img src="public/twitter.svg"/></a>
+                <a style={{marginRight:'5px', marginLeft:'5px'}} href="https://www.facebook.com/3BoyutluDestek/" target="_blank"><img src="public/facebook.svg"/></a>
+                <a style={{marginRight:'5px', marginLeft:'5px'}} href="https://www.linkedin.com/company/3boyutludestek/" target="_blank"><img src="public/linkedin.svg"/></a>
+                <a style={{marginRight:'5px', marginLeft:'5px'}} href="http://instagram.com/3BoyutluDestek/" target="_blank"><img src="public/instagram.png"/></a>
+                <a style={{marginRight:'5px', marginLeft:'5px'}} href="https://www.youtube.com/channel/UC_s_80cd1PsvgmT-p9pNdJw" target="_blank"><img src="public/youtube.png"/></a>
                 </div>
-              </div>
+               </div>
             </div>
           </div>
         </section>
@@ -293,35 +301,31 @@ class HomePage extends React.Component {
           <h3 className="BizdenHaberler-title">Bizden Haberler</h3>
           <div className="row">
               <div className="col-md-4 BizdenHaberler-haber">
-                  <img className="BizdenHaberler-haber-img" src="public/factory.png" />
-                  <h1 className="BizdenHaberler-haber-baslik">Haber Başlığı 1</h1>
-                  <span className="BizdenHaberler-haber-text">Ülke genelindeki sağlık çalışanlarımızın oluşturduğu siperlik talepleri 
-                    il temsilcilerine ulaşmaktadır, ürettiğiniz siperlikleri il temsilcinize 
-                    ulaştırabilir veya temsilci ile koordineli çalışarak direkt sağlık
-                     çalışanlarına iletebilirsiniz.</span>
-                     <a className="BizdenHaberler-haber-devami" href="" target="_blank">
+                  <img className="BizdenHaberler-haber-img" src="https://im.haberturk.com/2020/04/08/ver1586353099/2639680_3cfd9e44f2eaedd80325491197e1cbe8.png" />
+                  <h1 className="BizdenHaberler-haber-baslik">3 Boyutlu Destek</h1>
+                  <span className="BizdenHaberler-haber-text">Sağlık Çalışanlarımız İçin Yüz Kalkanı Üretiminde Bize Destek Olabilirsiniz</span>
+                     <a className="BizdenHaberler-haber-devami" href="https://medium.com/@3boyutludestek/sa%C4%9Fl%C4%B1k-%C3%A7al%C4%B1%C5%9Fanlar%C4%B1m%C4%B1z-i%CC%87%C3%A7in-y%C3%BCz-kalkan%C4%B1-%C3%BCretimi-yapabilirsiniz-e0296a678cdd" target="_blank">
                          Devamını Oku
                      </a>
               </div>
               <div className="col-md-4 BizdenHaberler-haber">
-                  <img className="BizdenHaberler-haber-img" src="public/counter-ust-1.png" />
-                  <h1 className="BizdenHaberler-haber-baslik">Haber Başlığı 2</h1>
-                  <span className="BizdenHaberler-haber-text">Ülke genelindeki sağlık çalışanlarımızın oluşturduğu siperlik talepleri 
-                    il temsilcilerine ulaşmaktadır, ürettiğiniz siperlikleri il temsilcinize 
-                    ulaştırabilir veya temsilci ile koordineli çalışarak direkt sağlık
-                     çalışanlarına iletebilirsiniz.</span>
-                     <a className="BizdenHaberler-haber-devami" href="" target="_blank">
+                  <img className="BizdenHaberler-haber-img" src="https://im.haberturk.com/2020/04/08/ver1586353099/2639680_810x458.jpg" />
+                  <h1 className="BizdenHaberler-haber-baslik">Koronavirüs ile mücadeleye 3 boyutlu yazıcılarla destek oluyorlar - HaberTürk</h1>
+                  <span className="BizdenHaberler-haber-text">Koronavirüs ile mücadele kapsamında bir grup mühendis sağlık çalışanlarının 
+                  yüz siperliği ihtiyacına destek olmak için başlatılan “3 Boyutlu Destek Kolektif Üretim Hareketi, 3 haftada 40 binden
+                   fazla siperlik üretip, sağlık kuruluşlarına teslim etti. Kolektif, "3 boyutlu yazıcı sahiplerini, hammadde ve diğer 
+                   konularda bu üretime destek vermek isteyen kurum ve şirketleri aramıza katılmaya davet ediyoruz" çağrısı yaptı.</span>
+                     <a className="BizdenHaberler-haber-devami" href="https://www.haberturk.com/koronavirus-ile-3-boyutlu-mucadele-haberler-2639680-teknoloji" target="_blank">
                         Devamını Oku
                      </a>
               </div>
               <div className="col-md-4 BizdenHaberler-haber">
-                  <img className="BizdenHaberler-haber-img" src="public/counter-ust-3.png" />
-                  <h1 className="BizdenHaberler-haber-baslik">Haber Başlığı 3</h1>
-                  <span className="BizdenHaberler-haber-text">Ülke genelindeki sağlık çalışanlarımızın oluşturduğu siperlik talepleri 
-                    il temsilcilerine ulaşmaktadır, ürettiğiniz siperlikleri il temsilcinize 
-                    ulaştırabilir veya temsilci ile koordineli çalışarak direkt sağlık
-                     çalışanlarına iletebilirsiniz.</span>
-                 <a className="BizdenHaberler-haber-devami" href="" target="_blank">
+                  <img className="BizdenHaberler-haber-img" src="https://i4.hurimg.com/i/hurriyet/75/750x422/5e82064bd3806c0ebc1f0429.jpg" />
+                  <h1 className="BizdenHaberler-haber-baslik">3D yazıcı ile siperli maske nasıl üretiliyor? - Hürriyet</h1>
+                  <span className="BizdenHaberler-haber-text">Sosyal medyada bir araya gelerek, "3 Boyut Destek" adıyla kolektif 
+                  üretim hareketi başlatan 3 boyutlu yazıcı sahibi firmalar, mühendisler, tasarımcılar ve yazılımcılar, sağlık 
+                  çalışanları için ücretsiz koruyucu siperli yüz siperi üretiyorlar. Peki 3D yazıcı ile siperli maske nasıl üretiliyor?</span>
+                 <a className="BizdenHaberler-haber-devami" href="https://www.hurriyet.com.tr/gundem/3d-yazici-ile-siperli-maske-nasil-uretiliyor-41482068" target="_blank">
                      Devamını Oku
                  </a>
               </div>
