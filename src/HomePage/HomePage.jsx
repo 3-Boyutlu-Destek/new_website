@@ -1,6 +1,9 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import ReactPlayer from "react-player"
+import { findDOMNode } from 'react-dom'
+//import screenfull from 'screenfull'
+
 const divHome = {
  // backgroundImage: `url(public/group.svg)`,
   width: '100%',
@@ -21,6 +24,9 @@ class HomePage extends React.Component {
     super(props);
 
     this.state = {};
+  }
+  onClickFullscreen(){
+   // screenfull.request(findDOMNode(this.refs.player))
   }
 
   render() {
@@ -153,6 +159,8 @@ class HomePage extends React.Component {
             </div>
           </div>
         </section>
+       
+        
         <section className="Sistem">
           <h3 className="Sistem-title">Sistem Nasıl Çalışır ?</h3>
           <div className="Sistem-content">
@@ -270,11 +278,9 @@ class HomePage extends React.Component {
           <div className="row"  >
             <div className="Video-cards-card hover">
               <div className="Video-cards-card-content">
-                  <ReactPlayer
-                    url="https://www.youtube.com/watch?v=2p6HnvkVQ5A"
-                      
-                />
-                <br></br>
+                  <ReactPlayer 
+                        url='https://www.youtube.com/watch?v=2p6HnvkVQ5A'
+                    />
                 <p className="Video-cards-card-content-text" >
                   Kolektifimiz, birbirini tanımayan binlerce 
                   insanın gönüllü olarak yönetim,organizasyon, üretim, 
@@ -324,6 +330,7 @@ class HomePage extends React.Component {
               </div>
           </div>
         </section>
+     
       </div>
     );
   }
