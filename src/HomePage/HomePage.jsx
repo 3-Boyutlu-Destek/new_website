@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import ReactPlayer from "react-player"
 const divHome = {
  // backgroundImage: `url(public/group.svg)`,
   width: '100%',
@@ -262,6 +263,26 @@ class HomePage extends React.Component {
                   iletebilirsiniz.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+        <section className="Video">
+          <div className="row"  >
+            <div className="Video-cards-card hover">
+              <div className="Video-cards-card-content">
+                  <ReactPlayer
+                    url="https://www.youtube.com/watch?v=2p6HnvkVQ5A"
+                      
+                />
+                <br></br>
+                <p className="Video-cards-card-content-text" >
+                  Kolektifimiz, birbirini tanımayan binlerce 
+                  insanın gönüllü olarak yönetim,organizasyon, üretim, 
+                  dağıtım, tanıtım ve kaynak oluşturma alanlarında yaptığı katkılarla ilerlemeye devam ediyor!
+
+                </p>
+            
+            </div>
             </div>
           </div>
         </section>
