@@ -25,9 +25,6 @@ class HomePage extends React.Component {
 
     this.state = {};
   }
-  onClickFullscreen(){
-   // screenfull.request(findDOMNode(this.refs.player))
-  }
 
   render() {
     return (
