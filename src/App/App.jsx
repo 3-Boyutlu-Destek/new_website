@@ -16,6 +16,7 @@ class App extends React.Component {
         <div>
           <Header />
           <PrivateRoute exact path="/" component={HomePage} />
+
         </div>
       </Router>
     );
