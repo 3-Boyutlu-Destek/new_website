@@ -1,19 +1,19 @@
 import React from 'react';
 
-function Habercard() {
+function Habercard(props) {
   return (
     <div className="Habercard">
       <div className="Habercard-top">
-        <img src="" alt="" className="Habercard-top-img" />
+        <img src={props.img} alt="" className="Habercard-top-img" />
       </div>
       <div className="Habercard-bottom">
-        <h3 className="Habercard-bottom-title">Haber Başlığı</h3>
-        <p className="Habercard-bottom-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis
-          mollis commodo. Ut fermentum orci purus, sit amet ultrices nisl
-          imperdiet sed.
-        </p>
-        <button className="Habercard-bottom-button">Devamını Oku</button>
+        <h3 className="Habercard-bottom-title">{props.title}</h3>
+        <p className="Habercard-bottom-text">{props.text}</p>
+        <button className="Habercard-bottom-button">
+          <a target="_blank" href={`${props.link}`}>
+            Devamını Oku
+          </a>
+        </button>
       </div>
     </div>
   );

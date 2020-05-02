@@ -15,6 +15,62 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.Title {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq {
+    font-size: 28px;
+  }
+  &:before {
+    content: '';
+    background-color: red;
+    width: 8px;
+    height: 8px;
+    border-radius: 18px;
+    position: absolute;
+    right: -10px;
+    top: -2px;
+    @include mq {
+      width: 0.85rem;
+      height: 0.85rem;
+    }
+  }
+  &.yellow {
+    &:before {
+      background-color: #ffc90a;
+    }
+  }
+  &.blank {
+    @include mq {
+      margin-left: initial;
+      margin-right: initial;
+    }
+    &:before {
+      background-color: transparent;
+    }
+  }
+  &.red {
+    &:before {
+      background-color: #ff003b;
+    }
+  }
+  &.blue {
+    &:before {
+      background-color: #6600ff;
+    }
+  }
+}
+
 .Header {
   &-nav {
     display: flex;
@@ -98,6 +154,8 @@ body {
 }
 
 .Cover {
+  display: flex;
+  justify-content: center;
   &-content {
     display: flex;
     justify-content: center;
@@ -120,7 +178,7 @@ body {
       padding-left: 20px;
       padding-right: 20px;
       @include mq {
-        width: 400px;
+        font-size: 36px;
         text-align: left;
         padding-left: 0px;
         padding-right: 0px;
@@ -136,6 +194,7 @@ body {
       padding-right: 20px;
       @include mq {
         width: 624px;
+        font-size: 24px;
         text-align: left;
         padding-left: 0px;
         padding-right: 0px;
@@ -148,15 +207,16 @@ body {
       border-radius: 50px;
       margin-top: 40px;
       font-size: 14px;
+      @include mq {
+        font-size: 18px;
+      }
     }
   }
   &-img {
     position: relative;
     top: -2px;
-    left: -310px;
     height: 500px;
     @include mq {
-      left: initial;
       width: 100vw;
       height: initial;
     }
@@ -176,13 +236,6 @@ body {
     margin-top: 150px;
   }
   &-left {
-    &-title {
-      line-height: 1.4;
-      font-size: 20px;
-      @include mq {
-        font-size: 2rem;
-      }
-    }
     &-text {
       font-size: 16px;
       color: #4d4d4d;
@@ -258,27 +311,6 @@ body {
   align-items: center;
   padding-top: 40px;
 
-  &-title {
-    position: relative;
-    font-size: 20px;
-    @include mq {
-      font-size: 1.4rem;
-    }
-    &:before {
-      content: '';
-      background-color: red;
-      width: 8px;
-      height: 8px;
-      border-radius: 18px;
-      position: absolute;
-      right: -15px;
-      @include mq {
-        width: 0.85rem;
-        height: 0.85rem;
-        right: -18px;
-      }
-    }
-  }
   &-cards {
     display: flex;
     flex-direction: column;
@@ -405,14 +437,7 @@ body {
     margin-left: initial;
     padding-top: 8.12rem;
   }
-  &-title {
-    font-size: 20px;
-    text-align: center;
-    position: relative;
-    @include mq {
-      font-size: 1.75rem;
-    }
-  }
+
   &-content {
     position: relative;
     display: flex;
@@ -568,14 +593,6 @@ body {
 }
 
 .Counter {
-  &-title {
-    font-size: 20px;
-    text-align: center;
-    line-height: 1.5;
-    @include mq {
-      font-size: 2rem;
-    }
-  }
   &-row {
     display: flex;
     justify-content: center;
@@ -629,10 +646,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  &-title {
-    font-size: 20px;
-    padding-top: 40px;
-  }
+  padding-top: 40px;
   &-content {
     display: flex;
     margin-top: 40px;
@@ -661,13 +675,16 @@ body {
       &-top {
         width: 100%;
         border-radius: 20px;
-        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-        background-color: #aab0bb;
         height: 150px;
         @include mq {
           height: 300px;
         }
         &-img {
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+          height: 150px;
+          @include mq {
+            width: 300px;
+          }
         }
       }
       &-bottom {
@@ -692,6 +709,9 @@ body {
           border-radius: 50px;
           margin-top: 20px;
           font-size: 16px;
+          a {
+            color: #fff;
+          }
         }
       }
     }
@@ -815,9 +835,13 @@ body {
   }
   &-bottom {
     text-align: center;
-    border-top: 3px solid #d8dbdd;
-    margin-top: 40px;
+    border-top: 1px solid #d8dbdd;
+    margin-top: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+    p {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 }
