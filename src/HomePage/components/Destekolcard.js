@@ -11,11 +11,9 @@ function Destekolcard(props) {
         <p className={`Destekol-cards-card-content-text ${props.addClass}`}>
           {props.text}
         </p>
-        <button
-          className={`Destekol-cards-card-content-button ${props.addClass}`}
-        >
-          Destek Ol
-        </button>
+        <a className={`Destekol-cards-card-content-button ${props.addClass}`} href={props.link} target="_blank">
+           Destek Ol
+        </a>
       </div>
     </div>
   );
