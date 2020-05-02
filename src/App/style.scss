@@ -40,10 +40,6 @@ body {
     position: absolute;
     right: -10px;
     top: -2px;
-    @include mq {
-      width: 0.85rem;
-      height: 0.85rem;
-    }
   }
   &.yellow {
     &:before {
@@ -72,12 +68,18 @@ body {
 }
 
 .Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background-color: #fff;
   &-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-    padding: 20px 40px;
+    padding: 15px 40px;
     &-link {
       &-img {
         width: 90px;
@@ -85,7 +87,7 @@ body {
       }
     }
     @include mq {
-      padding: 40px 80px;
+      padding: 20px 80px;
     }
   }
   &-buttons {
@@ -162,6 +164,11 @@ body {
 .Cover {
   display: flex;
   justify-content: center;
+  position: relative;
+  top: 125px;
+  @include mq {
+    top: 135px;
+  }
   &-content {
     display: flex;
     justify-content: center;
@@ -169,7 +176,8 @@ body {
     position: absolute;
     z-index: 1;
     align-items: center;
-    padding-top: 60px;
+    padding-top: 20px;
+    margin-left: 40px;
     @include mq {
       display: block;
       align-items: initial;
@@ -178,12 +186,12 @@ body {
       padding-top: 0px;
     }
     &-title {
-      font-size: 24px;
+      font-size: 18px;
       line-height: 1.5;
       text-align: center;
-      padding-left: 20px;
-      padding-right: 20px;
+      width: 228px;
       @include mq {
+        width: 100%;
         font-size: 36px;
         text-align: left;
         padding-left: 0px;
@@ -191,16 +199,16 @@ body {
       }
     }
     &-text {
-      font-size: 18px;
-      line-height: 1.5;
-      margin-top: 40px;
-      width: 350px;
+      font-size: 10px;
+      line-height: 1.6;
+      margin-top: 7px;
       text-align: center;
-      padding-left: 20px;
-      padding-right: 20px;
+      width: 217px;
+      color: #001c2b;
       @include mq {
         width: 624px;
         font-size: 24px;
+        margin-top: 40px;
         text-align: left;
         padding-left: 0px;
         padding-right: 0px;
@@ -209,22 +217,25 @@ body {
     &-button {
       background-color: #ff003b;
       color: white;
-      padding: 15px 25px;
+      padding: 7px 9px;
       border-radius: 50px;
-      margin-top: 40px;
-      font-size: 14px;
+      margin-top: 5px;
+      font-size: 9px;
       @include mq {
         font-size: 18px;
+        margin-top: 40px;
+        font-size: 14px;
+        padding: 15px 25px;
       }
     }
   }
   &-img {
     position: relative;
     top: -8px;
-    height: 500px;
+    // height: 500px;
+    width: 100vw;
     @include mq {
       top: -10px;
-      width: 100vw;
       height: 100%;
     }
   }
@@ -239,7 +250,7 @@ body {
   @include mq {
     flex-direction: row;
     text-align: initial;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 150px;
   }
   &-left {
@@ -263,7 +274,7 @@ body {
       display: none;
       @include mq {
         display: block;
-        width: 500px;
+        width: 350px;
       }
     }
   }
@@ -317,7 +328,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 40px;
-
+  margin-top: 40px;
   &-cards {
     display: flex;
     flex-direction: column;
@@ -599,6 +610,10 @@ body {
 }
 
 .Counter {
+  margin-top: 120px;
+  @include mq {
+    margin-top: 40px;
+  }
   &-row {
     display: flex;
     justify-content: center;

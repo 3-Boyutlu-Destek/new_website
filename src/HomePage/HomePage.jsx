@@ -19,7 +19,9 @@ class HomePage extends React.Component {
         <section className="Cover">
           <div className="Cover-content">
             <h1 className="Cover-content-title">
-              Covid-19 ile mücadeleye tam destek
+              Covid-19 ile
+              <br />
+              Mücadeleye Tam Destek
             </h1>
             <p className="Cover-content-text">
               3 Boyutlu yazıcıda oluşturulmuş parçalar, ihtiyaç anında orjinal
@@ -28,6 +30,10 @@ class HomePage extends React.Component {
             <button className="Cover-content-button">Üretime Başla</button>
           </div>
           <img className="Cover-img" src="public/group.svg" />
+          {/* <div
+            className="Cover-img"
+            style={{ backgroundImage: 'url(public/group.svg)' }}
+          ></div> */}
         </section>
         <section className="Counter">
           <div className="container">
