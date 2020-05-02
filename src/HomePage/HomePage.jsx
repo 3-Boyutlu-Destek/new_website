@@ -98,6 +98,7 @@ class HomePage extends React.Component {
                   boyutlu yazıcıları belirlemek ve kitlesel üretim ile ihtiyacı
                   en kısa sürede çözüme kavuşturmaya katkı sağlamak istersen 3
                   Boyutlu Destek Ağı'na kaydolabilirsin."
+                link="https://docs.google.com/forms/d/e/1FAIpQLSfKdrVs6fNSwsHGEkXcYFv9i03eRQKwwGm-g9y0c6N4LTPmvQ/viewform"
               />
               <Destekolcard
                 addClass="hover"
@@ -105,15 +106,74 @@ class HomePage extends React.Component {
                 title="Hammadde Desteği"
                 text="Lastik, PETG şeffaf koruyucu plaka ve filament desteği
                   sağlamak istersen, tedarik ağına dahil olabilirsin."
+                link="https://docs.google.com/forms/d/e/1FAIpQLScR4-5CE7VXJwTO84wvjLHxn11vtnZrip3bMr-ncHKKo2GBOw/viewform"
               />
-              <Destekolcard
-                image="public/destek-sosyal-medya.png"
-                title="Sosyal Medya Desteği"
-                text="Destek olmak için her zaman üretmek gerekmez! Sosyal medya
+               <div className={`Destekol-cards-card`}>
+      <img src="public/destek-sosyal-medya.png" alt="" className="Destekol-cards-card-img" />
+      <div className="Destekol-cards-card-content">
+        <div className={`Destekol-cards-card-content-title`}>
+            Sosyal Medya Desteği
+        </div>
+        <p className={`Destekol-cards-card-content-text`}>
+                  Destek olmak için her zaman üretmek gerekmez! Sosyal medya
                   uygulamaları üzerinden paylaşım yapabilir bize katkı
                   sağlayabilirsin. Hızlı paylaşım için sosyal medya araçlarını
-                  kullanabilirsin."
-              />
+                  kullanabilirsin.
+        </p>
+        <div className="Footer-top-right-social">
+              <a
+                href="https://twitter.com/search?q=3boyutludestek"
+                target="_blank"
+                className="Footer-top-right-social-link"
+              >
+                <img
+                  src="public/twitter.svg"
+                  className="Footer-top-right-social-link-img"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/3BoyutluDestek/"
+                target="_blank"
+                className="Footer-top-right-social-link"
+              >
+                <img
+                  src="public/facebook.svg"
+                  className="Footer-top-right-social-link-img"
+                />
+              </a>
+              <a
+                href="http://instagram.com/3BoyutluDestek/"
+                target="_blank"
+                className="Footer-top-right-social-link"
+              >
+                <img
+                  src="public/instagram.svg"
+                  className="Footer-top-right-social-link-img"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UC_s_80cd1PsvgmT-p9pNdJw"
+                target="_blank"
+                className="Footer-top-right-social-link"
+              >
+                <img
+                  src="public/youtube.svg"
+                  className="Footer-top-right-social-link-img"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/3boyutludestek/"
+                target="_blank"
+                className="Footer-top-right-social-link"
+              >
+                <img
+                  src="public/linkedin.svg"
+                  className="Footer-top-right-social-link-img"
+                />
+              </a>
+            </div>
+      </div>
+    </div>
             </div>
           </div>
         </section>
@@ -210,6 +270,7 @@ class HomePage extends React.Component {
               />
               <Habercard
                 img="public/logo.svg"
+                link="https://medium.com/@3boyutludestek/sa%C4%9Fl%C4%B1k-%C3%A7al%C4%B1%C5%9Fanlar%C4%B1m%C4%B1z-i%CC%87%C3%A7in-y%C3%BCz-kalkan%C4%B1-%C3%BCretimi-yapabilirsiniz-e0296a678cdd"
                 title="3 Boyutlu Destek"
                 text="Sağlık Çalışanlarımız İçin Yüz Kalkanı Üretiminde Bize Destek Olabilirsiniz"
               />
