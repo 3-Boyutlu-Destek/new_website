@@ -8,6 +8,7 @@
 
 html {
   font-size: 1.11vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -106,7 +107,8 @@ body {
     align-items: center;
     padding-top: 40px;
     @include mq {
-      flex-direction: row;
+      display: block;
+      align-items: initial;
       right: 150px;
       top: 120px;
       padding-top: 0px;
@@ -151,11 +153,12 @@ body {
   &-img {
     position: relative;
     top: -2px;
-    // width: 100vw;
-    height: 500px;
     left: -310px;
+    height: 500px;
     @include mq {
       left: initial;
+      width: 100vw;
+      height: initial;
     }
   }
 }
