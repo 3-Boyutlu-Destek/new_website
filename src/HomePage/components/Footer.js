@@ -8,7 +8,7 @@ function Footer() {
           <div className="Footer-top-left">
             <a href="/" className="Footer-top-left-link">
               <img
-                src="public/logo.png"
+                src="public/logo.svg"
                 className="Footer-top-left-link-img"
                 alt="Ana Sayfa"
               ></img>
@@ -94,16 +94,6 @@ function Footer() {
                 />
               </a>
               <a
-                href="https://www.linkedin.com/company/3boyutludestek/"
-                target="_blank"
-                className="Footer-top-right-social-link"
-              >
-                <img
-                  src="public/linkedin.svg"
-                  className="Footer-top-right-social-link-img"
-                />
-              </a>
-              <a
                 href="http://instagram.com/3BoyutluDestek/"
                 target="_blank"
                 className="Footer-top-right-social-link"
@@ -119,7 +109,17 @@ function Footer() {
                 className="Footer-top-right-social-link"
               >
                 <img
-                  src="public/youtube.png"
+                  src="public/youtube.svg"
+                  className="Footer-top-right-social-link-img"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/3boyutludestek/"
+                target="_blank"
+                className="Footer-top-right-social-link"
+              >
+                <img
+                  src="public/linkedin.svg"
                   className="Footer-top-right-social-link-img"
                 />
               </a>

@@ -4,7 +4,10 @@ function Habercard(props) {
   return (
     <div className="Habercard">
       <div className="Habercard-top">
-        <img src={props.img} alt="" className="Habercard-top-img" />
+        <div
+          style={{ backgroundImage: `url(${props.img})` }}
+          className="Habercard-top-img"
+        ></div>
       </div>
       <div className="Habercard-bottom">
         <h3 className="Habercard-bottom-title">{props.title}</h3>
