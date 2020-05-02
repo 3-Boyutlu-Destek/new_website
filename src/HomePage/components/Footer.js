@@ -128,7 +128,7 @@ function Footer() {
         </div>
       </div>
       <div className="Footer-bottom">
-        <p>Copyright 3D Destek Platformu Tüm Hakkı Saklıdır. | 2020</p>
+        <p>Copyright 3 Boyutlu Destek | Kollektif Üretim Hareketi Platformu Tüm Hakkı Saklıdır. | 2020</p>
       </div>
     </footer>
   );
