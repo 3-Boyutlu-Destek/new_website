@@ -12,7 +12,7 @@ function Header() {
         <a href="/" className="Header-nav-link">
           <img
             className="Header-nav-link-img"
-            src="public/logo.png"
+            src="public/logo.svg"
             alt="Ana Sayfa"
           ></img>
         </a>
