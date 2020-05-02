@@ -232,9 +232,10 @@ body {
   &-img {
     position: relative;
     top: -8px;
-    width: 100vw;
+    width: 130%;
     height: 100%;
     @include mq {
+      width: 100%;
       top: -10px;
     }
   }
