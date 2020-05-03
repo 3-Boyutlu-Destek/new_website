@@ -24,43 +24,63 @@ class HomePage extends React.Component {
               Mücadeleye Tam Destek
             </h1>
             <p className="Cover-content-text">
-              3 Boyutlu yazıcıda oluşturulmuş parçalar, ihtiyaç anında orjinal parçaların yerini daha kısa sürede alır
+              3 Boyutlu yazıcıda oluşturulmuş parçalar, ihtiyaç anında orjinal
+              parçaların yerini daha kısa sürede alır
             </p>
             <button className="Cover-content-button">Üretime Başla</button>
           </div>
           <img className="Cover-img" src="group.svg" />
-          {/* <div
-            className="Cover-img"
-            style={{ backgroundImage: 'url(group.svg)' }}
-          ></div> */}
         </section>
         <section className="Counter">
           <div className="container">
-            <Title addClass="yellow" text="Corona Virüse Karşı 3 Milyondan Fazla Destek Ağının Bir Parçası Ol!" />
+            <Title
+              addClass="yellow"
+              text="Corona Virüse Karşı 3 Milyondan Fazla Destek Ağının Bir Parçası Ol!"
+            />
             <div className="Counter-row">
-              <Counteritem image="counter-1.png" count="80.000 +" text="Siperlik" />
-              <Counteritem image="counter-2.png" count="3.000 +" text="Kişi / Kurum" />
-              <Counteritem image="counter-3.png" count="4.522 +" text="3Boyutlu Yazıcı" />
+              <Counteritem
+                image="counter-1.png"
+                count="80.000 +"
+                text="Siperlik"
+              />
+              <Counteritem
+                image="counter-2.png"
+                count="3.000 +"
+                text="Kişi / Kurum"
+              />
+              <Counteritem
+                image="counter-3.png"
+                count="4.522 +"
+                text="3Boyutlu Yazıcı"
+              />
             </div>
           </div>
         </section>
         <section className="YenilikciDestek">
           <div className="YenilikciDestek-left">
             <div className="container">
-              <Title addClass="blank" text="Covid 19 Mücadelesine Yenilikçi Destek" />
+              <Title
+                addClass="blank"
+                text="Covid 19 Mücadelesine Yenilikçi Destek"
+              />
               <p className="YenilikciDestek-left-text">
-                Covid-19 ile mücadelede sahip olduğumuz 3 boyutlu yazıcı potansiyeli ile medikal parçalara, araç ve
-                gereçlere ihtiyaç duyan hastaneleri desteklemek ve kişisel korunma ihtiyacına 3 boyutlu yazıcı
-                teknolojileri ile cevap vermek istiyoruz.{' '}
+                Covid-19 ile mücadelede sahip olduğumuz 3 boyutlu yazıcı
+                potansiyeli ile medikal parçalara, araç ve gereçlere ihtiyaç
+                duyan hastaneleri desteklemek ve kişisel korunma ihtiyacına 3
+                boyutlu yazıcı teknolojileri ile cevap vermek istiyoruz.{' '}
                 <span>
-                  3 boyutlu yazıcıda üretilmiş parçalar, ihtiyaç anında orijinal parçaların yerini daha kısa sürede
-                  alabilir!
+                  3 boyutlu yazıcıda üretilmiş parçalar, ihtiyaç anında orijinal
+                  parçaların yerini daha kısa sürede alabilir!
                 </span>
               </p>
             </div>
           </div>
           <div className="YenilikciDestek-right">
-            <img src="factory.png" alt="" className="YenilikciDestek-right-img" />
+            <img
+              src="factory.png"
+              alt=""
+              className="YenilikciDestek-right-img"
+            />
           </div>
         </section>
         <section className="Destekol">
@@ -85,12 +105,20 @@ class HomePage extends React.Component {
                 link="https://docs.google.com/forms/d/e/1FAIpQLScR4-5CE7VXJwTO84wvjLHxn11vtnZrip3bMr-ncHKKo2GBOw/viewform"
               />
               <div className={`Destekol-cards-card`}>
-                <img src="destek-sosyal-medya.png" alt="" className="Destekol-cards-card-img" />
+                <img
+                  src="destek-sosyal-medya.png"
+                  alt=""
+                  className="Destekol-cards-card-img"
+                />
                 <div className="Destekol-cards-card-content">
-                  <div className={`Destekol-cards-card-content-title`}>Sosyal Medya Desteği</div>
+                  <div className={`Destekol-cards-card-content-title`}>
+                    Sosyal Medya Desteği
+                  </div>
                   <p className={`Destekol-cards-card-content-text`}>
-                    Destek olmak için her zaman üretmek gerekmez! Sosyal medya uygulamaları üzerinden paylaşım yapabilir
-                    bize katkı sağlayabilirsin. Hızlı paylaşım için sosyal medya araçlarını kullanabilirsin.
+                    Destek olmak için her zaman üretmek gerekmez! Sosyal medya
+                    uygulamaları üzerinden paylaşım yapabilir bize katkı
+                    sağlayabilirsin. Hızlı paylaşım için sosyal medya araçlarını
+                    kullanabilirsin.
                   </p>
                   <div className="Footer-top-right-social">
                     <a
@@ -98,35 +126,50 @@ class HomePage extends React.Component {
                       target="_blank"
                       className="Footer-top-right-social-link"
                     >
-                      <img src="twitter.svg" className="Footer-top-right-social-link-img" />
+                      <img
+                        src="twitter.svg"
+                        className="Footer-top-right-social-link-img"
+                      />
                     </a>
                     <a
                       href="https://www.facebook.com/3BoyutluDestek/"
                       target="_blank"
                       className="Footer-top-right-social-link"
                     >
-                      <img src="facebook.svg" className="Footer-top-right-social-link-img" />
+                      <img
+                        src="facebook.svg"
+                        className="Footer-top-right-social-link-img"
+                      />
                     </a>
                     <a
                       href="http://instagram.com/3BoyutluDestek/"
                       target="_blank"
                       className="Footer-top-right-social-link"
                     >
-                      <img src="instagram.svg" className="Footer-top-right-social-link-img" />
+                      <img
+                        src="instagram.svg"
+                        className="Footer-top-right-social-link-img"
+                      />
                     </a>
                     <a
                       href="https://www.youtube.com/channel/UC_s_80cd1PsvgmT-p9pNdJw"
                       target="_blank"
                       className="Footer-top-right-social-link"
                     >
-                      <img src="youtube.svg" className="Footer-top-right-social-link-img" />
+                      <img
+                        src="youtube.svg"
+                        className="Footer-top-right-social-link-img"
+                      />
                     </a>
                     <a
                       href="https://www.linkedin.com/company/3boyutludestek/"
                       target="_blank"
                       className="Footer-top-right-social-link"
                     >
-                      <img src="linkedin.svg" className="Footer-top-right-social-link-img" />
+                      <img
+                        src="linkedin.svg"
+                        className="Footer-top-right-social-link-img"
+                      />
                     </a>
                   </div>
                 </div>
@@ -167,7 +210,11 @@ class HomePage extends React.Component {
                   sağlıyor. Teşekkürler"
               />
               <div className="Sistem-content-background">
-                <img src="sistem-bg.png" alt="" className="Sistem-content-background-img" />
+                <img
+                  src="sistem-bg.png"
+                  alt=""
+                  className="Sistem-content-background-img"
+                />
               </div>
               <Sistemsection
                 addClass="fourth"
@@ -196,8 +243,10 @@ class HomePage extends React.Component {
             <div className="Video-content">
               <ReactPlayer url="https://www.youtube.com/watch?v=2p6HnvkVQ5A" />
               <p className="Video-content-text">
-                Kolektifimiz, birbirini tanımayan binlerce insanın gönüllü olarak yönetim,organizasyon, üretim, dağıtım,
-                tanıtım ve kaynak oluşturma alanlarında yaptığı katkılarla ilerlemeye devam ediyor!
+                Kolektifimiz, birbirini tanımayan binlerce insanın gönüllü
+                olarak yönetim,organizasyon, üretim, dağıtım, tanıtım ve kaynak
+                oluşturma alanlarında yaptığı katkılarla ilerlemeye devam
+                ediyor!
               </p>
             </div>
           </div>
@@ -211,13 +260,13 @@ class HomePage extends React.Component {
                 img="haber-1.jpg"
                 link="https://www.haberturk.com/koronavirus-ile-3-boyutlu-mucadele-haberler-2639680-teknoloji"
                 title="Koronavirüs ile mücadeleye 3 boyutlu yazıcılarla destek oluyorlar - HaberTürk"
-                text='Koronavirüs ile mücadele kapsamında bir grup mühendis sağlık çalışanlarının yüz siperliği ihtiyacına destek olmak için başlatılan “3 Boyutlu Destek Kolektif Üretim Hareketi, 3 haftada 40 binden fazla siperlik üretip, sağlık kuruluşlarına teslim etti. Kolektif, "3 boyutlu yazıcı sahiplerini, hammadde ve diğer konularda bu üretime destek vermek isteyen kurum ve şirketleri aramıza katılmaya davet ediyoruz" çağrısı yaptı.'
+                text="Koronavirüs ile mücadele kapsamında bir grup mühendis sağlık çalışanlarının yüz siperliği ihtiyacına destek olmak..."
               />
               <Habercard
                 img="haber-2.jpg"
                 link="https://www.hurriyet.com.tr/gundem/3d-yazici-ile-siperli-maske-nasil-uretiliyor-41482068"
                 title="3D yazıcı ile siperli maske nasıl üretiliyor? - Hürriyet"
-                text='Sosyal medyada bir araya gelerek, "3 Boyut Destek" adıyla kolektif üretim hareketi başlatan 3 boyutlu yazıcı sahibi firmalar, mühendisler, tasarımcılar ve yazılımcılar, sağlık çalışanları için ücretsiz koruyucu siperli yüz siperi üretiyorlar. Peki 3D yazıcı ile siperli maske nasıl üretiliyor?'
+                text='Sosyal medyada bir araya gelerek, "3 Boyut Destek" adıyla kolektif üretim hareketi başlatan 3 boyutlu yazıcı...'
               />
               <Habercard
                 img="logo.svg"

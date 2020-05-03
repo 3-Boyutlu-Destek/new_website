@@ -29,7 +29,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   @include mq {
-    font-size: 28px;
+    font-size: 32px;
   }
   &:before {
     content: '';
@@ -42,7 +42,14 @@ body {
     top: -2px;
   }
   &.yellow {
+    @include mq {
+      width: 560px;
+    }
     &:before {
+      right: 5px;
+      @include mq {
+        right: -10px;
+      }
       background-color: #ffc90a;
     }
   }
@@ -217,10 +224,10 @@ body {
     &-button {
       background-color: #ff003b;
       color: white;
-      padding: 7px 9px;
+      padding: 9px 12px;
       border-radius: 50px;
       margin-top: 5px;
-      font-size: 9px;
+      font-size: 12px;
       @include mq {
         font-size: 18px;
         margin-top: 40px;
@@ -251,7 +258,7 @@ body {
     flex-direction: row;
     text-align: initial;
     justify-content: space-evenly;
-    margin-top: 150px;
+    margin-top: 190px;
   }
   &-left {
     &-text {
@@ -262,10 +269,14 @@ body {
       span {
         display: block;
         margin-top: 20px;
+        @include mq {
+          margin-top: 40px;
+        }
       }
       @include mq {
-        font-size: 1rem;
-        width: 530px;
+        font-size: 20px;
+        width: 600px;
+        margin-top: 80px;
       }
     }
   }
@@ -274,7 +285,7 @@ body {
       display: none;
       @include mq {
         display: block;
-        width: 350px;
+        width: 370px;
       }
     }
   }
@@ -305,7 +316,7 @@ body {
       }
     }
     &-text {
-      margin-top: 20px;
+      margin-top: 40px;
       line-height: 1.5;
       color: #515151;
       text-align: center;
@@ -327,19 +338,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
   margin-top: 40px;
+  @include mq {
+    margin-top: 150px;
+  }
   &-cards {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
     margin-right: 20px;
-    padding-top: 40px;
+    margin-top: 40px;
     @include mq {
       flex-direction: row;
-      margin-right: 123px;
-      margin-left: 123px;
-      padding-top: 120px;
+      margin-top: 170px;
     }
     &-card {
       text-align: center;
@@ -349,7 +360,9 @@ body {
       color: #060606;
       border-radius: 16px;
       @include mq {
-        padding: 60px 20px;
+        padding-top: 100px;
+        padding-right: 20px;
+        padding-left: 20px;
         border: 2px solid rgba(255, 0, 59, 0.33);
         border-radius: 24px;
       }
@@ -357,13 +370,13 @@ body {
         background-color: #ff003b;
         position: relative;
         @include mq {
-          top: -100px;
+          top: -40px;
         }
       }
       & + & {
         margin-top: 20px;
         @include mq {
-          margin-left: 24px;
+          margin-left: 32px;
           margin-top: initial;
         }
       }
@@ -380,7 +393,7 @@ body {
         margin-top: 20px;
         color: #515151;
         @include mq {
-          // height: 19rem;
+          margin-top: 40px;
         }
         position: relative;
         &-title {
@@ -388,10 +401,8 @@ body {
           font-weight: bold;
           color: inherit;
           font-size: 16px;
-          margin-top: 20px;
           @include mq {
             font-size: 24px;
-            margin-top: 5px;
           }
           &.hover {
             color: #fff;
@@ -407,7 +418,7 @@ body {
             // width: 20rem;
             height: 200px;
             width: 350px;
-            margin-top: 5px;
+            margin-top: 40px;
             font-size: 18px;
           }
           &.hover {
@@ -427,7 +438,7 @@ body {
             color: #ff003b;
           }
           @include mq {
-            padding: 20px 30px;
+            padding: 20px 80px;
             margin-top: initial;
             font-size: 18px;
           }
@@ -466,6 +477,7 @@ body {
       margin-left: 3.74rem;
       margin-right: 2.72rem;
       padding-bottom: 9.4rem;
+      margin-top: 80px;
     }
     &-section {
       display: flex;
@@ -611,9 +623,6 @@ body {
 
 .Counter {
   margin-top: 120px;
-  @include mq {
-    margin-top: 40px;
-  }
   &-row {
     display: flex;
     justify-content: center;
@@ -621,6 +630,7 @@ body {
     margin-top: 40px;
     @include mq {
       flex-direction: row;
+      margin-top: 90px;
     }
   }
   &-item {
@@ -689,6 +699,7 @@ body {
         }
       }
       @include mq {
+        position: relative;
         width: 20%;
         text-align: left;
       }
@@ -717,6 +728,9 @@ body {
         &-title {
           color: #515151;
           font-size: 16px;
+          @include mq {
+            height: 80px;
+          }
         }
         &-text {
           color: #353535;
@@ -732,6 +746,10 @@ body {
           border-radius: 50px;
           margin-top: 20px;
           font-size: 16px;
+          @include mq {
+            position: absolute;
+            bottom: -40px;
+          }
           a {
             color: #fff;
           }
@@ -744,9 +762,12 @@ body {
 .Footer {
   display: flex;
   flex-direction: column;
-  background-color: #f0f2f4;
+  background-color: #fafafa;
   color: #515151;
   font-size: 14px;
+  @include mq {
+    margin-top: 120px;
+  }
   &-top {
     display: flex;
     justify-content: space-between;
@@ -758,8 +779,8 @@ body {
     @include mq {
       flex-direction: row;
       padding-left: 40px;
-      padding-top: 80px;
       padding-right: 80px;
+      padding-bottom: 40px;
       text-align: left;
     }
     &-left {
@@ -767,12 +788,12 @@ body {
       @include mq {
         display: flex;
         flex-direction: column;
-        width: 150px;
+        width: 200px;
         align-items: center;
 
         &-link {
           &-img {
-            width: 80px;
+            width: 90px;
           }
         }
         &-text {
@@ -867,6 +888,10 @@ body {
     p {
       padding-left: 20px;
       padding-right: 20px;
+      font-size: 12px;
+      @include mq {
+        font-size: 14px;
+      }
     }
   }
 }
