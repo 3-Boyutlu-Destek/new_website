@@ -27,7 +27,13 @@ class HomePage extends React.Component {
               3 Boyutlu yazıcıda oluşturulmuş parçalar, ihtiyaç anında orjinal
               parçaların yerini daha kısa sürede alır
             </p>
-            <button className="Cover-content-button">Üretime Başla</button>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKdrVs6fNSwsHGEkXcYFv9i03eRQKwwGm-g9y0c6N4LTPmvQ/viewform"
+               target="_blank">
+              <button className="Cover-content-button">
+                    Üretime Başla
+               </button>
+           </a>
+
           </div>
           <img className="Cover-img" src="group.svg" />
         </section>
@@ -40,7 +46,7 @@ class HomePage extends React.Component {
             <div className="Counter-row">
               <Counteritem
                 image="counter-1.png"
-                count="80.000 +"
+                count="100.000 +"
                 text="Siperlik"
               />
               <Counteritem

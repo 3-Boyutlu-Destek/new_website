@@ -16,7 +16,7 @@ function Header() {
           <img className="Header-switch-icon" src="menu.svg" />
         </div>
         <div className="Header-buttons">
-          <a href="" className="Header-buttons-link">
+        { /*<a href="" className="Header-buttons-link">
             Hakkımızda
           </a>
           <a href="" className="Header-buttons-link">
@@ -24,8 +24,10 @@ function Header() {
           </a>
           <a href="" className="Header-buttons-link">
             Ürünler
-          </a>
-          <a href="" className="Header-buttons-link primary">
+  </a> */}  
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScR4-5CE7VXJwTO84wvjLHxn11vtnZrip3bMr-ncHKKo2GBOw/viewform"
+             className="Header-buttons-link primary" 
+             target="_blank">
             Destek Ol
           </a>
           <a

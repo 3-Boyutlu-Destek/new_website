@@ -4,6 +4,7 @@ import { history } from '@/_helpers';
 import { PrivateRoute } from '@/_components';
 import { HomePage } from '@/HomePage';
 import Header from '../HomePage/components/Header';
+import Favicon from 'react-favicon';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,7 +13,9 @@ class App extends React.Component {
 
   render() {
     return (
+     
       <Router history={history}>
+         <Favicon url="logo.png" />,
         <div>
           <Header />
           <PrivateRoute exact path="/" component={HomePage} />
