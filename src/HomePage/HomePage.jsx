@@ -255,7 +255,6 @@ class HomePage extends React.Component {
           <div className="container">
             <Title addClass="red" text="Bizden Haberler" />
             <div className="BizdenHaberler-content">
-              <div style={{ backgroundImage: 'url(haber-1.jpg)' }}></div>
               <Habercard
                 img="haber-1.jpg"
                 link="https://www.haberturk.com/koronavirus-ile-3-boyutlu-mucadele-haberler-2639680-teknoloji"
