@@ -10,18 +10,10 @@ function Header() {
     <header className="Header">
       <nav className="Header-nav">
         <a href="/" className="Header-nav-link">
-          <img
-            className="Header-nav-link-img"
-            src="public/logo.svg"
-            alt="Ana Sayfa"
-          ></img>
+          <img className="Header-nav-link-img" src="logo.svg" alt="Ana Sayfa"></img>
         </a>
-        <div
-          className="Header-switch"
-          onClick={toggle}
-          style={{ cursor: 'pointer' }}
-        >
-          <img className="Header-switch-icon" src="public/menu.svg" />
+        <div className="Header-switch" onClick={toggle} style={{ cursor: 'pointer' }}>
+          <img className="Header-switch-icon" src="menu.svg" />
         </div>
         <div className="Header-buttons">
           <a href="" className="Header-buttons-link">
@@ -36,9 +28,11 @@ function Header() {
           <a href="" className="Header-buttons-link primary">
             Destek Ol
           </a>
-          <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfTWxS4MBVDiqLRA-pL6GGk6p8lp1ugmwU6f0vvLYZChIs0zA/formResponse?embedded=true" 
-             target="_blank"
-             className="Header-buttons-link primary blue">
+          <a
+            href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfTWxS4MBVDiqLRA-pL6GGk6p8lp1ugmwU6f0vvLYZChIs0zA/formResponse?embedded=true"
+            target="_blank"
+            className="Header-buttons-link primary blue"
+          >
             Talep Et
           </a>
         </div>
