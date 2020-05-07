@@ -87,14 +87,25 @@ body {
     justify-content: space-between;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     padding: 15px 40px;
+    transition: 0.2s;
     &-link {
       &-img {
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
+        @include mq {
+          width: 90px;
+          height: 90px;
+        }
       }
     }
     @include mq {
       padding: 20px 80px;
+    }
+    &.scroll {
+      padding: 0px 40px;
+      @include mq {
+        padding: 5px 80px;
+      }
     }
   }
   &-buttons {
@@ -106,22 +117,27 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    top: 120px;
+    top: 95px;
     background-color: #fff;
     z-index: 2;
     padding-bottom: 20px;
+    padding-top: 20px;
     transition: 0.3s;
     @include mq {
       flex-direction: row;
       align-items: center;
       position: initial;
       padding-bottom: 0;
+      padding-top: 0;
       opacity: 1;
       pointer-events: initial;
     }
     &.switch {
       opacity: 1;
       pointer-events: initial;
+    }
+    &.scroll {
+      top: 70px;
     }
     &-link {
       font-size: 16px;
@@ -239,12 +255,12 @@ body {
   }
   &-img {
     position: relative;
-    top: -8px;
+    top: -30px;
     width: 130%;
     height: 100%;
     @include mq {
       width: 100%;
-      top: -10px;
+      top: -20px;
     }
   }
 }
