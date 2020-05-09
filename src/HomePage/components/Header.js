@@ -10,14 +10,17 @@ window.onscroll = function () {
 };
 
 function scrollFunc() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+  if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
     document.getElementById('logo').src = 'logo-text.svg';
+  } else {
+    document.getElementById('logo').src = 'logo.svg';
+  }
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementsByClassName('Header-nav')[0].classList.add('scroll');
     document
       .getElementsByClassName('Header-buttons')[0]
       .classList.add('scroll');
   } else {
-    document.getElementById('logo').src = 'logo.svg';
     document.getElementsByClassName('Header-nav')[0].classList.remove('scroll');
     document
       .getElementsByClassName('Header-buttons')[0]

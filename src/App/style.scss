@@ -87,14 +87,14 @@ body {
     justify-content: space-between;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     padding: 15px 40px;
-    transition: 0.2s;
+    transition: 0.1s;
     &-link {
       &-img {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         @include mq {
-          width: 90px;
-          height: 90px;
+          width: 80px;
+          height: 80px;
         }
       }
     }
@@ -122,7 +122,7 @@ body {
     z-index: 2;
     padding-bottom: 20px;
     padding-top: 20px;
-    transition: 0.3s;
+    transition: 0.1s;
     @include mq {
       flex-direction: row;
       align-items: center;
@@ -199,14 +199,12 @@ body {
     position: absolute;
     z-index: 1;
     align-items: center;
-    padding-top: 20px;
     margin-left: 40px;
     @include mq {
       display: block;
       align-items: initial;
       right: 150px;
       top: 120px;
-      padding-top: 0px;
     }
     &-title {
       font-size: 18px;
@@ -255,12 +253,12 @@ body {
   }
   &-img {
     position: relative;
-    top: -30px;
+    top: -45px;
     width: 130%;
     height: 100%;
     @include mq {
       width: 100%;
-      top: -20px;
+      top: -40px;
     }
   }
 }
