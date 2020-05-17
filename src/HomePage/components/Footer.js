@@ -132,6 +132,7 @@ function Footer() {
           Copyright 3 Boyutlu Destek | Kollektif Üretim Hareketi Platformu Tüm
           Hakkı Saklıdır. | 2020
         </p>
+        <p className="Footer-bottom-mail">iletisim@3boyutludestek.org</p>
       </div>
     </footer>
   );
