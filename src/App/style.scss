@@ -189,8 +189,10 @@ body {
   justify-content: center;
   position: relative;
   top: 125px;
+  height: 380px;
   @include mq {
     top: 135px;
+    height: 990px;
   }
   &-content {
     display: flex;
