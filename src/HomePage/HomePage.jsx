@@ -6,6 +6,7 @@ import Counteritem from './components/Counteritem';
 import Habercard from './components/Habercard';
 import Footer from './components/Footer';
 import Title from './components/Title';
+import { Link } from 'react-router-dom';
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -27,12 +28,10 @@ class HomePage extends React.Component {
               3 Boyutlu yazıcıda oluşturulmuş parçalar, ihtiyaç anında orjinal
               parçaların yerini daha kısa sürede alır
             </p>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfKdrVs6fNSwsHGEkXcYFv9i03eRQKwwGm-g9y0c6N4LTPmvQ/viewform"
-              target="_blank"
+            <Link to="/baski-destek-form"
             >
-              <button className="Cover-content-button">Üretime Başla</button>
-            </a>
+              <button className="Cover-content-button">Harekete Geç</button>
+            </Link>
           </div>
           <img className="Cover-img" src="group.svg" />
         </section>

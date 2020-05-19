@@ -1,0 +1,30 @@
+.BaskiDestekForm{
+    width: 50%;
+    margin: auto;
+    &-form {
+        margin-top:130px;
+        &-row{
+            display: flex;
+            margin-bottom: 20px;
+            &-inputDiv{
+                margin: auto;
+                &-input{
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 10px;
+                    font-size: large;
+                }
+            }
+            &-3Boyutluyaziciyasahipmisiniz{
+                margin: auto;
+                border: 1px solid;
+                border-radius: 10px;
+                padding: 10px;
+                height: 100px;
+                font-size: large;
+            }
+        }
+       
+
+    }
+}
