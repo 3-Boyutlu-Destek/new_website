@@ -129,8 +129,7 @@ function Footer() {
       </div>
       <div className="Footer-bottom">
         <p>
-          Copyright 3 Boyutlu Destek | Kollektif Üretim Hareketi Platformu Tüm
-          Hakkı Saklıdır. | 2020
+          3 Boyutlu Destek | Kolektif Üretim Hareketi Platformu | 2020
         </p>
         <p className="Footer-bottom-mail">iletisim@3boyutludestek.org</p>
       </div>

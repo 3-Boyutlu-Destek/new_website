@@ -127,7 +127,7 @@ class HomePage extends React.Component {
                   </p>
                   <div className="Footer-top-right-social">
                     <a
-                      href="https://twitter.com/search?q=3boyutludestek"
+                      href="https://twitter.com/intent/tweet?text=Sa%C4%9Fl%C4%B1k%20%C3%A7al%C4%B1%C5%9Fanlar%C4%B1%20i%C3%A7in%20%C3%BCretim%20yapan%203%20Boyutlu%20Destek%20ekibi%20%403boyutludestek%20https%3A%2F%2F3boyutludestek.org"
                       target="_blank"
                       className="Footer-top-right-social-link"
                     >
@@ -137,7 +137,7 @@ class HomePage extends React.Component {
                       />
                     </a>
                     <a
-                      href="https://www.facebook.com/3BoyutluDestek/"
+                      href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3boyutludestek.org"
                       target="_blank"
                       className="Footer-top-right-social-link"
                     >
@@ -157,7 +157,7 @@ class HomePage extends React.Component {
                       />
                     </a>
                     <a
-                      href="https://www.youtube.com/channel/UC_s_80cd1PsvgmT-p9pNdJw"
+                      href="https://www.youtube.com/channel/UC_s_80cd1PsvgmT-p9pNdJw?sub_confirmation=1"
                       target="_blank"
                       className="Footer-top-right-social-link"
                     >
@@ -167,7 +167,7 @@ class HomePage extends React.Component {
                       />
                     </a>
                     <a
-                      href="https://www.linkedin.com/company/3boyutludestek/"
+                      href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3boyutludestek.org"
                       target="_blank"
                       className="Footer-top-right-social-link"
                     >
