@@ -3,6 +3,7 @@ import config from 'config';
 
 
 function Api(methodUrl, data){
+    console.log(methodUrl, data)
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

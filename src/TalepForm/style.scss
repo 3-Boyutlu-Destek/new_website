@@ -1,4 +1,4 @@
-.BaskiDestekForm{
+.TalepForm{
     width: 60%;
     margin: auto;
     &-form {
@@ -17,7 +17,40 @@
                     width: 100%;
                 }
             }
-            &-nameDiv{
+            &-contactNameDiv{
+                margin-right: auto;
+                width: 400px;
+                &-input{
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 10px;
+                    font-size: large;
+                    width: 100%;
+                }
+            }
+            &-contactEmailDiv{
+                margin-left: auto;
+                width: 400px;
+                &-input{
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 10px;
+                    font-size: large;
+                    width: 100%;
+                }
+            }
+            &-requesterNameDiv{
+                margin-right: auto;
+                width: 400px;
+                &-input{
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 10px;
+                    font-size: large;
+                    width: 100%;
+                }
+            }
+            &-sectionDiv{
                 margin-left: auto;
                 width: 400px;
                 &-input{
@@ -29,7 +62,7 @@
                 }
             }
             &-phoneNumberDiv{
-                margin-right: auto;
+                margin-left: auto;
                 width: 400px;
                 &-input{
                     border-radius: 10px;
@@ -50,7 +83,18 @@
                     width: 100%;
                 }
             }
-            &-3Boyutluyaziciyasahipmisiniz{
+            &-formGonderButton{
+                background-color: #ff003b;
+                color: white;
+                padding: 9px 12px;
+                border-radius: 50px;
+                font-size: 12px;
+                box-shadow: 0 3px 25px 0 rgba(0, 0, 0, 0.16);
+                margin: auto;
+                width: 150px;
+                line-height: normal;
+            }
+            &-talepEdilenMalzeme{
                 margin-right: auto;;
                 border: 1px solid;
                 border-radius: 10px;
@@ -65,7 +109,7 @@
                     margin-top: 10px;
                 }
             }
-            &-kacAdetYaziciyaSahipsiniz{
+            &-kacAdetMedicalParcayaIhtiyacinizVar{
                 margin-left: auto;;
                 border: 1px solid;
                 border-radius: 10px;
@@ -81,106 +125,21 @@
                     margin-top: 10px;
                 }
             }
-            &-hangiTurYaziciTeknolojisineSahipsiniz{
+            &-details{
                 margin-right: auto;;
                 border: 1px solid;
                 border-radius: 10px;
                 padding: 10px;
                 width: 400px;
                 font-size: large;
-                display: flex;
-                flex-flow: wrap;
-                &-label{
-                    margin-right: 30px;
-                    margin-top: 10px;
-                }
-                &-input{
-                    border-radius: 10px;
-                    border: 1px solid;
-                    padding: 10px;
-                    font-size: large;
-                    margin-top: 10px;
-                    margin-right: 5px;
-                }
-                &-other{
-                    border-radius: 10px;
-                    border: 1px solid;
-                    padding: 10px;
-                    font-size: large;
-                    margin-top: 20px;
-                    margin-right: 5px;
-                }
-            }
-            &-3DYaziciyiHangiSeviyedeKullanıyorsunuz
-            {
-                margin-left: auto;;
-                border: 1px solid;
-                border-radius: 10px;
-                padding: 10px;
-                width: 400px;
-                font-size: large;
-                &-label{
-                    margin-right: 30px;
-                    margin-top: 10px;
-                }
-                &-input{
-                    border-radius: 10px;
-                    border: 1px solid;
-                    padding: 10px;
-                    font-size: large;
-                    margin-top: 10px;
-                    margin-right: 5px;
-                }
-            }
-            &-hangiBeceriyeSahipsiniz
-            {
-                margin-right: auto;
-                border: 1px solid;
-                border-radius: 10px;
-                padding: 10px;
-                width: 400px;
-                font-size: large;
-                display: flex;
-                flex-flow: wrap;
-                &-label{
-                    margin-right: 30px;
-                    margin-top: 10px;
-                }
-                &-input{
-                    border-radius: 10px;
-                    border: 1px solid;
-                    font-size: large;
-                    margin-top: 10px;
-                    margin-right: 5px;
-                }
-            }
-            &-kacYillik3dBaskiTecrubenizVar
-            {
-                margin-left: auto;
-                width: 400px;
                 &-input{
                     border-radius: 10px;
                     border: 1px solid;
                     padding: 10px;
                     font-size: large;
                     width: 100%;
+                    margin-top: 10px;
                 }
-            }
-            &-aciklamaLabel{
-                margin: auto;
-                text-align: center;
-                font-size: large;
-            }
-            &-formGonderButton{
-                background-color: #ff003b;
-                color: white;
-                padding: 9px 12px;
-                border-radius: 50px;
-                font-size: 12px;
-                box-shadow: 0 3px 25px 0 rgba(0, 0, 0, 0.16);
-                margin: auto;
-                width: 150px;
-                line-height: normal;
             }
             
         }

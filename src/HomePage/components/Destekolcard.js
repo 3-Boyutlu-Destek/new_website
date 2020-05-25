@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Destekolcard(props) {
   return (
@@ -11,9 +12,9 @@ function Destekolcard(props) {
         <p className={`Destekol-cards-card-content-text ${props.addClass}`}>
           {props.text}
         </p>
-        <a className={`Destekol-cards-card-content-button ${props.addClass}`} href={props.link} target="_blank">
+        <Link className={`Destekol-cards-card-content-button ${props.addClass}`} to={props.link} target="_blank">
            Destek Ol
-        </a>
+        </Link>
       </div>
     </div>
   );

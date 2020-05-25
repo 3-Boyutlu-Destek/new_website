@@ -32,7 +32,7 @@ const threeDTypes = [
       {
         name: 'other',
         key: 'other',
-        label: 'other',
+        label: 'Diğer',
       },
   ];
   

@@ -28,7 +28,7 @@ class HomePage extends React.Component {
               3 Boyutlu yazıcıda oluşturulmuş parçalar, ihtiyaç anında orjinal
               parçaların yerini daha kısa sürede alır
             </p>
-            <Link to="/baski-destek-form"
+            <Link to="/baski-destek-form" target="_blank"
             >
               <button className="Cover-content-button">Harekete Geç</button>
             </Link>
@@ -98,7 +98,7 @@ class HomePage extends React.Component {
                   boyutlu yazıcıları belirlemek ve kitlesel üretim ile ihtiyacı
                   en kısa sürede çözüme kavuşturmaya katkı sağlamak istersen 3
                   Boyutlu Destek Ağı'na kaydolabilirsin."
-                link="https://docs.google.com/forms/d/e/1FAIpQLSfKdrVs6fNSwsHGEkXcYFv9i03eRQKwwGm-g9y0c6N4LTPmvQ/viewform"
+                link="/baski-destek-form"
               />
               <Destekolcard
                 addClass="hover"
@@ -106,7 +106,7 @@ class HomePage extends React.Component {
                 title="Hammadde Desteği"
                 text="Lastik, PETG şeffaf koruyucu plaka ve filament desteği
                   sağlamak istersen, tedarik ağına dahil olabilirsin."
-                link="https://docs.google.com/forms/d/e/1FAIpQLScR4-5CE7VXJwTO84wvjLHxn11vtnZrip3bMr-ncHKKo2GBOw/viewform"
+                link="/hammadde-destek-form"
               />
               <div className={`Destekol-cards-card`}>
                 <img
