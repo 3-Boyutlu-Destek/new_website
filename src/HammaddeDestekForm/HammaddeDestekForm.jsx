@@ -1,6 +1,9 @@
 import React from 'react';
 import './style.scss'
 import Api from '../_services/Api';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Cities from '../BaskiDestekForm/components/Cities';
 
 class HammaddeDestekForm extends React.Component {
     constructor(props) {
@@ -21,6 +24,13 @@ class HammaddeDestekForm extends React.Component {
         this.handleMaterialChange = this.handleMaterialChange.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleCityChange = this.handleCityChange.bind(this);
+      }
+      handleCityChange(e){
+        const value = e.target.value;
+        this.setState({
+          city:value
+        })
       }
       handleSubmit(e){ 
         e.preventDefault();
@@ -38,9 +48,12 @@ class HammaddeDestekForm extends React.Component {
           details: this.state.details,
           quantity:this.state.quantity
         }
+        if(!data.email || !data.contact_name || !data.donater_name || !data.city || data.city<=0 || !data.material || !data.quantity){
+          toast.error("* ile işaretli olan alanlar boş bırakılamaz!  Lütfen işaretli alanları doldurunuz.");
+          return;
+        }
         const methodUrl = 'anonymous/donation';
         const response = Api(methodUrl, data);
-        console.log("response",response)
       }
       handleInputChange(e){
         const name = e.target.name;
@@ -64,11 +77,6 @@ class HammaddeDestekForm extends React.Component {
           case 'phone':
             this.setState({
               phone: value
-            })
-            break;
-          case 'city':
-            this.setState({
-              city: value
             })
             break;
           case 'quantity':
@@ -116,6 +124,7 @@ class HammaddeDestekForm extends React.Component {
 
       render() {
         return <div className="HammaddeDestekForm">
+              <ToastContainer/>
               <form className="HammaddeDestekForm-form" onSubmit={this.handleSubmit}>
                 <div className="HammaddeDestekForm-form-row">
                      <div className="HammaddeDestekForm-form-row-contactNameDiv">
@@ -138,7 +147,7 @@ class HammaddeDestekForm extends React.Component {
                          <input className="HammaddeDestekForm-form-row-emailDiv-input" 
                                 type="email"
                                 name="email" 
-                                placeholder="Email" 
+                                placeholder="Email*" 
                                 onChange={this.handleInputChange}/>
                      </div>
                      <div className="HammaddeDestekForm-form-row-phoneNumberDiv">
@@ -183,11 +192,14 @@ class HammaddeDestekForm extends React.Component {
                      
                  </div>
                   <div className="HammaddeDestekForm-form-row-cityDiv">
-                         <input className="HammaddeDestekForm-form-row-cityDiv-input" 
-                         type="text" 
-                         name="city" 
-                         placeholder="Şehir Seçiniz"
-                         onChange={this.handleInputChange} />
+                  <select name="city" className="HammaddeDestekForm-form-row-cityDiv-input" onChange={this.handleCityChange}>
+                        <option value="0" key="0">Şehir Seçiniz*</option>
+                       {
+                         Cities.map(item =>(
+                         <option value={item.id} key={item.id}>{item.city}</option>
+                         ))
+                       }
+                    </select>
                   </div>
                 </div>
                 <div className="HammaddeDestekForm-form-row">
@@ -202,7 +214,7 @@ class HammaddeDestekForm extends React.Component {
                          <input className="HammaddeDestekForm-form-row-donaterNameDiv-input" 
                                 type="number"
                                 name="quantity" 
-                                placeholder="Bağış yapılacak maddenin miktarı" 
+                                placeholder="Bağış yapılacak maddenin miktarı*" 
                                 onChange={this.handleInputChange}/>
                      </div>
                 </div>

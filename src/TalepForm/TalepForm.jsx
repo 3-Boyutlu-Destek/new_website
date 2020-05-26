@@ -1,6 +1,9 @@
 import React from 'react';
 import './style.scss'
 import Api from '../_services/Api';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Cities from '../BaskiDestekForm/components/Cities';
 
 class TalepForm extends React.Component {
     constructor(props) {
@@ -23,6 +26,13 @@ class TalepForm extends React.Component {
         this.handleProductChange = this.handleProductChange.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleCityChange = this.handleCityChange.bind(this);
+      }
+      handleCityChange(e){
+        const value = e.target.value;
+        this.setState({
+          city:value
+        })
       }
       handleSubmit(e){ 
         e.preventDefault();
@@ -41,6 +51,11 @@ class TalepForm extends React.Component {
           product: product,
           details: this.state.details,
           quantity:this.state.quantity
+        }
+        if(!data.email || !data.contact_name || !data.contact_email || !data.requester_name || !data.section || !data.city
+           || data.city<=0 || !data.product || !data.quantity){
+          toast.error("* ile işaretli olan alanlar boş bırakılamaz! Lütfen işaretli alanları doldurunuz.");
+          return;
         }
         const methodUrl = 'anonymous/request';
         const response = Api(methodUrl, data);
@@ -78,11 +93,6 @@ class TalepForm extends React.Component {
           case 'phone':
             this.setState({
               phone: value
-            })
-            break;
-          case 'city':
-            this.setState({
-              city: value
             })
             break;
           case 'quantity':
@@ -129,6 +139,7 @@ class TalepForm extends React.Component {
 
       render() {
         return <div className="TalepForm">
+             <ToastContainer/>
               <form className="TalepForm-form" onSubmit={this.handleSubmit}>
                 <div className="TalepForm-form-row">
                      <div className="TalepForm-form-row-contactNameDiv">
@@ -167,7 +178,7 @@ class TalepForm extends React.Component {
                          <input className="TalepForm-form-row-emailDiv-input" 
                                 type="email"
                                 name="email" 
-                                placeholder="Email" 
+                                placeholder="Email*" 
                                 onChange={this.handleInputChange}/>
                      </div>
                      <div className="TalepForm-form-row-phoneNumberDiv">
@@ -211,11 +222,14 @@ class TalepForm extends React.Component {
                     </label>
                  </div>
                   <div className="TalepForm-form-row-cityDiv">
-                         <input className="TalepForm-form-row-cityDiv-input" 
-                         type="text" 
-                         name="city" 
-                         placeholder="Şehir Seçiniz"
-                         onChange={this.handleInputChange} />
+                  <select name="city" className="HammaddeDestekForm-form-row-cityDiv-input" onChange={this.handleCityChange}>
+                        <option value="0" key="0">Şehir Seçiniz*</option>
+                       {
+                         Cities.map(item =>(
+                         <option value={item.id} key={item.id}>{item.city}</option>
+                         ))
+                       }
+                    </select>
                   </div>
                 </div>
                 <div className="TalepForm-form-row">

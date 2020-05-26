@@ -2,8 +2,10 @@ import React from 'react';
 import "./style.scss"
 import threeDTypes from './components/3DTypes';
 import skills from './components/Skills';
+import Cities from './components/Cities';
 import Api from '../_services/Api';
-import { empty } from 'rxjs';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class BaskiDestekForm extends React.Component {
   constructor(props) {
@@ -13,7 +15,7 @@ class BaskiDestekForm extends React.Component {
       name:"",
       phone:"",
       city:"",
-      has_printer: true,
+      has_printer: false,
       printer_count: 0,
       experience: 0,
       level:"",
@@ -32,6 +34,7 @@ class BaskiDestekForm extends React.Component {
     this.handleSkilsChange = this.handleSkilsChange.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCityChange = this.handleCityChange.bind(this);
   }
 
   handleInputChange(e){
@@ -51,11 +54,6 @@ class BaskiDestekForm extends React.Component {
       case 'phone':
         this.setState({
           phone: value
-        })
-        break;
-      case 'city':
-        this.setState({
-          city: value
         })
         break;
       case 'printerCount':
@@ -108,9 +106,19 @@ class BaskiDestekForm extends React.Component {
       design_and_engineering: this.state.design_and_engineering,
       details: this.state.details
     }
+    if(!data.email || !data.name || !data.city || data.city<=0){
+      toast.error("* ile işaretli olan alanlar boş bırakılamaz!  Lütfen işaretli alanları doldurunuz.");
+      return;
+    }
     const methodUrl = 'anonymous/production';
     const response = Api(methodUrl, data);
     console.log("response",response)
+  }
+  handleCityChange(e){
+    const value = e.target.value;
+    this.setState({
+      city:value
+    })
   }
   handleSkilsChange(e) {
     const item = e.target.name;
@@ -169,13 +177,14 @@ class BaskiDestekForm extends React.Component {
 
   render() {
     return <div className="BaskiDestekForm">
+          <ToastContainer />
           <form className="BaskiDestekForm-form" onSubmit={this.handleSubmit}>
             <div className="BaskiDestekForm-form-row">
                  <div className="BaskiDestekForm-form-row-emailDiv">
                      <input className="BaskiDestekForm-form-row-emailDiv-input" 
                             type="email"
                             name="email" 
-                            placeholder="Email" 
+                            placeholder="Email*" 
                             onChange={this.handleInputChange}/>
                  </div>
                  <div className="BaskiDestekForm-form-row-nameDiv">
@@ -195,17 +204,20 @@ class BaskiDestekForm extends React.Component {
                             onChange={this.handleInputChange} />
                  </div>
                  <div className="BaskiDestekForm-form-row-cityDiv">
-                     <input className="BaskiDestekForm-form-row-cityDiv-input" 
-                     type="text" 
-                     name="city" 
-                     placeholder="Şehir Seçiniz"
-                     onChange={this.handleInputChange} />
+                    <select name="city" className="BaskiDestekForm-form-row-cityDiv-input" onChange={this.handleCityChange}>
+                        <option value="0" key="0">Şehir Seçiniz*</option>
+                       {
+                         Cities.map(item =>(
+                         <option value={item.id} key={item.id}>{item.city}</option>
+                         ))
+                       }
+                    </select>
                  </div>
             </div>
             <div className="BaskiDestekForm-form-row">
                  <div className="BaskiDestekForm-form-row-3Boyutluyaziciyasahipmisiniz">
                    <label>
-                   3 Boyutlu yazıcıya sahip misiniz?*
+                   3 Boyutlu yazıcıya sahip misiniz?
                    </label>
                    <br/>
                    <label className="BaskiDestekForm-form-row-3Boyutluyaziciyasahipmisiniz-label">
@@ -230,7 +242,7 @@ class BaskiDestekForm extends React.Component {
                  </div>
                  <div className="BaskiDestekForm-form-row-kacAdetYaziciyaSahipsiniz">
                    <label>
-                   Kaç adet yazıcıya sahipsiniz?*
+                   Kaç adet yazıcıya sahipsiniz?
                    </label>
                    <br/>
                     <input className="BaskiDestekForm-form-row-kacAdetYaziciyaSahipsiniz-input" 
@@ -244,7 +256,7 @@ class BaskiDestekForm extends React.Component {
             <div className="BaskiDestekForm-form-row">
                  <div className="BaskiDestekForm-form-row-hangiTurYaziciTeknolojisineSahipsiniz">
                    <label>
-                   Hangi tür 3D yazıcı teknolojilerine sahipsiniz?*
+                   Hangi tür 3D yazıcı teknolojilerine sahipsiniz?
                    </label>
                    <br/>
                   {
@@ -271,7 +283,7 @@ class BaskiDestekForm extends React.Component {
                  </div>
                  <div className="BaskiDestekForm-form-row-3DYaziciyiHangiSeviyedeKullanıyorsunuz">
                    <label>
-                   3 Boyutlu Yazıcıyı Hangi Seviyede Kullanıyorsunuz?*
+                   3 Boyutlu Yazıcıyı Hangi Seviyede Kullanıyorsunuz?
                    </label>
                    <br/>
                    <label className="BaskiDestekForm-form-row-3DYaziciyiHangiSeviyedeKullanıyorsunuz-label">
@@ -307,7 +319,7 @@ class BaskiDestekForm extends React.Component {
             <div className="BaskiDestekForm-form-row">
                  <div className="BaskiDestekForm-form-row-hangiBeceriyeSahipsiniz">
                    <label>
-                   Aşağıdaki hangi beceriye sahipsiniz?*
+                   Aşağıdaki hangi beceriye sahipsiniz?
                    </label>
                    {
                      skills.map(item => (
@@ -325,7 +337,7 @@ class BaskiDestekForm extends React.Component {
                  </div>
                  <div className="BaskiDestekForm-form-row-kacAdetYaziciyaSahipsiniz">
                    <label>
-                    Tasarım veya mühendislik becerileriniz var mı?*
+                    Tasarım veya mühendislik becerileriniz var mı?
                    </label>
                    <br/>
                     <input className="BaskiDestekForm-form-row-kacAdetYaziciyaSahipsiniz-input" 
