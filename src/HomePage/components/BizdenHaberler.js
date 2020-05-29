@@ -10,17 +10,16 @@ import '../../scss/components/BizdenHaberler.scss';
 
 
 function BizdenHaberler(){
-  const [videoDetail, setVideoDetail] = useState({title:allVideos[0].title, videoUrl: allVideos[0].videoUrl, detail:allVideos[0].detail});
-  
-  console.log("video",videoDetail)
+  const [videoDetail, setVideoDetail] = useState({title:allVideos[0].title, videoUrl: allVideos[0].videoUrl, detail:allVideos[0].detail, link: allVideos[0].link});
 
  return(
    <div className="BizdenHaberlerAll">
        <div className="BizdenHaberlerAll-videoDetail">
-       <div className="Video-content">
-             <span className="BizdenHaberlerAll-videoDetail-title">{ videoDetail && videoDetail.title}</span>
-             <ReactPlayer url={videoDetail && videoDetail.videoUrl} />
-             <span className="BizdenHaberlerAll-videoDetail-detail">{videoDetail && videoDetail.detail}</span>
+             <div className="Video-content BizdenHaberlerAll-videoDetail-content">
+                    <span className="BizdenHaberlerAll-videoDetail-title">{ videoDetail && videoDetail.title}</span>
+                    <ReactPlayer url={videoDetail && videoDetail.videoUrl} />
+                    <span className="BizdenHaberlerAll-videoDetail-detail">{videoDetail && videoDetail.detail}</span>
+                    <a className="BizdenHaberlerAll-videoDetail-link" href={videoDetail && videoDetail.link} target="_blank">{videoDetail.link}</a>
             </div>
        </div>
        <div className="BizdenHaberlerAll-titles">
@@ -41,7 +40,7 @@ function BizdenHaberler(){
                   allVideos && allVideos.map(item=>(
                        <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail}
                        onClick={()=>{
-                            const newVideo = { title:item.title, videoUrl: item.videoUrl, detail: item.detail}
+                            const newVideo = { title:item.title, videoUrl: item.videoUrl, detail: item.detail, link: item.link}
                             setVideoDetail(newVideo);
                        }}/>
                    ))
@@ -50,7 +49,7 @@ function BizdenHaberler(){
            <TabPanel> {
                    ilTemsilcileri && ilTemsilcileri.map(item=>(
                        <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail}onClick={()=>{
-                        const newVideo = { title:item.title, videoUrl: item.videoUrl, detail: item.detail}
+                        const newVideo = { title:item.title, videoUrl: item.videoUrl, detail: item.detail, link: item.link}
                         setVideoDetail(newVideo);
                    }} />
                    ))
@@ -60,7 +59,7 @@ function BizdenHaberler(){
                {
                   haberler && haberler.map(item=>(
                        <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail}onClick={()=>{
-                        const newVideo = { title:item.title, videoUrl: item.videoUrl, detail: item.detail}
+                        const newVideo = { title:item.title, videoUrl: item.videoUrl, detail: item.detail, link: item.link}
                         setVideoDetail(newVideo);
                    }} />
                    ))

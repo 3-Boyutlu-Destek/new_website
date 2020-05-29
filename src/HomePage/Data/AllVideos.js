@@ -4,7 +4,7 @@ const allVideos=[
        imgUrl:"logo.svg",
        title:"Haber Başlığı 1",
        detail:"Lorem ipsum sdfsdf",
-       link:"asdasd",
+       link:"https://www.youtube.com/watch?v=2p6HnvkVQ5A",
        id:"1"
    },
    {
@@ -12,7 +12,7 @@ const allVideos=[
     imgUrl:"logo.svg",
     title:"Haber Başlığı 2",
     detail:"Lorem ipsum sdfsdf",
-    link:"asdasd",
+    link:"https://www.youtube.com/watch?v=zUTnXGQK-FU",
     id:"2"
 },
 {
