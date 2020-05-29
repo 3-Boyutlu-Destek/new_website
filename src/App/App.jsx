@@ -4,6 +4,7 @@ import { history } from '@/_helpers';
 import { PrivateRoute } from '@/_components';
 import { HomePage } from '@/HomePage';
 import { DestekForm } from '@/DestekForm';
+import { Urunler } from '@/Urunler';
 import Header from '../HomePage/components/Header';
 import Footer from '../HomePage/components/Footer';
 import Favicon from 'react-favicon';
@@ -21,6 +22,7 @@ class App extends React.Component {
           <Header />
           <PrivateRoute exact path="/" component={HomePage} />
           <PrivateRoute path="/destek-form" component={DestekForm} />
+          <PrivateRoute path="/urunler" component={ Urunler } />
           <Footer />
         </div>
       </Router>
