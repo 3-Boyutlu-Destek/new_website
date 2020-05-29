@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
   resolve: {
-    extensions: ['.js', '.jsx', '.scss'],
+    extensions: ['.js', '.jsx', '.scss','.css'],
   },
   module: {
     rules: [
@@ -13,10 +13,14 @@ module.exports = {
         test: /\.scss$/,
         loader: [require.resolve('style-loader'), require.resolve('css-loader'), require.resolve('sass-loader')],
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      }
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.scss'],
+    extensions: ['.js', '.jsx', '.scss', '.css'],
     alias: {
       '@': path.resolve(__dirname, 'src/'),
     },
@@ -33,7 +37,7 @@ module.exports = {
   externals: {
     // global app config object
     config: JSON.stringify({
-      apiUrl: 'http://localhost:4000',
+      apiUrl: 'https://3boyutludestek.ege.dev',
     }),
   },
 };
