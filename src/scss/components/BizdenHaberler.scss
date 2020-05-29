@@ -1,0 +1,35 @@
+.BizdenHaberlerAll{
+    display: flex;
+    &-videoDetail{
+      margin-right: auto;
+      &-title{
+        font-family: Poppins;
+        font-weight: 600;
+        line-height: 1.5;
+        text-align: left;
+        color: #ffffff;
+      }
+      &-detail{
+        width: 1051px;
+        height: 209px;
+        font-family: Poppins;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 1.52;
+        text-align: left;
+        color: #ffffff;
+      }
+  }
+    &-titles{
+       font-family: Poppins;
+       line-height: 1.5;
+       font-size: large;
+       color: #ffffff;
+
+       &-tabs{
+         height: 600px;
+         width: 450px;
+         overflow-y: auto;
+       }
+    }
+  }

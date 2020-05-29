@@ -6,6 +6,7 @@ import Counteritem from './components/Counteritem';
 import Habercard from './components/Habercard';
 import Footer from './components/Footer';
 import Title from './components/Title';
+import BizdenHaberler from './components/BizdenHaberler';
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -278,6 +279,9 @@ class HomePage extends React.Component {
                 title="3 Boyutlu Destek"
                 text="Sağlık Çalışanlarımız İçin Yüz Kalkanı Üretiminde Bize Destek Olabilirsiniz"
               />
+            </div>
+            <div className="BizdenHaberler-content-all">
+               <BizdenHaberler />
             </div>
           </div>
         </section>
