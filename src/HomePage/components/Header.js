@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function toggle() {
   const e = document.getElementsByClassName('Header-buttons');
@@ -57,20 +58,20 @@ function Header() {
           <a href="" className="Header-buttons-link">
             Ürünler
   </a> */}
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScR4-5CE7VXJwTO84wvjLHxn11vtnZrip3bMr-ncHKKo2GBOw/viewform"
+          <Link
+            to='/hammadde-destek-form'
             className="Header-buttons-link primary"
             target="_blank"
           >
             Destek Ol
-          </a>
-          <a
-            href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfTWxS4MBVDiqLRA-pL6GGk6p8lp1ugmwU6f0vvLYZChIs0zA/formResponse?embedded=true"
+          </Link>
+          <Link
+            to="/talep-form"
             target="_blank"
             className="Header-buttons-link primary blue"
           >
             Talep Et
-          </a>
+          </Link>
         </div>
       </nav>
     </header>

@@ -16,9 +16,12 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-dropdown-select": "^4.4.1",
     "react-favicon": "0.0.18",
     "react-player": "^2.0.1",
     "react-router-dom": "^5.1.2",
+    "react-toastify": "^6.0.5",
+    "reactjs-toastr": "^1.1.0",
     "react-tabs": "^3.1.1",
     "rxjs": "^6.5.5",
     "yup": "^0.27.0"

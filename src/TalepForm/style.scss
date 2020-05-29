@@ -1,0 +1,149 @@
+.TalepForm{
+    width: 60%;
+    margin: auto;
+    &-form {
+        margin-top:130px;
+        &-row{
+            display: flex;
+            padding: 20px;
+            &-emailDiv{
+                margin-right: auto;
+                width: 400px;
+                &-input{
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 10px;
+                    font-size: large;
+                    width: 100%;
+                }
+            }
+            &-contactNameDiv{
+                margin-right: auto;
+                width: 400px;
+                &-input{
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 10px;
+                    font-size: large;
+                    width: 100%;
+                }
+            }
+            &-contactEmailDiv{
+                margin-left: auto;
+                width: 400px;
+                &-input{
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 10px;
+                    font-size: large;
+                    width: 100%;
+                }
+            }
+            &-requesterNameDiv{
+                margin-right: auto;
+                width: 400px;
+                &-input{
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 10px;
+                    font-size: large;
+                    width: 100%;
+                }
+            }
+            &-sectionDiv{
+                margin-left: auto;
+                width: 400px;
+                &-input{
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 10px;
+                    font-size: large;
+                    width: 100%;
+                }
+            }
+            &-phoneNumberDiv{
+                margin-left: auto;
+                width: 400px;
+                &-input{
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 10px;
+                    font-size: large;
+                    width: 100%;
+                }
+            }
+            &-cityDiv{
+                margin-left: auto;
+                width: 400px;
+                &-input{
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 10px;
+                    font-size: large;
+                    width: 100%;
+                }
+            }
+            &-formGonderButton{
+                background-color: #ff003b;
+                color: white;
+                padding: 9px 12px;
+                border-radius: 50px;
+                font-size: 12px;
+                box-shadow: 0 3px 25px 0 rgba(0, 0, 0, 0.16);
+                margin: auto;
+                width: 150px;
+                line-height: normal;
+            }
+            &-talepEdilenMalzeme{
+                margin-right: auto;;
+                border: 1px solid;
+                border-radius: 10px;
+                padding: 10px;
+                width: 400px;
+                font-size: large;
+                &-label{
+                   margin-right: 30px;
+                   margin-top: 10px;
+                }
+                &-input{
+                    margin-top: 10px;
+                }
+            }
+            &-kacAdetMedicalParcayaIhtiyacinizVar{
+                margin-left: auto;;
+                border: 1px solid;
+                border-radius: 10px;
+                padding: 10px;
+                width: 400px;
+                font-size: large;
+                &-input{
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 10px;
+                    font-size: large;
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+            &-details{
+                margin-right: auto;;
+                border: 1px solid;
+                border-radius: 10px;
+                padding: 10px;
+                width: 400px;
+                font-size: large;
+                &-input{
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 10px;
+                    font-size: large;
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+            
+        }
+       
+
+    }
+}

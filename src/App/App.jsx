@@ -3,6 +3,9 @@ import { Router } from 'react-router-dom';
 import { history } from '@/_helpers';
 import { PrivateRoute } from '@/_components';
 import { HomePage } from '@/HomePage';
+import { BaskiDestekForm } from '@/BaskiDestekForm';
+import { HammaddeDestekForm } from '@/HammaddeDestekForm';
+import { TalepForm } from '@/TalepForm';
 import { DestekForm } from '@/DestekForm';
 import { Urunler } from '@/Urunler';
 import Header from '../HomePage/components/Header';
@@ -21,6 +24,9 @@ class App extends React.Component {
         <div>
           <Header />
           <PrivateRoute exact path="/" component={HomePage} />
+          <PrivateRoute path="/baski-destek-form" component={BaskiDestekForm} />
+          <PrivateRoute path="/hammadde-destek-form" component={HammaddeDestekForm} />
+          <PrivateRoute path="/talep-form" component={ TalepForm } />
           <PrivateRoute path="/destek-form" component={DestekForm} />
           <PrivateRoute path="/urunler" component={ Urunler } />
           <Footer />
