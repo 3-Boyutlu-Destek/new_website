@@ -7,7 +7,7 @@ import Habercard from './components/Habercard';
 import Footer from './components/Footer';
 import Title from './components/Title';
 import { Link } from 'react-router-dom';
-import BizdenHaberler from './components/BizdenHaberler';
+import BasindaBiz from './components/BasindaBiz';
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -279,8 +279,9 @@ class HomePage extends React.Component {
                 text="Sağlık Çalışanlarımız İçin Yüz Kalkanı Üretiminde Bize Destek Olabilirsiniz"
               />
             </div>
-            <div className="BizdenHaberler-content-all">
-               <BizdenHaberler />
+            <div className="BizdenHaberler-basindabiz">
+              <Title addClass="red BizdenHaberler-basindabiz-title" text="Basında Biz" />
+               <BasindaBiz />
             </div>
           </div>
         </section>

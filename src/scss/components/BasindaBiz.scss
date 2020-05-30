@@ -1,7 +1,10 @@
-.BizdenHaberlerAll{
+.BasindaBiz{
     display: flex;
+    flex-direction: row;
+    width: 100%;
     &-videoDetail{
       margin-right: auto;
+      width: 640px;
       &-content{
         display: flex;
         flex-flow: column;
@@ -14,7 +17,6 @@
         color: #ffffff;
       }
       &-detail{
-        width: 1051px;
         font-family: Poppins;
         font-size: 25px;
         font-weight: 500;

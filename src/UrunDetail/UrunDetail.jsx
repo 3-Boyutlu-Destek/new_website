@@ -7,26 +7,23 @@ import ReactPlayer from 'react-player';
 class UrunDetail extends React.Component{
     constructor(props){
         super(props);
-        this.state={
-           urun:{}
-        }
     }
-  /* componentDidMount(){
-       console.log("sdfsdf")
+   componentDidMount(){
         const id = this.props.match.params.id;
-
         const urun = urunler.filter(x=>x.id == 2);
+        console.log(urunler)
         this.setState({
-            urun:urun
+           urun
         })
-    }*/
+    }
     render(){
-        
+        const urun = this.state;
+        console.log(urun)
         return (
          <div className="UrunDetail"> 
             <div className="UrunDetail-top">
                   <div className="UrunDetail-top-left">
-                    <img className="UrunDetail-top-left-img" src="logo.svg" />
+                    <img className="UrunDetail-top-left-img" src={urun.img} />
                   </div>
                  <div className="UrunDetail-top-rigth">
                 <h1 className="UrunDetail-top-rigth-title">
@@ -51,12 +48,12 @@ class UrunDetail extends React.Component{
             </div>
         
          </div>
-         <div className="UrunDetail-bottom">
+        {/* <div className="UrunDetail-bottom">
                  <div className="UrunDetail-bottom-videoDetail-content">
                     <ReactPlayer url="https://www.youtube.com/watch?v=2p6HnvkVQ5A" />
                     <span className="UrunDetail-bottom-videoDetail-detail">dsfsdfdsf</span>
                 </div>
-            </div>
+            </div>*/}
          </div>
         );
     }

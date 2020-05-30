@@ -28,7 +28,7 @@ class App extends React.Component {
           <PrivateRoute path="/hammadde-destek-form" component={HammaddeDestekForm} />
           <PrivateRoute path="/talep-form" component={ TalepForm } />
           <PrivateRoute path="/urunler" component={ Urunler } />
-          <PrivateRoute path="/urun-detail" component={ UrunDetail } />
+          <PrivateRoute path="/urun-detail/:id" component={ UrunDetail } />
           <Footer />
         </div>
       </Router>

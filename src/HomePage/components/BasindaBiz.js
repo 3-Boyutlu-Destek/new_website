@@ -6,24 +6,22 @@ import Haber from './Haber';
 import allVideos from '../Data/AllVideos';
 import ilTemsilcileri from '../Data/ilTemsilcileri';
 import haberler from '../Data/Haberler';
-import '../../scss/components/BizdenHaberler.scss';
+import '../../scss/components/BasindaBiz.scss';
 
 
-function BizdenHaberler(){
-  const [videoDetail, setVideoDetail] = useState({title:allVideos[0].title, videoUrl: allVideos[0].videoUrl, detail:allVideos[0].detail, link: allVideos[0].link});
-
+function BasindaBiz(){
+  const [videoDetail, setVideoDetail] = useState({videoUrl: allVideos[0].videoUrl, detail:allVideos[0].detail});
+  console.log(videoDetail)
  return(
-   <div className="BizdenHaberlerAll">
-       <div className="BizdenHaberlerAll-videoDetail">
-             <div className="Video-content BizdenHaberlerAll-videoDetail-content">
-                    <span className="BizdenHaberlerAll-videoDetail-title">{ videoDetail && videoDetail.title}</span>
-                    <ReactPlayer url={videoDetail && videoDetail.videoUrl} />
-                    <span className="BizdenHaberlerAll-videoDetail-detail">{videoDetail && videoDetail.detail}</span>
-                    <a className="BizdenHaberlerAll-videoDetail-link" href={videoDetail && videoDetail.link} target="_blank">{videoDetail.link}</a>
+   <div className="BasindaBiz">
+       <div className="BasindaBiz-videoDetail">
+             <div className="BasindaBiz-videoDetail-content">
+                    <ReactPlayer style={{width:'100%!important'}} url={videoDetail && videoDetail.videoUrl} />
+                    <span className="BasindaBiz-videoDetail-detail">{videoDetail && videoDetail.detail}</span>
             </div>
        </div>
-       <div className="BizdenHaberlerAll-titles">
-       <Tabs className="BizdenHaberlerAll-titles-tabs" defaultActiveKey="tumVideo" id="uncontrolled-tab-example">
+       <div className="BasindaBiz-titles">
+       <Tabs className="BasindaBiz-titles-tabs" defaultActiveKey="tumVideo" id="uncontrolled-tab-example">
            <TabList>
               <Tab eventKey="tumVideo" title="Tüm Videolar" key="1">
                 Tüm Videolar
@@ -38,9 +36,9 @@ function BizdenHaberler(){
            <TabPanel>
                {
                   allVideos && allVideos.map(item=>(
-                       <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail} key={item.id}
+                       <Haber imgUrl={item.imgUrl} detail={item.detail} key={item.id}
                        onClick={()=>{
-                            const newVideo = { title:item.title, videoUrl: item.videoUrl, detail: item.detail, link: item.link}
+                            const newVideo = { videoUrl: item.videoUrl, detail: item.detail}
                             setVideoDetail(newVideo);
                        }}/>
                    ))
@@ -50,7 +48,7 @@ function BizdenHaberler(){
                    ilTemsilcileri && ilTemsilcileri.map(item=>(
                        <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail} key={item.id}
                        onClick={()=>{
-                        const newVideo = { title:item.title, videoUrl: item.videoUrl, detail: item.detail, link: item.link}
+                        const newVideo = { videoUrl: item.videoUrl, detail: item.detail}
                         setVideoDetail(newVideo);
                    }} />
                    ))
@@ -61,7 +59,7 @@ function BizdenHaberler(){
                   haberler && haberler.map(item=>(
                        <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail} key={item.id}
                         onClick={()=>{
-                        const newVideo = { title:item.title, videoUrl: item.videoUrl, detail: item.detail, link: item.link}
+                        const newVideo = { videoUrl: item.videoUrl, detail: item.detail, }
                         setVideoDetail(newVideo);
                    }} />
                    ))
@@ -74,4 +72,4 @@ function BizdenHaberler(){
  );
 }
 
-export default BizdenHaberler;
+export default BasindaBiz;

@@ -772,13 +772,16 @@ body {
       }
     }
   }
-  &-content-all{
+  &-basindabiz{
   margin: auto;
   width: 80%;
   padding: 1rem;
   border: solid 1px #707070;
   background-color: #002939;
   margin-top: 50px;
+  &-title{
+    color: #ffff;
+  }
   
   }
 }
