@@ -25,20 +25,20 @@ function BizdenHaberler(){
        <div className="BizdenHaberlerAll-titles">
        <Tabs className="BizdenHaberlerAll-titles-tabs" defaultActiveKey="tumVideo" id="uncontrolled-tab-example">
            <TabList>
-              <Tab eventKey="tumVideo" title="Tüm Videolar">
+              <Tab eventKey="tumVideo" title="Tüm Videolar" key="1">
                 Tüm Videolar
               </Tab>
-              <Tab eventKey="ilTemsilcileri" title="İl Temsilcileri">
+              <Tab eventKey="ilTemsilcileri" title="İl Temsilcileri" key="2">
                 İl Temsilcileri
               </Tab>
-              <Tab eventKey="haberler" title="Haberler">
+              <Tab eventKey="haberler" title="Haberler" key="3">
                 Haberler
               </Tab>
            </TabList>  
            <TabPanel>
                {
                   allVideos && allVideos.map(item=>(
-                       <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail}
+                       <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail} key={item.id}
                        onClick={()=>{
                             const newVideo = { title:item.title, videoUrl: item.videoUrl, detail: item.detail, link: item.link}
                             setVideoDetail(newVideo);
@@ -48,7 +48,8 @@ function BizdenHaberler(){
            </TabPanel>
            <TabPanel> {
                    ilTemsilcileri && ilTemsilcileri.map(item=>(
-                       <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail}onClick={()=>{
+                       <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail} key={item.id}
+                       onClick={()=>{
                         const newVideo = { title:item.title, videoUrl: item.videoUrl, detail: item.detail, link: item.link}
                         setVideoDetail(newVideo);
                    }} />
@@ -58,7 +59,8 @@ function BizdenHaberler(){
            <TabPanel> 
                {
                   haberler && haberler.map(item=>(
-                       <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail}onClick={()=>{
+                       <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail} key={item.id}
+                        onClick={()=>{
                         const newVideo = { title:item.title, videoUrl: item.videoUrl, detail: item.detail, link: item.link}
                         setVideoDetail(newVideo);
                    }} />

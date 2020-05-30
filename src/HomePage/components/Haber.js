@@ -3,7 +3,7 @@ import '../../scss/components/Haber.scss';
 
 function Haber(props){
   return (
-    <div className="Haber" onClick={()=>props.onClick()}>
+    <div className="Haber" key={props.key} onClick={()=>props.onClick()}>
         <img className="Haber-img" src={props.imgUrl} />
         <div>
             <h1 className="Haber-title">{props.title}</h1>

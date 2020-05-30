@@ -1,5 +1,7 @@
 import React from 'react';
 import './style.scss';
+import UrunCard from './components/UrunCard';
+import urunler from './Data/Urunler';
 
 
 class Urunler extends React.Component{
@@ -9,11 +11,22 @@ class Urunler extends React.Component{
 
         }
     }
-
     render(){
         return(
-           <div>
-               
+           <div className="Urunler">
+               {
+                   urunler && urunler.map(item=>(
+                    <UrunCard  
+                    key={item.id} 
+                    img= { item.img }
+                    link={ item.link }
+                    title={ item.title }
+                    text={ item.text }
+                    id={ item.id }
+                  />
+                ))
+               }
+             
            </div>
         );
     }

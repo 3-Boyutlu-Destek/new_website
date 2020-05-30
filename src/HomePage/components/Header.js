@@ -54,10 +54,10 @@ function Header() {
           </a>
           <a href="" className="Header-buttons-link">
             Destekçiler
-          </a>
-          <a href="" className="Header-buttons-link">
+          </a>*/}
+          <Link to='/urunler' className="Header-buttons-link">
             Ürünler
-  </a> */}
+          </Link> 
           <Link
             to='/hammadde-destek-form'
             className="Header-buttons-link primary"
