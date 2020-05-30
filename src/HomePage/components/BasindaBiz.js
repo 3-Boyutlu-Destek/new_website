@@ -1,17 +1,16 @@
 import React, {useState} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
 import ReactPlayer from 'react-player';
 import Haber from './Haber';
 import allVideos from '../Data/AllVideos';
 import ilTemsilcileri from '../Data/ilTemsilcileri';
 import haberler from '../Data/Haberler';
 import '../../scss/components/BasindaBiz.scss';
+import 'react-tabs/style/react-tabs.css';
 
 
 function BasindaBiz(){
   const [videoDetail, setVideoDetail] = useState({videoUrl: allVideos[0].videoUrl, detail:allVideos[0].detail});
-  console.log(videoDetail)
  return(
    <div className="BasindaBiz">
        <div className="BasindaBiz-videoDetail">
@@ -21,19 +20,19 @@ function BasindaBiz(){
             </div>
        </div>
        <div className="BasindaBiz-titles">
-       <Tabs className="BasindaBiz-titles-tabs" defaultActiveKey="tumVideo" id="uncontrolled-tab-example">
+       <Tabs className="BasindaBiz-titles-tabs" defaultactivekey="tumVideo" id="uncontrolled-tab-example">
            <TabList>
-              <Tab eventKey="tumVideo" title="Tüm Videolar" key="1">
+              <Tab eventkey="tumVideo" title="Tüm Videolar" key="1">
                 Tüm Videolar
               </Tab>
-              <Tab eventKey="ilTemsilcileri" title="İl Temsilcileri" key="2">
+              <Tab eventkey="ilTemsilcileri" title="İl Temsilcileri" key="2">
                 İl Temsilcileri
               </Tab>
-              <Tab eventKey="haberler" title="Haberler" key="3">
+              <Tab eventkey="haberler" title="Haberler" key="3">
                 Haberler
               </Tab>
            </TabList>  
-           <TabPanel>
+           <TabPanel key="1">
                {
                   allVideos && allVideos.map(item=>(
                        <Haber imgUrl={item.imgUrl} detail={item.detail} key={item.id}
@@ -44,7 +43,7 @@ function BasindaBiz(){
                    ))
                }
            </TabPanel>
-           <TabPanel> {
+           <TabPanel key="2"> {
                    ilTemsilcileri && ilTemsilcileri.map(item=>(
                        <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail} key={item.id}
                        onClick={()=>{
@@ -54,7 +53,7 @@ function BasindaBiz(){
                    ))
                }
            </TabPanel>
-           <TabPanel> 
+           <TabPanel key="3"> 
                {
                   haberler && haberler.map(item=>(
                        <Haber imgUrl={item.imgUrl} title={item.title} detail={item.detail} key={item.id}

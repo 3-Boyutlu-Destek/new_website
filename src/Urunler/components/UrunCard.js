@@ -15,7 +15,7 @@ function UrunCard(props){
         <h3 className="UrunCard-bottom-title">{props.title}</h3>
         <p className="UrunCard-bottom-text">{props.text}</p>
         <button className="UrunCard-bottom-button">
-          <Link to={`/urun-detail/${props.id}`}>
+          <Link to={`/urun-detail/${props.id}`} target="_blank">
             Ürünü İncele
           </Link>
         </button>

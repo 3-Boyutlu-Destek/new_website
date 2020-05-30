@@ -1,8 +1,7 @@
-import React from 'React';
+import React from 'react';
 import './style.scss';
 import urunler from '../Urunler/Data/Urunler';
 import { Link } from 'react-router-dom';
-import ReactPlayer from 'react-player';
 
 class UrunDetail extends React.Component{
     constructor(props){
@@ -10,6 +9,7 @@ class UrunDetail extends React.Component{
     }
    componentDidMount(){
         const id = this.props.match.params.id;
+        console.log("id",id)
         const urun = urunler.filter(x=>x.id == 2);
         console.log(urunler)
         this.setState({
@@ -23,7 +23,7 @@ class UrunDetail extends React.Component{
          <div className="UrunDetail"> 
             <div className="UrunDetail-top">
                   <div className="UrunDetail-top-left">
-                    <img className="UrunDetail-top-left-img" src={urun.img} />
+                    <img className="UrunDetail-top-left-img" src={urun && urun[0] && urun[0].img} />
                   </div>
                  <div className="UrunDetail-top-rigth">
                 <h1 className="UrunDetail-top-rigth-title">

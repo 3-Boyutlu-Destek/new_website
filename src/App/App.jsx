@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Router, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import { history } from '@/_helpers';
 import { PrivateRoute } from '@/_components';
 import { HomePage } from '@/HomePage';
