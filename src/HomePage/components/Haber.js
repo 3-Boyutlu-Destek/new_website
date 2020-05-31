@@ -5,8 +5,7 @@ function Haber(props){
   return (
     <div className="Haber" onClick={()=>props.onClick()}>
         <img className="Haber-img" src={props.imgUrl} />
-        <div>
-            <h1 className="Haber-title">{props.title}</h1>
+        <div style={{marginLeft:'10px'}}> 
             <span className="Haber-detail">{props.detail}</span>
         </div>
     </div>
