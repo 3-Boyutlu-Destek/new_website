@@ -243,11 +243,13 @@ class BaskiDestekForm extends React.Component {
                   alt=""
                 />
                 <select
+                  required
                   name="city"
                   className="form-input"
                   onChange={this.handleCityChange}
+                  style={{ textIndent: '45px', paddingLeft: '0' }}
                 >
-                  <option value="0" key="0">
+                  <option value="" selected disabled key="0">
                     Şehir Seçiniz*
                   </option>
                   {Cities.map((item) => (
@@ -276,7 +278,7 @@ class BaskiDestekForm extends React.Component {
                       checked={this.state.has_printer === 'true'}
                       onChange={this.handleHasPrinterChange}
                     />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   <label className="container-input">
                     <span className="input-text">Hayır</span>
@@ -288,7 +290,7 @@ class BaskiDestekForm extends React.Component {
                       checked={this.state.has_printer === 'false'}
                       onChange={this.handleHasPrinterChange}
                     />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                 </div>
               </div>
@@ -335,7 +337,7 @@ class BaskiDestekForm extends React.Component {
                         value={item.label}
                         onChange={this.handle3DTypesChange}
                       />
-                      <span class="checkmark"></span>
+                      <span className="checkmark"></span>
                     </label>
                   ))}
                 </div>
@@ -369,7 +371,7 @@ class BaskiDestekForm extends React.Component {
                       checked={this.state.level === 'hobi'}
                       onChange={this.handleLevelChange}
                     />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   <label className="container-input">
                     <span className="input-text">MFJ</span>
@@ -381,7 +383,7 @@ class BaskiDestekForm extends React.Component {
                       checked={this.state.level === 'mfj'}
                       onChange={this.handleLevelChange}
                     />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   <label className="container-input">
                     <span className="input-text">SLA</span>
@@ -393,7 +395,7 @@ class BaskiDestekForm extends React.Component {
                       checked={this.state.level === 'sla'}
                       onChange={this.handleLevelChange}
                     />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                 </div>
               </div>
@@ -418,7 +420,7 @@ class BaskiDestekForm extends React.Component {
                         checked={this.state.checkedSkilsItems.get(item.name)}
                         onChange={this.handleSkilsChange}
                       />
-                      <span class="checkmark"></span>
+                      <span className="checkmark"></span>
                     </label>
                   ))}
                 </div>

@@ -28,7 +28,7 @@
       padding-bottom: 360px;
       padding-right: 40px;
       padding-left: 40px;
-      box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);
+      box-shadow: 0 3px 15px 0 rgba(26, 24, 24, 0.16);
       background-color: #fff;
       border-radius: 24px;
     }
@@ -86,10 +86,13 @@
       }
     }
     .form-input {
+      appearance: none;
+      -webkit-appearance: none;
       border-radius: 10px;
       border: 2px solid #003144;
       padding-left: 50px;
       height: 42px;
+      line-height: 42px;
       width: 100%;
     }
     .form-section-big {
@@ -186,6 +189,7 @@
         font-size: 12px;
         margin: auto;
         width: 150px;
+        cursor: pointer;
       }
     }
   }
@@ -309,4 +313,14 @@ select {
   @include mq {
     outline: initial;
   }
+}
+
+select:required:invalid {
+  color: gray;
+}
+option[value=''][disabled] {
+  display: none;
+}
+option {
+  color: black;
 }
