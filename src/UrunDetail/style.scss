@@ -1,0 +1,95 @@
+.UrunDetail{
+    margin: auto;
+    width: 70%;
+    margin-top: 200px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    &-top{
+        display: flex;
+        flex-flow: row;
+        &-left{
+            margin-right: auto;
+            &-img{
+                width: 400px;
+                height: 400px;
+            }
+        }
+        &-rigth{
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            margin-left: auto;
+            width: 600px;
+            &-title{
+                font-family: Poppins;
+                font-size: 36px;
+                font-weight: 600;
+                line-height: 1.53;
+                text-align: left;
+                color: #515151;
+            }
+            &-detail{
+                font-family: Poppins;
+                font-size: 24px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.46;
+                letter-spacing: normal;
+                text-align: left;
+                color: #353535;
+            }
+            &-buttons{
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+               &-firstButton{
+                height: 40px;
+                width: 300px;
+                margin-right: 20px;
+                border-radius: 25px;
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+                background-color: #ff003b;
+                &-text{
+                    width: 94px;
+                    height: 33px;
+                    font-family: Poppins;
+                    line-height: 1.46;
+                    text-align: left;
+                    color: #ffffff;
+                }
+               } 
+               &-secondButton{
+                width: 330px;
+                height: 40px;
+                border-radius: 25px;
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+                background-color: #515151;
+                &-text{
+                    width: 277px;
+                    height: 33px;
+                    font-family: Poppins;
+                    line-height: 1.46;
+                    text-align: left;
+                    color: #ffffff;
+                }
+               }
+            }
+        }
+    }
+  
+    &-bottom{
+        margin: auto;
+        margin-top: 40px;
+        &-videoDetail{
+            width: 1400px;
+            height: 787.5px;
+            display: flex;
+            flex-flow: column;
+            border-radius: 25px;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+            background-image: linear-gradient(179deg, #ffffff 2%, #808080 131%);
+        }
+    }
+}
