@@ -285,7 +285,7 @@ class TalepForm extends React.Component {
                 Talep edeceğiniz medikal parçayı seçiniz*
               </label>
               <br />
-              <div style={{ display: 'flex' }}>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <label className="container-input TalepForm-form-row-talepEdilenMalzeme-label">
                   <span className="input-text">Yüz kalkanı</span>
                   <input
