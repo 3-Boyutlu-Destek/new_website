@@ -10,10 +10,14 @@ class Urunler extends React.Component{
         this.state={
 
         }
+        this.myRef = React.createRef()
+    }
+    componentDidMount(){
+       this.myRef.current.scrollTo(0, 0);
     }
     render(){
         return(
-           <div className="Urunler">
+           <div className="Urunler" ref={this.myRef}>
                {
                    urunler && urunler.map(item=>(
                     <UrunCard  
