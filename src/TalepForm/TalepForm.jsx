@@ -1,27 +1,27 @@
-import React from 'react';
-import './style.scss';
-import Api from '../_services/Api';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Cities from '../BaskiDestekForm/components/Cities';
+import React from "react";
+import "./style.scss";
+import Api from "../_services/Api";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Cities from "../BaskiDestekForm/components/Cities";
 
 class TalepForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      contact_name: '',
-      contact_email: '',
-      requester_name: '',
-      section: '',
-      phone: '',
-      city: '',
+      email: "",
+      contact_name: "",
+      contact_email: "",
+      requester_name: "",
+      section: "",
+      phone: "",
+      city: "",
       product: [],
-      quantity: '',
-      details: '',
+      quantity: "",
+      details: "",
       checkedProductItems: new Map(),
       isOtherProduct: false,
-      otherProduct: '',
+      otherProduct: ""
     };
     this.handleProductChange = this.handleProductChange.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -31,7 +31,7 @@ class TalepForm extends React.Component {
   handleCityChange(e) {
     const value = e.target.value;
     this.setState({
-      city: value,
+      city: value
     });
   }
   handleSubmit(e) {
@@ -45,9 +45,9 @@ class TalepForm extends React.Component {
       section: this.state.section,
       phone: this.state.phone,
       city: this.state.city,
-      product:  this.state.product && this.state.product.join(','),
+      product: this.state.product && this.state.product.join(","),
       details: this.state.details,
-      quantity: this.state.quantity,
+      quantity: this.state.quantity
     };
     if (
       !data.email ||
@@ -61,56 +61,56 @@ class TalepForm extends React.Component {
       !data.quantity
     ) {
       toast.error(
-        '* ile işaretli olan alanlar boş bırakılamaz! Lütfen işaretli alanları doldurunuz.'
+        "* ile işaretli olan alanlar boş bırakılamaz! Lütfen işaretli alanları doldurunuz."
       );
       return;
     }
-    const methodUrl = 'anonymous/request';
+    const methodUrl = "anonymous/request";
     const response = Api(methodUrl, data);
-    console.log('response', response);
+    console.log("response", response);
   }
   handleInputChange(e) {
     const name = e.target.name;
     const value = e.target.value;
     switch (name) {
-      case 'email':
+      case "email":
         this.setState({
-          email: value,
+          email: value
         });
         break;
-      case 'contact_name':
+      case "contact_name":
         this.setState({
-          name: value,
+          name: value
         });
         break;
-      case 'contact_email':
+      case "contact_email":
         this.setState({
-          contact_email: value,
+          contact_email: value
         });
         break;
-      case 'requester_name':
+      case "requester_name":
         this.setState({
-          requester_name: value,
+          requester_name: value
         });
         break;
-      case 'section':
+      case "section":
         this.setState({
-          section: value,
+          section: value
         });
         break;
-      case 'phone':
+      case "phone":
         this.setState({
-          phone: value,
+          phone: value
         });
         break;
-      case 'quantity':
+      case "quantity":
         this.setState({
-          quantity: value,
+          quantity: value
         });
         break;
-      case 'details':
+      case "details":
         this.setState({
-          details: value,
+          details: value
         });
         break;
       default:
@@ -120,21 +120,20 @@ class TalepForm extends React.Component {
   handleProductChange(e) {
     const item = e.target.name;
     const isChecked = e.target.checked;
-    const value = e.target.value;
-    const list = this.state.product && [];
-    if (item === 'other') {
+    const list = this.state.product || [];
+    if (item === "other") {
       this.setState({
-        isOtherProduct: isChecked,
+        isOtherProduct: isChecked
       });
     }
     if (isChecked) {
-      list.push(value);
+      list.push(item);
       this.setState({
-        product: list,
+        product: list
       });
     } else {
       this.setState({
-        product: list.filter((i) => i !== value),
+        product: list.filter(i => i !== item)
       });
     }
   }
@@ -250,12 +249,12 @@ class TalepForm extends React.Component {
                 name="city"
                 className="form-input"
                 onChange={this.handleCityChange}
-                style={{ textIndent: '45px', paddingLeft: '0' }}
+                style={{ textIndent: "45px", paddingLeft: "0" }}
               >
                 <option value="" selected disabled key="0">
                   Şehir Seçiniz*
                 </option>
-                {Cities.map((item) => (
+                {Cities.map(item => (
                   <option value={item.id} key={item.id}>
                     {item.city}
                   </option>
@@ -274,15 +273,14 @@ class TalepForm extends React.Component {
                 Talep edeceğiniz medikal parçayı seçiniz*
               </label>
               <br />
-              <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <div style={{ display: "flex", justifyContent: "center" }}>
                 <label className="container-input TalepForm-form-row-talepEdilenMalzeme-label">
                   <span className="input-text">Yüz kalkanı</span>
                   <input
                     className="TalepForm-form-row-talepEdilenMalzeme-input"
                     type="checkbox"
                     name="yuz_kalkanı"
-                    value="Yüz Kalkanı"
-                    checked={this.state.checkedProductItems.get('yuz_kalkanı')}
+                    checked={this.state.checkedProductItems.get("yuz_kalkanı")}
                     onChange={this.handleProductChange}
                   />
                   <span className="checkmark"></span>
@@ -293,8 +291,7 @@ class TalepForm extends React.Component {
                     className="TalepForm-form-row-bagislanacakhammaddeseciniz-input"
                     type="checkbox"
                     name="other"
-                    value="Diğer"
-                    checked={this.state.checkedProductItems.get('other')}
+                    checked={this.state.checkedProductItems.get("other")}
                     onChange={this.handleProductChange}
                   />
                   <span className="checkmark"></span>

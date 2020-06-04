@@ -1,25 +1,25 @@
-import React from 'react';
-import './style.scss';
-import Api from '../_services/Api';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Cities from '../BaskiDestekForm/components/Cities';
+import React from "react";
+import "./style.scss";
+import Api from "../_services/Api";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Cities from "../BaskiDestekForm/components/Cities";
 
 class HammaddeDestekForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      contact_name: '',
-      donater_name: '',
-      phone: '',
-      city: '',
+      email: "",
+      contact_name: "",
+      donator_name: "",
+      phone: "",
+      city: "",
       material: [],
-      quantity: '',
-      details: '',
+      quantity: "",
+      details: "",
       checkedMaterialItems: new Map(),
       isOtherMaterial: false,
-      otherMaterial: '',
+      otherMaterial: ""
     };
     this.handleMaterialChange = this.handleMaterialChange.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -29,7 +29,7 @@ class HammaddeDestekForm extends React.Component {
   handleCityChange(e) {
     const value = e.target.value;
     this.setState({
-      city: value,
+      city: value
     });
   }
   handleSubmit(e) {
@@ -37,63 +37,63 @@ class HammaddeDestekForm extends React.Component {
     const data = {
       email: this.state.email,
       contact_name: this.state.contact_name,
-      donater_name: this.state.donater_name,
+      donator_name: this.state.donator_name,
       phone: this.state.phone,
-      city: this.state.city,
-      material: this.state.material && this.state.material.join(','),
+      city: parseInt(this.state.city, 10),
+      material: this.state.material && this.state.material.join(","),
       details: this.state.details,
-      quantity: this.state.quantity,
+      quantity: parseInt(this.state.quantity, 10)
     };
-    console.log("data",data)
+
     if (
       !data.email ||
       !data.contact_name ||
-      !data.donater_name ||
+      !data.donator_name ||
       !data.city ||
       data.city <= 0 ||
       !data.material ||
       !data.quantity
     ) {
       toast.error(
-        '* ile işaretli olan alanlar boş bırakılamaz!  Lütfen işaretli alanları doldurunuz.'
+        "* ile işaretli olan alanlar boş bırakılamaz!  Lütfen işaretli alanları doldurunuz."
       );
       return;
     }
-    const methodUrl = 'anonymous/donation';
+    const methodUrl = "anonymous/donation";
     const response = Api(methodUrl, data);
   }
   handleInputChange(e) {
     const name = e.target.name;
     const value = e.target.value;
     switch (name) {
-      case 'email':
+      case "email":
         this.setState({
-          email: value,
+          email: value
         });
         break;
-      case 'contact_name':
+      case "contact_name":
         this.setState({
-          contact_name: value,
+          contact_name: value
         });
         break;
-      case 'donater_name':
+      case "donator_name":
         this.setState({
-          donater_name: value,
+          donator_name: value
         });
         break;
-      case 'phone':
+      case "phone":
         this.setState({
-          phone: value,
+          phone: value
         });
         break;
-      case 'quantity':
+      case "quantity":
         this.setState({
-          quantity: value,
+          quantity: value
         });
         break;
-      case 'details':
+      case "details":
         this.setState({
-          details: value,
+          details: value
         });
         break;
       default:
@@ -103,21 +103,20 @@ class HammaddeDestekForm extends React.Component {
   handleMaterialChange(e) {
     const item = e.target.name;
     const isChecked = e.target.checked;
-    const value = e.target.value;
-    const list = this.state.material ?? [];
-    if (item === 'other') {
+    const list = this.state.material || [];
+    if (item === "other") {
       this.setState({
-        isOtherMaterial: isChecked,
+        isOtherMaterial: isChecked
       });
     }
     if (isChecked) {
-      list.push(value);
+      list.push(item);
       this.setState({
-        material: list,
+        material: list
       });
     } else {
       this.setState({
-        material: list.filter((i) => i !== value),
+        material: list.filter(i => i !== item)
       });
     }
   }
@@ -155,7 +154,7 @@ class HammaddeDestekForm extends React.Component {
               <input
                 className="form-input"
                 type="text"
-                name="donater_name"
+                name="donator_name"
                 placeholder="Bağış yapan kişi/kurumun adı*"
                 onChange={this.handleInputChange}
               />
@@ -203,13 +202,13 @@ class HammaddeDestekForm extends React.Component {
                 name="city"
                 className="form-input"
                 onChange={this.handleCityChange}
-                style={{ textIndent: '45px', paddingLeft: '0' }}
+                style={{ textIndent: "45px", paddingLeft: "0" }}
                 defaultValue=""
               >
                 <option value="" disabled key="0">
                   Şehir Seçiniz*
                 </option>
-                {Cities.map((item) => (
+                {Cities.map(item => (
                   <option value={item.id} key={item.id}>
                     {item.city}
                   </option>
@@ -224,15 +223,14 @@ class HammaddeDestekForm extends React.Component {
                 Bağışlayabileceğiniz hammaddeyi seçiniz*
               </label>
               <br />
-              <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <div style={{ display: "flex", justifyContent: "center" }}>
                 <label className="container-input HammaddeDestekForm-form-row-bagislanacakhammaddeseciniz-label">
                   <span className="input-text">Filament</span>
                   <input
                     className="HammaddeDestekForm-form-row-bagislanacakhammaddeseciniz-input"
                     type="checkbox"
                     name="filament"
-                    value="Filament"
-                    checked={this.state.checkedMaterialItems.get('filament')}
+                    checked={this.state.checkedMaterialItems.get("filament")}
                     onChange={this.handleMaterialChange}
                   />
                   <span className="checkmark"></span>
@@ -243,8 +241,7 @@ class HammaddeDestekForm extends React.Component {
                     className="HammaddeDestekForm-form-row-bagislanacakhammaddeseciniz-input"
                     type="checkbox"
                     name="other"
-                    value="Diğer"
-                    checked={this.state.checkedMaterialItems.get('other')}
+                    checked={this.state.checkedMaterialItems.get("other")}
                     onChange={this.handleMaterialChange}
                   />
                   <span className="checkmark"></span>
@@ -268,17 +265,17 @@ class HammaddeDestekForm extends React.Component {
               />
             </div>
             <div className="form-relative HammaddeDestekForm-form-row-contactNameDiv">
-              {
-                this.state.isOtherMaterial && <textarea
-                rows="4"
-                cols="50"
-                className="form-section-big BaskiDestekForm-form-row-kacAdetYaziciyaSahipsiniz"
-                type="text"
-                name="details"
-                placeholder="Filament dışında başka malzeme bağışlıyorsanız lütfen detaylarını giriniz"
-                onChange={this.handleInputChange}
-                  />
-              }
+              {this.state.isOtherMaterial && (
+                <textarea
+                  rows="4"
+                  cols="50"
+                  className="form-section-big BaskiDestekForm-form-row-kacAdetYaziciyaSahipsiniz"
+                  type="text"
+                  name="details"
+                  placeholder="Filament dışında başka malzeme bağışlıyorsanız lütfen detaylarını giriniz"
+                  onChange={this.handleInputChange}
+                />
+              )}
             </div>
           </div>
           <div className="HammaddeDestekForm-form-row">

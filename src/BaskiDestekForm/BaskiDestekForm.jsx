@@ -1,32 +1,32 @@
-import React from 'react';
-import './style.scss';
-import threeDTypes from './components/3DTypes';
-import skills from './components/Skills';
-import Cities from './components/Cities';
-import Api from '../_services/Api';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React from "react";
+import "./style.scss";
+import threeDTypes from "./components/3DTypes";
+import skills from "./components/Skills";
+import Cities from "./components/Cities";
+import Api from "../_services/Api";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 class BaskiDestekForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      name: '',
-      phone: '',
-      city: '',
+      email: "",
+      name: "",
+      phone: "",
+      city: "",
       has_printer: false,
       printer_count: 0,
       experience: 0,
-      level: '',
+      level: "",
       technologies: [],
       skills: [],
-      design_and_engineering: '',
-      details: '',
+      design_and_engineering: "",
+      details: "",
       checked3DTypeItems: new Map(),
       checkedSkilsItems: new Map(),
       isOther3DType: false,
-      other3DTypes: '',
+      other3DTypes: ""
     };
     this.handleHasPrinterChange = this.handleHasPrinterChange.bind(this);
     this.handleLevelChange = this.handleLevelChange.bind(this);
@@ -41,44 +41,44 @@ class BaskiDestekForm extends React.Component {
     const name = e.target.name;
     const value = e.target.value;
     switch (name) {
-      case 'email':
+      case "email":
         this.setState({
-          email: value,
+          email: value
         });
         break;
-      case 'name':
+      case "name":
         this.setState({
-          name: value,
+          name: value
         });
         break;
-      case 'phone':
+      case "phone":
         this.setState({
-          phone: value,
+          phone: value
         });
         break;
-      case 'printerCount':
+      case "printerCount":
         this.setState({
-          printer_count: value,
+          printer_count: value
         });
         break;
-      case 'design_and_engineering':
+      case "design_and_engineering":
         this.setState({
-          design_and_engineering: value,
+          design_and_engineering: value
         });
         break;
-      case 'experience':
+      case "experience":
         this.setState({
-          experience: value,
+          experience: value
         });
         break;
-      case 'details':
+      case "details":
         this.setState({
-          details: value,
+          details: value
         });
         break;
-      case 'other_3D_types':
+      case "other_3D_types":
         this.setState({
-          other3DTypes: value,
+          other3DTypes: value
         });
         break;
       default:
@@ -89,40 +89,40 @@ class BaskiDestekForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     var technologies =
-      this.state.technologies && this.state.technologies.join(',');
+      this.state.technologies && this.state.technologies.join(",");
     if (this.state.isOther3DType) {
       technologies = technologies
-        ? technologies.concat(',', this.state.other3DTypes)
+        ? technologies.concat(",", this.state.other3DTypes)
         : this.state.technologies;
     }
     const data = {
       email: this.state.email,
       name: this.state.name,
       phone: this.state.phone,
-      city: this.state.city,
+      city: parseInt(this.state.city, 10),
       has_printer: this.state.has_printer,
-      printer_count: this.state.printer_count,
+      printer_count: parseInt(this.state.printer_count, 10),
       experience: this.state.experience,
       level: this.state.level,
       technologies: technologies,
-      skills: this.state.skills && this.state.skills.join(','),
+      skills: this.state.skills && this.state.skills.join(","),
       design_and_engineering: this.state.design_and_engineering,
-      details: this.state.details,
+      details: this.state.details
     };
     if (!data.email || !data.name || !data.city || data.city <= 0) {
       toast.error(
-        '* ile işaretli olan alanlar boş bırakılamaz!  Lütfen işaretli alanları doldurunuz.'
+        "* ile işaretli olan alanlar boş bırakılamaz!  Lütfen işaretli alanları doldurunuz."
       );
       return;
     }
-    const methodUrl = 'anonymous/production';
+    const methodUrl = "anonymous/production";
     const response = Api(methodUrl, data);
-    console.log('response', response);
+    console.log("response", response);
   }
   handleCityChange(e) {
     const value = e.target.value;
     this.setState({
-      city: value,
+      city: value
     });
   }
   handleSkilsChange(e) {
@@ -132,51 +132,50 @@ class BaskiDestekForm extends React.Component {
     if (isChecked) {
       list.push(item);
       this.setState({
-        skills: list,
+        skills: list
       });
     } else {
       this.setState({
-        skills: list.filter((i) => i !== item),
+        skills: list.filter(i => i !== item)
       });
     }
   }
   handle3DTypesChange(e) {
     const item = e.target.name;
-    const value = e.target.value;
     const isChecked = e.target.checked;
-    const list = this.state.technologies ?? [];
-    if (item === 'other') {
+    const list = this.state.technologies || [];
+    if (item === "other") {
       this.setState({
-        isOther3DType: isChecked,
+        isOther3DType: isChecked
       });
       return;
     }
     if (isChecked) {
-      list.push(value);
+      list.push(item);
       this.setState({
-        technologies: list,
+        technologies: list
       });
     } else {
       this.setState({
-        technologies: list.filter((i) => i !== value),
+        technologies: list.filter(i => i !== item)
       });
     }
   }
   handleHasPrinterChange(changeEvent) {
     this.setState({
-      has_printer: changeEvent.target.value,
+      has_printer: changeEvent.target.value
     });
   }
 
   handleLevelChange(changeEvent) {
     this.setState({
-      level: changeEvent.target.value,
+      level: changeEvent.target.value
     });
   }
 
   handleLevelChange(changeEvent) {
     this.setState({
-      level: changeEvent.target.value,
+      level: changeEvent.target.value
     });
   }
 
@@ -247,12 +246,12 @@ class BaskiDestekForm extends React.Component {
                   name="city"
                   className="form-input"
                   onChange={this.handleCityChange}
-                  style={{ textIndent: '45px', paddingLeft: '0' }}
+                  style={{ textIndent: "45px", paddingLeft: "0" }}
                 >
                   <option value="" selected disabled key="0">
                     Şehir Seçiniz*
                   </option>
-                  {Cities.map((item) => (
+                  {Cities.map(item => (
                     <option value={item.id} key={item.id}>
                       {item.city}
                     </option>
@@ -275,7 +274,7 @@ class BaskiDestekForm extends React.Component {
                       type="radio"
                       name="evet"
                       value={true}
-                      checked={this.state.has_printer === 'true'}
+                      checked={this.state.has_printer === "true"}
                       onChange={this.handleHasPrinterChange}
                     />
                     <span className="checkmark"></span>
@@ -287,7 +286,7 @@ class BaskiDestekForm extends React.Component {
                       type="radio"
                       name="hayır"
                       value={false}
-                      checked={this.state.has_printer === 'false'}
+                      checked={this.state.has_printer === "false"}
                       onChange={this.handleHasPrinterChange}
                     />
                     <span className="checkmark"></span>
@@ -323,7 +322,7 @@ class BaskiDestekForm extends React.Component {
                 </label>
                 <br />
                 <div className="flex">
-                  {threeDTypes.map((item) => (
+                  {threeDTypes.map(item => (
                     <label
                       key={item.key}
                       className="container-input wide-input"
@@ -334,7 +333,6 @@ class BaskiDestekForm extends React.Component {
                         name={item.name}
                         className=""
                         checked={this.state.checked3DTypeItems.get(item.name)}
-                        value={item.label}
                         onChange={this.handle3DTypesChange}
                       />
                       <span className="checkmark"></span>
@@ -368,7 +366,7 @@ class BaskiDestekForm extends React.Component {
                       type="radio"
                       name="hobi"
                       value="hobi"
-                      checked={this.state.level === 'hobi'}
+                      checked={this.state.level === "hobi"}
                       onChange={this.handleLevelChange}
                     />
                     <span className="checkmark"></span>
@@ -380,7 +378,7 @@ class BaskiDestekForm extends React.Component {
                       type="radio"
                       name="mfj"
                       value="mfj"
-                      checked={this.state.level === 'mfj'}
+                      checked={this.state.level === "mfj"}
                       onChange={this.handleLevelChange}
                     />
                     <span className="checkmark"></span>
@@ -392,7 +390,7 @@ class BaskiDestekForm extends React.Component {
                       type="radio"
                       name="sla"
                       value="sla"
-                      checked={this.state.level === 'sla'}
+                      checked={this.state.level === "sla"}
                       onChange={this.handleLevelChange}
                     />
                     <span className="checkmark"></span>
@@ -407,7 +405,7 @@ class BaskiDestekForm extends React.Component {
                   Aşağıdaki hangi beceriye sahipsiniz?
                 </label>
                 <div className="flex">
-                  {skills.map((item) => (
+                  {skills.map(item => (
                     <label
                       key={item.key}
                       className="container-input wide-input"
