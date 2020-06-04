@@ -34,22 +34,17 @@ class HammaddeDestekForm extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    var material = this.state.material && this.state.material.join(',');
-    if (this.state.isOtherMaterial) {
-      material = material
-        ? material.concat(',', this.state.otherMaterial)
-        : this.state.otherMaterial;
-    }
     const data = {
       email: this.state.email,
       contact_name: this.state.contact_name,
       donater_name: this.state.donater_name,
       phone: this.state.phone,
       city: this.state.city,
-      material: material,
+      material: this.state.material && this.state.material.join(','),
       details: this.state.details,
       quantity: this.state.quantity,
     };
+    console.log("data",data)
     if (
       !data.email ||
       !data.contact_name ||
@@ -101,10 +96,6 @@ class HammaddeDestekForm extends React.Component {
           details: value,
         });
         break;
-      case 'other_material':
-        this.setState({
-          otherMaterial: value,
-        });
       default:
         break;
     }
@@ -115,12 +106,9 @@ class HammaddeDestekForm extends React.Component {
     const value = e.target.value;
     const list = this.state.material ?? [];
     if (item === 'other') {
-      console.log('edfsdfsd');
-      console.log(this.state.isOtherMaterial);
       this.setState({
         isOtherMaterial: isChecked,
       });
-      return;
     }
     if (isChecked) {
       list.push(value);
@@ -216,8 +204,9 @@ class HammaddeDestekForm extends React.Component {
                 className="form-input"
                 onChange={this.handleCityChange}
                 style={{ textIndent: '45px', paddingLeft: '0' }}
+                defaultValue=""
               >
-                <option value="" selected disabled key="0">
+                <option value="" disabled key="0">
                   Şehir Seçiniz*
                 </option>
                 {Cities.map((item) => (
@@ -261,14 +250,6 @@ class HammaddeDestekForm extends React.Component {
                   <span className="checkmark"></span>
                 </label>
               </div>
-              {this.state.isOtherMaterial && (
-                <input
-                  className="form-input"
-                  type="text"
-                  name="other_material"
-                  onChange={this.handleInputChange}
-                />
-              )}
             </div>
           </div>
           <div className="HammaddeDestekForm-form-row">
@@ -287,7 +268,8 @@ class HammaddeDestekForm extends React.Component {
               />
             </div>
             <div className="form-relative HammaddeDestekForm-form-row-contactNameDiv">
-              <textarea
+              {
+                this.state.isOtherMaterial && <textarea
                 rows="4"
                 cols="50"
                 className="form-section-big BaskiDestekForm-form-row-kacAdetYaziciyaSahipsiniz"
@@ -295,7 +277,8 @@ class HammaddeDestekForm extends React.Component {
                 name="details"
                 placeholder="Filament dışında başka malzeme bağışlıyorsanız lütfen detaylarını giriniz"
                 onChange={this.handleInputChange}
-              />
+                  />
+              }
             </div>
           </div>
           <div className="HammaddeDestekForm-form-row">

@@ -36,12 +36,7 @@ class TalepForm extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    var product = this.state.product && this.state.product.join(',');
-    if (this.state.isOtherProduct) {
-      product = product.length
-        ? product.concat(',', this.state.otherProduct)
-        : this.state.otherProduct;
-    }
+
     const data = {
       email: this.state.email,
       contact_name: this.state.contact_name,
@@ -50,7 +45,7 @@ class TalepForm extends React.Component {
       section: this.state.section,
       phone: this.state.phone,
       city: this.state.city,
-      product: product,
+      product:  this.state.product && this.state.product.join(','),
       details: this.state.details,
       quantity: this.state.quantity,
     };
@@ -118,11 +113,6 @@ class TalepForm extends React.Component {
           details: value,
         });
         break;
-      case 'other_product':
-        this.setState({
-          otherProduct: value,
-        });
-        break;
       default:
         break;
     }
@@ -136,7 +126,6 @@ class TalepForm extends React.Component {
       this.setState({
         isOtherProduct: isChecked,
       });
-      return;
     }
     if (isChecked) {
       list.push(value);
@@ -311,15 +300,6 @@ class TalepForm extends React.Component {
                   <span className="checkmark"></span>
                 </label>
               </div>
-
-              {this.state.isOtherProduct && (
-                <input
-                  className="form-input"
-                  type="text"
-                  name="other_product"
-                  onChange={this.handleInputChange}
-                />
-              )}
             </div>
           </div>
 

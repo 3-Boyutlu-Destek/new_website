@@ -55,6 +55,9 @@ function Header() {
           <a href="" className="Header-buttons-link">
             Destekçiler
           </a>*/}
+           <Link to='/bizden-haberler' className="Header-buttons-link">
+            Bizden Haberler
+          </Link> 
           <Link to='/urunler' className="Header-buttons-link">
             Ürünler
           </Link> 

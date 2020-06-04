@@ -1,0 +1,89 @@
+@import '../scss/global/normalize.scss';
+@import '../scss/global/formalize.scss';
+@import '../scss/config/mixin.scss';
+
+.BizdenHaberler{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    &-content {
+      display: flex;
+      margin-top: 40px;
+      flex-direction: column;
+      align-items: center;
+      @include mq {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: initial;
+      }
+      .Habercard {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        & + & {
+          margin-top: 40px;
+          @include mq {
+            margin-top: 0;
+          }
+        }
+        @include mq {
+          position: relative;
+          width: 20%;
+          text-align: left;
+        }
+        &-top {
+          width: 100%;
+          border-radius: 20px;
+          height: 150px;
+          @include mq {
+            height: 300px;
+          }
+          &-img {
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+            height: 170px;
+            background-position: center center;
+            background-size: cover;
+            @include mq {
+              width: 300px;
+              height: 300px;
+            }
+          }
+        }
+        &-bottom {
+          padding-top: 40px;
+          padding-bottom: 40px;
+          line-height: 1.5;
+          &-title {
+            color: #515151;
+            font-size: 16px;
+            @include mq {
+              height: 80px;
+            }
+          }
+          &-text {
+            color: #353535;
+            margin-top: 20px;
+            font-size: 14px;
+          }
+          &-button {
+            width: 60%;
+            background-color: #ff003b;
+            color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-size: 16px;
+            @include mq {
+              position: absolute;
+              bottom: -40px;
+            }
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+}
