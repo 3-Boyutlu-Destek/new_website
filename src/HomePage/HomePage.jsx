@@ -1,11 +1,10 @@
-import React from 'react';
-import ReactPlayer from 'react-player';
-import Destekolcard from './components/Destekolcard';
-import Sistemsection from './components/Sistemsection';
-import Counteritem from './components/Counteritem';
-import Title from './components/Title';
-import { Link } from 'react-router-dom';
-import BasindaBiz from './components/BasindaBiz';
+import React from "react";
+import ReactPlayer from "react-player";
+import Destekolcard from "./components/Destekolcard";
+import Sistemsection from "./components/Sistemsection";
+import Counteritem from "./components/Counteritem";
+import Title from "./components/Title";
+import { Link } from "react-router-dom";
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -15,7 +14,7 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <div style={{ position: 'relative' }}>
+      <div style={{ position: "relative" }}>
         <section className="Cover">
           <div className="Cover-content">
             <h1 className="Cover-content-title">
@@ -27,16 +26,18 @@ class HomePage extends React.Component {
               3 Boyutlu yazıcıda oluşturulmuş parçalar, ihtiyaç anında orjinal
               parçaların yerini daha kısa sürede alır
             </p>
-            <Link to="/baski-destek-form" target="_blank">
-              <button className="Cover-content-button">Harekete Geç</button>
-            </Link>
-           {/*
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKdrVs6fNSwsHGEkXcYFv9i03eRQKwwGm-g9y0c6N4LTPmvQ/viewform" 
-                target="_blank">
+
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfKdrVs6fNSwsHGEkXcYFv9i03eRQKwwGm-g9y0c6N4LTPmvQ/viewform"
+              target="_blank"
+            >
               <button className="Cover-content-button">Harekete Geç</button>
             </a>
+            {/* <Link to="/baski-destek-form" target="_blank">
+              <button className="Cover-content-button">Harekete Geç</button>
+            </Link>
+         
             */}
-             
           </div>
           <img className="Cover-img" src="group.svg" />
         </section>
@@ -76,7 +77,7 @@ class HomePage extends React.Component {
                 Covid-19 ile mücadelede sahip olduğumuz 3 boyutlu yazıcı
                 potansiyeli ile medikal parçalara, araç ve gereçlere ihtiyaç
                 duyan hastaneleri desteklemek ve kişisel korunma ihtiyacına 3
-                boyutlu yazıcı teknolojileri ile cevap vermek istiyoruz.{' '}
+                boyutlu yazıcı teknolojileri ile cevap vermek istiyoruz.{" "}
                 <span>
                   3 boyutlu yazıcıda üretilmiş parçalar, ihtiyaç anında orijinal
                   parçaların yerini daha kısa sürede alabilir!
@@ -103,8 +104,8 @@ class HomePage extends React.Component {
                   boyutlu yazıcıları belirlemek ve kitlesel üretim ile ihtiyacı
                   en kısa sürede çözüme kavuşturmaya katkı sağlamak istersen 3
                   Boyutlu Destek Ağı'na kaydolabilirsin."
-               // link="https://docs.google.com/forms/d/e/1FAIpQLSfKdrVs6fNSwsHGEkXcYFv9i03eRQKwwGm-g9y0c6N4LTPmvQ/viewform"
-                  link="/baski-destek-form"
+                link="https://docs.google.com/forms/d/e/1FAIpQLSfKdrVs6fNSwsHGEkXcYFv9i03eRQKwwGm-g9y0c6N4LTPmvQ/viewform"
+                // link="/baski-destek-form"
               />
               <Destekolcard
                 addClass="hover"
@@ -112,8 +113,8 @@ class HomePage extends React.Component {
                 title="Hammadde Desteği"
                 text="Lastik, PETG şeffaf koruyucu plaka ve filament desteği
                   sağlamak istersen, tedarik ağına dahil olabilirsin."
-               // link="https://docs.google.com/forms/d/e/1FAIpQLScR4-5CE7VXJwTO84wvjLHxn11vtnZrip3bMr-ncHKKo2GBOw/viewform"
-                 link="/hammadde-destek-form"
+                link="https://docs.google.com/forms/d/e/1FAIpQLScR4-5CE7VXJwTO84wvjLHxn11vtnZrip3bMr-ncHKKo2GBOw/viewform"
+                // link="/hammadde-destek-form"
               />
               <div className={`Destekol-cards-card`}>
                 <img
@@ -261,12 +262,6 @@ class HomePage extends React.Component {
               </p>
             </div>
           </div>
-        </section>
-        <section className="BizdenHaberler">
-          <div className="BizdenHaberler-basindabiz">
-              <Title addClass="red BizdenHaberler-basindabiz-title" text="Basında Biz" />
-               <BasindaBiz />
-            </div>
         </section>
       </div>
     );

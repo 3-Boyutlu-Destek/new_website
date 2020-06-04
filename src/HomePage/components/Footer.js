@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function Footer() {
   return (
@@ -124,14 +124,20 @@ function Footer() {
                 />
               </a>
             </div>
+            <div className="Footer-top-right-bizeUlasin">
+              <p className="Footer-top-right-bizeUlasin-telNo">Bize Ulaşın</p>
+              <p className="Footer-top-right-bizeUlasin-telNo">
+                0554 348 47 74
+              </p>
+              <p className="Footer-top-right-bizeUlasin-email">
+                iletisim@3boyutludestek.org
+              </p>
+            </div>
           </div>
         </div>
       </div>
       <div className="Footer-bottom">
-        <p>
-          3 Boyutlu Destek | Kolektif Üretim Hareketi Platformu | 2020
-        </p>
-        <p className="Footer-bottom-mail">iletisim@3boyutludestek.org</p>
+        <p>3 Boyutlu Destek | Kolektif Üretim Hareketi Platformu | 2020</p>
       </div>
     </footer>
   );

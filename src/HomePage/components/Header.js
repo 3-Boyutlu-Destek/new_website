@@ -1,31 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function toggle() {
-  const e = document.getElementsByClassName('Header-buttons');
-  e[0].classList.toggle('switch');
+  const e = document.getElementsByClassName("Header-buttons");
+  e[0].classList.toggle("switch");
 }
 
-window.onscroll = function () {
+window.onscroll = function() {
   scrollFunc();
 };
 
 function scrollFunc() {
   if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
-    document.getElementById('logo').src = 'logo-text.svg';
+    document.getElementById("logo").src = "logo-text.svg";
   } else {
-    document.getElementById('logo').src = 'logo.svg';
+    document.getElementById("logo").src = "logo.svg";
   }
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementsByClassName('Header-nav')[0].classList.add('scroll');
+    document.getElementsByClassName("Header-nav")[0].classList.add("scroll");
     document
-      .getElementsByClassName('Header-buttons')[0]
-      .classList.add('scroll');
+      .getElementsByClassName("Header-buttons")[0]
+      .classList.add("scroll");
   } else {
-    document.getElementsByClassName('Header-nav')[0].classList.remove('scroll');
+    document.getElementsByClassName("Header-nav")[0].classList.remove("scroll");
     document
-      .getElementsByClassName('Header-buttons')[0]
-      .classList.remove('scroll');
+      .getElementsByClassName("Header-buttons")[0]
+      .classList.remove("scroll");
   }
 }
 
@@ -44,7 +44,7 @@ function Header() {
         <div
           className="Header-switch"
           onClick={toggle}
-          style={{ cursor: 'pointer' }}
+          style={{ cursor: "pointer" }}
         >
           <img className="Header-switch-icon" src="menu.svg" />
         </div>
@@ -55,13 +55,28 @@ function Header() {
           <a href="" className="Header-buttons-link">
             Destekçiler
           </a>*/}
-           <Link to='/bizden-haberler' className="Header-buttons-link">
+          <Link to="/bizden-haberler" className="Header-buttons-link">
             Bizden Haberler
-          </Link> 
-          <Link to='/urunler' className="Header-buttons-link">
+          </Link>
+          <Link to="/urunler" className="Header-buttons-link">
             Ürünler
-          </Link> 
-          <Link
+          </Link>
+
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScR4-5CE7VXJwTO84wvjLHxn11vtnZrip3bMr-ncHKKo2GBOw/viewform"
+            className="Header-buttons-link primary"
+            target="_blank"
+          >
+            Destek Ol
+          </a>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfTWxS4MBVDiqLRA-pL6GGk6p8lp1ugmwU6f0vvLYZChIs0zA/viewform?embedded=true"
+            target="_blank"
+            className="Header-buttons-link primary blue"
+          >
+            Talep Et
+          </a>
+          {/*   <Link
             to='/hammadde-destek-form'
             className="Header-buttons-link primary"
             target="_blank"
@@ -75,22 +90,8 @@ function Header() {
           >
             Talep Et
          </Link>
-        {/*
-        <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScR4-5CE7VXJwTO84wvjLHxn11vtnZrip3bMr-ncHKKo2GBOw/viewform"
-            className="Header-buttons-link primary"
-            target="_blank"
-          >
-            Destek Ol
-          </a>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfTWxS4MBVDiqLRA-pL6GGk6p8lp1ugmwU6f0vvLYZChIs0zA/viewform?embedded=true"
-            target="_blank"
-            className="Header-buttons-link primary blue"
-          >
-            Talep Et
-         </a>
-        */}  
+       
+        */}
         </div>
       </nav>
     </header>
