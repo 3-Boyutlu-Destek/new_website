@@ -44,7 +44,7 @@ class HammaddeDestekForm extends React.Component {
       details: this.state.details,
       quantity: parseInt(this.state.quantity, 10)
     };
-
+    // console.log("data", JSON.stringify(data));
     if (
       !data.email ||
       !data.contact_name ||
@@ -59,8 +59,16 @@ class HammaddeDestekForm extends React.Component {
       );
       return;
     }
+
     const methodUrl = "anonymous/donation";
-    const response = Api(methodUrl, data);
+
+    Api(methodUrl, data).then(response => {
+      if (response) {
+        toast.success("Başarıyla kaydedildi");
+      } else {
+        toast.error("İşlem başarısız oldu. Lütfen tekrar deneyin.");
+      }
+    });
   }
   handleInputChange(e) {
     const name = e.target.name;
@@ -108,6 +116,7 @@ class HammaddeDestekForm extends React.Component {
       this.setState({
         isOtherMaterial: isChecked
       });
+      return;
     }
     if (isChecked) {
       list.push(item);

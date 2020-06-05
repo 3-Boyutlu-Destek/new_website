@@ -36,11 +36,10 @@ class TalepForm extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-
     const data = {
       email: this.state.email,
       contact_name: this.state.contact_name,
-      contact_email: this.state.donater_name,
+      contact_email: this.state.contact_email,
       requester_name: this.state.requester_name,
       section: this.state.section,
       phone: this.state.phone,
@@ -60,14 +59,20 @@ class TalepForm extends React.Component {
       !data.product ||
       !data.quantity
     ) {
+      console.log(data);
       toast.error(
         "* ile işaretli olan alanlar boş bırakılamaz! Lütfen işaretli alanları doldurunuz."
       );
       return;
     }
     const methodUrl = "anonymous/request";
-    const response = Api(methodUrl, data);
-    console.log("response", response);
+    Api(methodUrl, data).then(response => {
+      if (response) {
+        toast.success("Başarıyla kaydedildi");
+      } else {
+        toast.error("İşlem başarısız oldu. Lütfen tekrar deneyin.");
+      }
+    });
   }
   handleInputChange(e) {
     const name = e.target.name;
@@ -80,7 +85,7 @@ class TalepForm extends React.Component {
         break;
       case "contact_name":
         this.setState({
-          name: value
+          contact_name: value
         });
         break;
       case "contact_email":
@@ -125,6 +130,7 @@ class TalepForm extends React.Component {
       this.setState({
         isOtherProduct: isChecked
       });
+      return;
     }
     if (isChecked) {
       list.push(item);
@@ -250,8 +256,9 @@ class TalepForm extends React.Component {
                 className="form-input"
                 onChange={this.handleCityChange}
                 style={{ textIndent: "45px", paddingLeft: "0" }}
+                defaultValue=""
               >
-                <option value="" selected disabled key="0">
+                <option value="" disabled key="0">
                   Şehir Seçiniz*
                 </option>
                 {Cities.map(item => (
@@ -279,8 +286,8 @@ class TalepForm extends React.Component {
                   <input
                     className="TalepForm-form-row-talepEdilenMalzeme-input"
                     type="checkbox"
-                    name="yuz_kalkanı"
-                    checked={this.state.checkedProductItems.get("yuz_kalkanı")}
+                    name="face_shield"
+                    checked={this.state.checkedProductItems.get("face_shield")}
                     onChange={this.handleProductChange}
                   />
                   <span className="checkmark"></span>
@@ -301,24 +308,26 @@ class TalepForm extends React.Component {
           </div>
 
           <div className="TalepForm-form-row">
-            <div className="form-relative form-section-big TalepForm-form-row-details">
-              <img
-                src="form-printer-count-level.svg"
-                className="form-icon"
-                alt=""
-              />
-              <label className="center">
-                Yüz kalkanı dışında bir medikal parça talep ediyorsanız, lütfen
-                detaylarını giriniz.
-              </label>
-              <br />
-              <input
-                className="input-small TalepForm-form-row-details-input"
-                type="text"
-                name="details"
-                onChange={this.handleInputChange}
-              />
-            </div>
+            {this.state.isOtherProduct && (
+              <div className="form-relative form-section-big TalepForm-form-row-details">
+                <img
+                  src="form-printer-count-level.svg"
+                  className="form-icon"
+                  alt=""
+                />
+                <label className="center">
+                  Yüz kalkanı dışında bir medikal parça talep ediyorsanız,
+                  lütfen detaylarını giriniz.
+                </label>
+                <br />
+                <input
+                  className="input-small TalepForm-form-row-details-input"
+                  type="text"
+                  name="details"
+                  onChange={this.handleInputChange}
+                />
+              </div>
+            )}{" "}
             <div className="form-relative form-section-big  TalepForm-form-row-kacAdetMedicalParcayaIhtiyacinizVar">
               <img
                 src="form-printer-count-icon.svg"
