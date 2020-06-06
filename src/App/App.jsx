@@ -9,6 +9,7 @@ import { TalepForm } from '@/TalepForm';
 import { Urunler } from '@/Urunler';
 import { UrunDetail } from '@/UrunDetail';
 import { BizdenHaberler } from '@/BizdenHaberler';
+import { Hakkimizda } from '@/Hakkimizda';
 import Header from '../HomePage/components/Header';
 import Footer from '../HomePage/components/Footer';
 import Favicon from 'react-favicon';
@@ -30,6 +31,7 @@ class App extends React.Component {
           <PrivateRoute path="/talep-form" component={ TalepForm } />
           <PrivateRoute path="/urunler" component={ Urunler } />
           <PrivateRoute path="/bizden-haberler" component={ BizdenHaberler } />
+          <PrivateRoute path="/hakkimizda" component={ Hakkimizda } />
           <PrivateRoute path="/urun-detail/:id" component={ UrunDetail } />
           <Footer />
         </div>
