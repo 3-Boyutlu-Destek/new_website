@@ -7,13 +7,10 @@ import urunler from './Data/Urunler';
 class Urunler extends React.Component{
     constructor(props){
         super(props);
-        this.state={
-
-        }
-        this.myRef = React.createRef()
+        this.myRef = React.createRef() 
     }
     componentDidMount(){
-       this.myRef.current.scrollTo(0, 0);
+        this.myRef = window.scrollTo(0,0);
     }
     render(){
         return(

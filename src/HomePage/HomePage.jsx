@@ -10,11 +10,14 @@ class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.myRef = React.createRef();
   }
-
+  componentDidMount(){
+    this.myRef = window.scrollTo(0,0);
+}
   render() {
     return (
-      <div style={{ position: "relative" }}>
+      <div style={{ position: "relative" }} ref={this.myRef}>
         <section className="Cover">
           <div className="Cover-content">
             <h1 className="Cover-content-title">
@@ -26,7 +29,7 @@ class HomePage extends React.Component {
               3 Boyutlu yazıcıda oluşturulmuş parçalar, ihtiyaç anında orjinal
               parçaların yerini daha kısa sürede alır
             </p>
-            <Link to="/baski-destek-form" target="_blank">
+            <Link to="/baski-destek-form">
               <button className="Cover-content-button">Harekete Geç</button>
             </Link>
             {/*

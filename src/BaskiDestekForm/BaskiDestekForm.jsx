@@ -28,6 +28,8 @@ class BaskiDestekForm extends React.Component {
       isOther3DType: false,
       other3DTypes: ""
     };
+    
+    this.myRef = React.createRef() 
     this.handleHasPrinterChange = this.handleHasPrinterChange.bind(this);
     this.handleLevelChange = this.handleLevelChange.bind(this);
     this.handle3DTypesChange = this.handle3DTypesChange.bind(this);
@@ -36,7 +38,9 @@ class BaskiDestekForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCityChange = this.handleCityChange.bind(this);
   }
-
+  componentDidMount(){
+    this.myRef = window.scrollTo(0,0);
+  }
   handleInputChange(e) {
     const name = e.target.name;
     const value = e.target.value;
@@ -181,7 +185,7 @@ class BaskiDestekForm extends React.Component {
 
   render() {
     return (
-      <div className="BaskiDestekForm">
+      <div className="BaskiDestekForm" ref={this.myRef}>
         <img src="form-top-red.png" className="BaskiDestekForm-top" alt="" />
         <ToastContainer />
         <div className="BaskiDestekForm-main">

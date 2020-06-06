@@ -23,11 +23,15 @@ class TalepForm extends React.Component {
       isOtherProduct: false,
       otherProduct: ""
     };
+    this.myRef = React.createRef();
     this.handleProductChange = this.handleProductChange.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCityChange = this.handleCityChange.bind(this);
   }
+  componentDidMount(){
+    this.myRef = window.scrollTo(0,0);
+}
   handleCityChange(e) {
     const value = e.target.value;
     this.setState({
@@ -59,7 +63,6 @@ class TalepForm extends React.Component {
       !data.product ||
       !data.quantity
     ) {
-      console.log(data);
       toast.error(
         "* ile işaretli olan alanlar boş bırakılamaz! Lütfen işaretli alanları doldurunuz."
       );
@@ -146,7 +149,7 @@ class TalepForm extends React.Component {
 
   render() {
     return (
-      <div className="TalepForm">
+      <div className="TalepForm" ref={this.myRef}>
         <img src="form-top-blue.png" className="TalepForm-top" alt="" />
         <h1 className="TalepForm-title">Medikal Parça</h1>
         <p className="TalepForm-subtitle">

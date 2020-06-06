@@ -104,7 +104,7 @@ body {
     &.scroll {
       padding: 0px 40px;
       @include mq {
-        padding: 5px 80px;
+        padding: 0 80px;
       }
     }
   }

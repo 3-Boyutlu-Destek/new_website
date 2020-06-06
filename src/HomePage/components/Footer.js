@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -24,12 +25,12 @@ function Footer() {
                 <a href="" className="Footer-top-middle-links-left-link">
                   Hakkımızda
                 </a>
-                <a href="" className="Footer-top-middle-links-left-link">
-                  Biz Kimiz
-                </a>
-                <a href="" className="Footer-top-middle-links-left-link">
+                <Link to="/bizden-haberler" className="Footer-top-middle-links-left-link">
+                  Bizden Haberler
+                </Link>
+                {/*<a href="" className="Footer-top-middle-links-left-link">
                   Basında Biz
-                </a>
+             </a>*/}
                 <a
                   href="kvkk_metni.html"
                   className="Footer-top-middle-links-left-link"
@@ -46,15 +47,15 @@ function Footer() {
                 </a>
               </div>
               <div className="Footer-top-middle-links-right">
-                <a href="" className="Footer-top-middle-links-right-link">
+               {/* <a href="" className="Footer-top-middle-links-right-link">
                   Destekçilerimiz
-                </a>
-                <a href="" className="Footer-top-middle-links-right-link">
-                  Üreticiler
-                </a>
-                <a href="" className="Footer-top-middle-links-right-link">
+                </a>*/} 
+                <Link to="/urunler" className="Footer-top-middle-links-right-link">
+                  Ürünler
+                </Link>
+               {/* <a href="" className="Footer-top-middle-links-right-link">
                   İstatistikler
-                </a>
+                </a>*/}
                 <a
                   href="ss_sorular.html"
                   className="Footer-top-middle-links-right-link"
@@ -62,7 +63,7 @@ function Footer() {
                 >
                   S.S.S
                 </a>
-                <a href="" className="Footer-top-middle-links-right-link">
+                <a href="https://medium.com/@3boyutludestek" target="_blank" className="Footer-top-middle-links-right-link">
                   Blog
                 </a>
               </div>

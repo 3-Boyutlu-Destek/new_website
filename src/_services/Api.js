@@ -1,11 +1,11 @@
 import React from "react";
 import config from "config";
 
-function Api(methodUrl, body) {
+function Api(methodUrl, data) {
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body)
+    body: JSON.stringify(data)
   };
   return fetch(`${config.apiUrl}/${methodUrl}`, requestOptions).then(
     response => {

@@ -64,13 +64,11 @@ function Header() {
           <Link
             to="/hammadde-destek-form"
             className="Header-buttons-link primary"
-            target="_blank"
           >
             Destek Ol
           </Link>
           <Link
             to="/talep-form"
-            target="_blank"
             className="Header-buttons-link primary blue"
           >
             Talep Et

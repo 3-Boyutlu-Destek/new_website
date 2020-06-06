@@ -21,11 +21,15 @@ class HammaddeDestekForm extends React.Component {
       isOtherMaterial: false,
       otherMaterial: ""
     };
+    this.myRef = React.createRef();
     this.handleMaterialChange = this.handleMaterialChange.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCityChange = this.handleCityChange.bind(this);
   }
+  componentDidMount(){
+    this.myRef = window.scrollTo(0,0);
+}
   handleCityChange(e) {
     const value = e.target.value;
     this.setState({
@@ -63,6 +67,7 @@ class HammaddeDestekForm extends React.Component {
     const methodUrl = "anonymous/donation";
 
     Api(methodUrl, data).then(response => {
+      console.log(response.status);
       if (response) {
         toast.success("Başarıyla kaydedildi");
       } else {
@@ -132,7 +137,7 @@ class HammaddeDestekForm extends React.Component {
 
   render() {
     return (
-      <div className="HammaddeDestekForm">
+      <div className="HammaddeDestekForm" ref={this.myRef}>
         <img src="form-top-red.png" className="BaskiDestekForm-top" alt="" />
         <ToastContainer />
         <h1 className="BaskiDestekForm-main-title">
