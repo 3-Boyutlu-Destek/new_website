@@ -747,7 +747,7 @@ body {
         &-left {
           display: flex;
           flex-direction: column;
-          justify-content: space-around;
+          justify-content: space-evenly;
           &-link {
             color: #515151;
             & + & {
@@ -764,7 +764,7 @@ body {
         &-right {
           display: flex;
           flex-direction: column;
-          justify-content: space-around;
+          justify-content: space-evenly;
           margin-top: 15px;
           @include mq {
             margin-left: 130px;

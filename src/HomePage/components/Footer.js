@@ -22,9 +22,9 @@ function Footer() {
           <div className="Footer-top-middle">
             <div className="Footer-top-middle-links">
               <div className="Footer-top-middle-links-left">
-                <a href="" className="Footer-top-middle-links-left-link">
+                <Link to="/hakkimizda" className="Footer-top-middle-links-left-link">
                   Hakkımızda
-                </a>
+                </Link>
                 <Link to="/bizden-haberler" className="Footer-top-middle-links-left-link">
                   Bizden Haberler
                 </Link>
@@ -38,6 +38,12 @@ function Footer() {
                 >
                   İlgili Kişi Başvuru Formu
                 </a>
+                
+              </div>
+              <div className="Footer-top-middle-links-right">
+               {/* <a href="" className="Footer-top-middle-links-right-link">
+                  Destekçilerimiz
+                </a>*/} 
                 <a
                   href="aydinlatma_metni.html"
                   className="Footer-top-middle-links-left-link"
@@ -45,14 +51,6 @@ function Footer() {
                 >
                   K.V.K Metni
                 </a>
-              </div>
-              <div className="Footer-top-middle-links-right">
-               {/* <a href="" className="Footer-top-middle-links-right-link">
-                  Destekçilerimiz
-                </a>*/} 
-                <Link to="/urunler" className="Footer-top-middle-links-right-link">
-                  Ürünler
-                </Link>
                {/* <a href="" className="Footer-top-middle-links-right-link">
                   İstatistikler
                 </a>*/}

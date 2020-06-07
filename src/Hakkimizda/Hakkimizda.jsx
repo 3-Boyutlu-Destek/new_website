@@ -5,16 +5,20 @@ import "./style.scss";
  class Hakkimizda extends React.Component {
     constructor(props) {
         super(props);
+        this.myRef = React.createRef();
       }
-        render() {
+     componentDidMount(){
+         this.myRef = window.scrollTo(0,0);
+     }
+      render() {
         return (
-            <div >
+            <div className="Hakkimizda" ref={this.myRef}>
               <Image src="public/Doktorlar.jpg" className="header-image"/>
               
                 <div className='hakkimizda'>
+                    <h3>HAKKIMIZDA</h3>
                     <p className="tanitim-text">
                      3 Boyutlu Destek Kolektif Üretim Hareketi olarak Covid-19 ile mücadele için 3 boyutlu yazıcı sahiplerinin bir araya geldiği büyük bir aileyiz.
-{" "}
                     </p>
                     <p className="tanitim-text">
                     Kolektif Üretim Hareketi Ağı’mıza kayıtlı 4500’den fazla 3 boyutlu yazıcı sayesinde günde 25.000 adet farklı boyutlarda ürünü basabilme kapasitesine sahibiz. Gücümüzü, ağa kayıtlı 3.000’den fazla kişi ve kurumun tamamen gönüllü emeklerinden ve üretim yapabilmemiz için hammadde sağlayan destekçilerimizden alıyoruz.
@@ -24,9 +28,8 @@ import "./style.scss";
                     </p>
                                  
                 </div>
-                <div className="MisyonVizyon-left">
-                    <div className="container">
-                        
+                <div className="MisyonVizyon">
+                    <div className="MisyonVizyon-left">
                         <p className="MisyonVizyon-left-text">
                         <h3>MİSYON</h3>
                             3 Boyutlu Destek Kolektif Üretim Hareketi, teknoloji kullanım yetenekleri 
@@ -42,8 +45,7 @@ import "./style.scss";
                         araçlarını kullanarak tasarladığı ve ürettiği ürünlerle, toplumsal problemlere karşı çözüm geliştirir.
                         </p>
                     </div>
-                </div>
-                <div className="MisyonVizyon-right">
+                    <div className="MisyonVizyon-right">
                         
                         <img
                             src="misyon.jpg"
@@ -51,6 +53,8 @@ import "./style.scss";
                             className="MisyonVizyon-right-img"
                         />
 
+                     </div>
+           
                 </div>
             </div>
         )
