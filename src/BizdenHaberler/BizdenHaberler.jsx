@@ -7,11 +7,14 @@ import BasindaBiz from "../HomePage/components/BasindaBiz";
 class BizdenHaberler extends React.Component {
   constructor(props) {
     super(props);
+    this.myRef = React.createRef() 
   }
-
+  componentDidMount(){
+    this.myRef = window.scrollTo(0,0);
+}
   render() {
     return (
-      <div className="BizdenHaberler">
+      <div className="BizdenHaberler" ref={this.myRef}>
         <Title addClass="red" text="Bizden Haberler" />
         <div className="BizdenHaberler-content">
           <Habercard

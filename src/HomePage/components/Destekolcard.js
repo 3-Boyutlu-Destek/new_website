@@ -16,7 +16,6 @@ function Destekolcard(props) {
         <Link
           className={`Destekol-cards-card-content-button ${props.addClass}`}
           to={props.link}
-          target="_blank"
         >
           Destek Ol
         </Link>

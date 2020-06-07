@@ -28,6 +28,8 @@ class BaskiDestekForm extends React.Component {
       isOther3DType: false,
       other3DTypes: ""
     };
+    
+    this.myRef = React.createRef() 
     this.handleHasPrinterChange = this.handleHasPrinterChange.bind(this);
     this.handleLevelChange = this.handleLevelChange.bind(this);
     this.handle3DTypesChange = this.handle3DTypesChange.bind(this);
@@ -36,7 +38,9 @@ class BaskiDestekForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCityChange = this.handleCityChange.bind(this);
   }
-
+  componentDidMount(){
+    this.myRef = window.scrollTo(0,0);
+  }
   handleInputChange(e) {
     const name = e.target.name;
     const value = e.target.value;
@@ -88,13 +92,7 @@ class BaskiDestekForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    var technologies =
-      this.state.technologies && this.state.technologies.join(",");
-    if (this.state.isOther3DType) {
-      technologies = technologies
-        ? technologies.concat(",", this.state.other3DTypes)
-        : this.state.technologies;
-    }
+
     const data = {
       email: this.state.email,
       name: this.state.name,
@@ -104,7 +102,8 @@ class BaskiDestekForm extends React.Component {
       printer_count: parseInt(this.state.printer_count, 10),
       experience: this.state.experience,
       level: this.state.level,
-      technologies: technologies,
+      technologies:
+        this.state.technologies && this.state.technologies.join(","),
       skills: this.state.skills && this.state.skills.join(","),
       design_and_engineering: this.state.design_and_engineering,
       details: this.state.details
@@ -116,8 +115,13 @@ class BaskiDestekForm extends React.Component {
       return;
     }
     const methodUrl = "anonymous/production";
-    const response = Api(methodUrl, data);
-    console.log("response", response);
+    Api(methodUrl, data).then(response => {
+      if (response) {
+        toast.success("Başarıyla kaydedildi");
+      } else {
+        toast.error("İşlem başarısız oldu. Lütfen tekrar deneyin.");
+      }
+    });
   }
   handleCityChange(e) {
     const value = e.target.value;
@@ -181,7 +185,7 @@ class BaskiDestekForm extends React.Component {
 
   render() {
     return (
-      <div className="BaskiDestekForm">
+      <div className="BaskiDestekForm" ref={this.myRef}>
         <img src="form-top-red.png" className="BaskiDestekForm-top" alt="" />
         <ToastContainer />
         <div className="BaskiDestekForm-main">
@@ -247,8 +251,9 @@ class BaskiDestekForm extends React.Component {
                   className="form-input"
                   onChange={this.handleCityChange}
                   style={{ textIndent: "45px", paddingLeft: "0" }}
+                  defaultValue=""
                 >
-                  <option value="" selected disabled key="0">
+                  <option value="" disabled key="0">
                     Şehir Seçiniz*
                   </option>
                   {Cities.map(item => (
@@ -364,33 +369,33 @@ class BaskiDestekForm extends React.Component {
                     <input
                       className=""
                       type="radio"
-                      name="hobi"
-                      value="hobi"
-                      checked={this.state.level === "hobi"}
+                      name="hobby"
+                      value="hobby"
+                      checked={this.state.level === "hobby"}
                       onChange={this.handleLevelChange}
                     />
                     <span className="checkmark"></span>
                   </label>
                   <label className="container-input">
-                    <span className="input-text">MFJ</span>
+                    <span className="input-text">Profesyonel</span>
                     <input
                       className=""
                       type="radio"
-                      name="mfj"
-                      value="mfj"
-                      checked={this.state.level === "mfj"}
+                      name="professional"
+                      value="professional"
+                      checked={this.state.level === "professional"}
                       onChange={this.handleLevelChange}
                     />
                     <span className="checkmark"></span>
                   </label>
                   <label className="container-input">
-                    <span className="input-text">SLA</span>
+                    <span className="input-text">Diğer</span>
                     <input
                       className=""
                       type="radio"
-                      name="sla"
-                      value="sla"
-                      checked={this.state.level === "sla"}
+                      name="other"
+                      value="other"
+                      checked={this.state.level === "other"}
                       onChange={this.handleLevelChange}
                     />
                     <span className="checkmark"></span>
@@ -438,11 +443,9 @@ class BaskiDestekForm extends React.Component {
               </div>
             </div>
             <div className="BaskiDestekForm-form-row">
-              <textarea
-                rows="4"
-                cols="50"
+              <input
                 className="form-relative form-section-big BaskiDestekForm-form-row-kacAdetYaziciyaSahipsiniz"
-                type="text"
+                type="number"
                 name="experience"
                 placeholder="Kaç yıl deneyiminiz var?"
                 onChange={this.handleInputChange}
