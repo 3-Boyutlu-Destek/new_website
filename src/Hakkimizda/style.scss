@@ -59,6 +59,8 @@
         word-break: break-word;
         span {
           display: block;
+          font-size: larger;
+          font-weight: 600;
           @include mq {
             margin-top: 40px;
           }

@@ -13,7 +13,6 @@ import "./style.scss";
         return (
             <div className="Hakkimizda" ref={this.myRef}>
               <img src="public/Doktorlar.jpg" className="header-image"/>
-              
                 <div className='hakkimizda'>
                     <h3>HAKKIMIZDA</h3>
                     <p className="tanitim-text">
@@ -30,7 +29,7 @@ import "./style.scss";
                 <div className="MisyonVizyon">
                     <div className="MisyonVizyon-left">
                         <p className="MisyonVizyon-left-text">
-                        <h3>MİSYON</h3>
+                        <span>MİSYON</span>
                             3 Boyutlu Destek Kolektif Üretim Hareketi, teknoloji kullanım yetenekleri 
                             ve farkındalığı yüksek olan bireylerin bir araya gelerek oluşturduğu merkezi 
                             olmayan üretim ağıdır.Bir araya gelme amacımız, yeni nesil üretim teknolojilerini
@@ -39,7 +38,7 @@ import "./style.scss";
                         </p>
                         
                         <p className="MisyonVizyon-left-text">
-                        <h3>VİZYON</h3>
+                        <span>VİZYON</span>
                         3 Boyutlu Destek Kolektif Üretim Hareketi, dağıtık gönüllü üretici ağı ile yeni nesil üretim
                         araçlarını kullanarak tasarladığı ve ürettiği ürünlerle, toplumsal problemlere karşı çözüm geliştirir.
                         </p>
