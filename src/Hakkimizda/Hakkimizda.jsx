@@ -1,5 +1,4 @@
 import React from "react";
-import {Grid, Col, Image} from 'react-bootstrap'
 import "./style.scss";
 
  class Hakkimizda extends React.Component {
@@ -13,7 +12,7 @@ import "./style.scss";
       render() {
         return (
             <div className="Hakkimizda" ref={this.myRef}>
-              <Image src="public/Doktorlar.jpg" className="header-image"/>
+              <img src="public/Doktorlar.jpg" className="header-image"/>
               
                 <div className='hakkimizda'>
                     <h3>HAKKIMIZDA</h3>
