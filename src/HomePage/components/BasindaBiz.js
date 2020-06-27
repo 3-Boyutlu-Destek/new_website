@@ -24,7 +24,7 @@ function BasindaBiz(){
        <Tabs className="BasindaBiz-titles-tabs" defaultactivekey="tumVideo" id="uncontrolled-tab-example">
            <TabList>
               <Tab eventkey="tumVideo" title="Tüm Videolar" key="1">
-                Tüm Videolarrrrrr
+                Tüm Videolar
               </Tab>
               <Tab eventkey="ilTemsilcileri" title="İl Temsilcileri" key="2">
                 İl Temsilcileri
