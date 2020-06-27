@@ -12,6 +12,7 @@ import 'react-tabs/style/react-tabs.css';
 function BasindaBiz(){
   const [videoDetail, setVideoDetail] = useState({videoUrl: allVideos[0].videoUrl, detail:allVideos[0].detail});
  return(
+
    <div className="BasindaBiz">
        <div className="BasindaBiz-videoDetail">
              <div className="BasindaBiz-videoDetail-content">
@@ -23,7 +24,7 @@ function BasindaBiz(){
        <Tabs className="BasindaBiz-titles-tabs" defaultactivekey="tumVideo" id="uncontrolled-tab-example">
            <TabList>
               <Tab eventkey="tumVideo" title="Tüm Videolar" key="1">
-                Tüm Videolar
+                Tüm Videolarrrrrr
               </Tab>
               <Tab eventkey="ilTemsilcileri" title="İl Temsilcileri" key="2">
                 İl Temsilcileri
