@@ -13,20 +13,20 @@ function Destekolcard(props) {
           {props.text}
         </p>
 
-        <Link
+         {/* <Link
           className={`Destekol-cards-card-content-button ${props.addClass}`}
           to={props.link}
         >
           Destek Ol
-        </Link>
-        {/*  <a
+        </Link>  */}
+        <a
           className={`Destekol-cards-card-content-button ${props.addClass}`}
           href={props.link}
           target="_blank"
         >
           Destek Ol
         </a>
-  */}
+
       </div>
     </div>
   );
