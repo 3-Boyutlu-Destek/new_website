@@ -64,7 +64,7 @@ function Header() {
           <Link to="/urunler" className="Header-buttons-link">
             Ürünler
           </Link>
-          <Link
+         {/* <Link
             to="/hammadde-destek-form"
             className="Header-buttons-link primary"
           >
@@ -76,8 +76,8 @@ function Header() {
           >
             Talep Et
           </Link>
-          {/*  
-       
+            
+        */}
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLScR4-5CE7VXJwTO84wvjLHxn11vtnZrip3bMr-ncHKKo2GBOw/viewform"
             className="Header-buttons-link primary"
@@ -92,7 +92,7 @@ function Header() {
           >
             Talep Et
           </a>
-        */}
+       
         </div>
       </nav>
     </header>

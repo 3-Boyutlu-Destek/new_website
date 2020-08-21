@@ -12,7 +12,7 @@ import "./style.scss";
       render() {
         return (
             <div className="Hakkimizda" ref={this.myRef}>
-              <img src="public/Doktorlar.jpg" className="header-image"/>
+              <img src="Doktorlar.jpg" className="header-image"/>
                 <div className='hakkimizda'>
                     <h3>HAKKIMIZDA</h3>
                     <p className="tanitim-text">
